@@ -120,7 +120,7 @@
 			<div class="form">
 				<div class="form_general">
 
-					<form id="form_first" style="height: 1200px;">
+					<form id="form_first" style="height: 1400px;">
 						<div class="general_title">
 							General
 						</div>
@@ -178,24 +178,65 @@
 							Project Stage
 						</div>
 
-						<div class="form-check form-check-inline">
-						    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-						    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-						    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-						    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<div class="form-check form-check-inline radio_button container_radio row m-0 justify-content-between">
+                            <label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
+                                
+                                <div class="radio_card card_idea" data-index="1">
+                                    <div class="top_card d-flex">
+                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
+                                        <span class="topCard_span">Idea</span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
+                                <div class="radio_card card_investments" data-index="2">
+                                    <div class="top_card d-flex">
+                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
+                                        <span class="topCard_span">Investments</span>
+                                    </div>
+
+                                </div>
+                            </label>
+
+                            <label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
+                                <div class="radio_card card_development" data-index="3">
+                                    <div class="top_card d-flex">
+                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
+                                        <span class="topCard_span">Development</span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
+                                <div class="radio_card card_complete" data-index="4">
+                                    <div class="top_card d-flex">
+                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
+                                        <span class="topCard_span">Complete</span>
+                                    </div>
+                                </div>
+                            </label>
 						</div>
 
 						<div class="form-group">
     						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other comments"></textarea>
   						</div>
 
-  						<div class="multiple_download">
-    						<input type="file" name="file" multiple>
+
+
+  						<div class="multiple_download">                         
+                            <label><span class="file_name"></span></label>
+    						<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                            <label for="file">+ Upload Files</label>
   						</div>
 
   						<div><hr class="horizont_line"></div>
 
-						
+						 <!--
   							<div class="form-check">
       							<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
       							<label class="form-check-label" for="invalidCheck3">
@@ -205,10 +246,12 @@
       						</div>
 
       						<div class="form-check">
+                               
       							<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
       							<label class="form-check-label" for="invalidCheck3">
        								  I accept <a href="">the Data Processing Rules of Stone Labs</a>
       							</label>
+                            -->
       						</div>
 								
 							<div class="button_submit">
@@ -220,7 +263,7 @@
 							
 
 					</form>
-
+<button id="res">sdfsdfsdf</button>
 				</div>
 
 
@@ -290,7 +333,6 @@
 	
 
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./app/js/app.js"></script>
 <script src="./app/js/owl.carousel.min.js"></script>
@@ -301,5 +343,14 @@
 <script src="./app/js/form.js"></script>
 
 
+<script>
+$(function () {
+  $('#res').on('click', function(){
+    
+
+    document.getElementById("file").value = null;
+    })
+      
+}); </script>
 </body>
 </html>

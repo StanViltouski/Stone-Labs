@@ -144,6 +144,13 @@ window.onload = function () {
 
   })
 
+  $(window).on('click', function(){
+      $('.submenu-resp').slideUp(200);
+  })
+
+
+
+
 
     $('.mobile-dropdown-item-toggler').on('click', function () {
       if ($(this).find('.mobile-dropdown-menu').hasClass('active')) {

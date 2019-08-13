@@ -25269,7 +25269,7 @@ footer.no-inquiry.footer-wave-3 {
 /*Apply-form*/
 
 #applyForm_header {
-  padding-bottom: 217px;
+  padding-bottom: 120px;
 }
 
 .applyForm_title {
@@ -25281,7 +25281,7 @@ footer.no-inquiry.footer-wave-3 {
 }
 
 .form_wrapper {
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: 860px;
 }
 
@@ -25336,7 +25336,7 @@ textarea[placeholder] {padding-top: 20px;}
 
 .form-group input {
   width: 420px;
-  height: 90px;
+  height: 55px;
   border: none;
   border-radius: 10px;
   background-color: #edfafe;
@@ -25421,8 +25421,9 @@ textarea[placeholder] {padding-top: 20px;}
 input[type=range] {
   -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
   width: 100%; /* Указание параметра ширины требуется для Firefox. */
+  height: 90px;
   background-color: transparent;
- background: transparent url("/assets/png/line.png") no-repeat left bottom;
+ background: transparent url("/assets/png/line.png") no-repeat center bottom;
 }
  
 input[type=range]::-webkit-slider-thumb {
@@ -25507,7 +25508,6 @@ input[type=range]::-ms-fill-lower {
   background: #2a6495;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -25518,7 +25518,6 @@ input[type=range]::-ms-fill-upper {
   background: #3071a9;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 input[type=range]:focus::-ms-fill-upper {
@@ -25533,7 +25532,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .output_text{
-   font-size: 20px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #ef1c3b;
@@ -25567,6 +25566,107 @@ input[type=range]:focus::-ms-fill-upper {
   cursor: move;
   left: 100px;
   z-index: 1;
+}
+
+.container_radio {
+  width: 100%;
+}
+
+
+.radio_button label input{
+  position: absolute;
+  visibility: hidden;
+}
+
+.radio_button label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.radio_button label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+
+.radio_card {
+  padding: 12px;
+  width: 197px;
+  height: 75px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(2, 189, 243, 0.2);
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #232323;
+}
+
+.topCard_span {
+  padding-left: 7px; 
+  font-size: 18px;
+}
+
+.card_idea {
+    background: url("/assets/svg/idea-blue.svg") no-repeat;
+    background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
+}
+
+.card_investments {
+  background: url("/assets/svg/investments icon blue.svg") no-repeat;
+  background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
+}
+
+.card_development{
+  background: url("/assets/svg/development-blue.svg") no-repeat;
+  background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
+}
+
+.card_complete{
+  background: url("/assets/svg/complete-blue.svg") no-repeat;
+  background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
+}
+
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  padding: 10px 0;
+  width: 164px;
+  border-radius: 25px;
+  border: 1px solid #0497f4;
+  display: inline-block;
+  color: #0497f4;
+  font-size: 18px;
+  text-align: center;
+}
+
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+.multiple_download {
+  display: flex;
+  flex-direction: column;
+}
+
+.file_name {
+  font-size: 18px;
+  color: #232323;
+}
+
+.icon_file {margin-right: 16px;}
+
+.bottom_delete {
+  cursor: pointer;
+  padding-left: 16px;
+}
+
+.downloadFile_block {
+  margin-bottom: 17px;
 }
 
 
