@@ -25336,7 +25336,7 @@ textarea[placeholder] {padding-top: 20px;}
 
 .form-group input {
   width: 420px;
-  height: 55px;
+  height: 90px;
   border: none;
   border-radius: 10px;
   background-color: #edfafe;
@@ -25422,6 +25422,7 @@ input[type=range] {
   -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
   width: 100%; /* Указание параметра ширины требуется для Firefox. */
   background-color: transparent;
+ background: transparent url("/assets/png/line.png") no-repeat left bottom;
 }
  
 input[type=range]::-webkit-slider-thumb {
@@ -25536,6 +25537,36 @@ input[type=range]:focus::-ms-fill-upper {
   font-weight: bold;
   text-align: center;
   color: #ef1c3b;
+}
+
+.range, .rangeTwo {
+  height: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.slide, .slideTwo {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.thumb{
+  position: absolute;
+  text-align: center;
+  max-width: 90px;
+  cursor: move;
+  left: 0;
+  z-index: 1;
+}
+
+.thumbTwo{
+  position: absolute;
+  text-align: center;
+  max-width: 90px;
+  cursor: move;
+  left: 100px;
+  z-index: 1;
 }
 
 
