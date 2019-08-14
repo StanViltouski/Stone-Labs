@@ -118,42 +118,117 @@ $(function () {
 }); 
 
 
+/*Add files to multiple download*/
+
 $(function () {
 
+  var inputs = document.querySelectorAll('.inputfile');
 
+  Array.prototype.forEach.call(inputs, function(input){
 
-    var inputs = document.querySelectorAll('.inputfile');
-
-
-    Array.prototype.forEach.call(inputs, function(input){
-
-      var label  = input.previousElementSibling,
-          labelVal = label.innerHTML;
-          input.addEventListener('change', function(e){
-console.log(inputs);
+    var label  = input.previousElementSibling,
+    labelVal = label.innerHTML;
+    input.addEventListener('change', function(e){
+    console.log(inputs);
           var fileName = '';
 
           if( this.files && this.files.length > 1 )
           fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-          else
+          else 
           fileName = e.target.value.split( '\\' ).pop();    
           if( fileName )
-          label.querySelector( 'span' ).innerHTML += '<div class="downloadFile_block"><img class="icon_file" src="assets/svg/doc-blue.svg" alt="doc-blue">' + fileName + '<img class="bottom_delete" src="assets/svg/close icon small.svg" alt="close icon small"></div>';
+          label.querySelector( 'span' ).innerHTML = '<div class="downloadFile_block"><img class="icon_file" src="assets/svg/doc-blue.svg" alt="doc-blue">' + fileName + '<img id="reset_value" src="assets/svg/close icon small.svg" alt="close icon small"></div>';
     else
       label.innerHTML = labelVal;
   });
 
+//input.addEventListener('focus', function(){ input.classList.add( 'has-focus' ); });input.addEventListener('blur', function(){ input.classList.remove( 'has-focus' ); });
 
 });
 
 
-      
 }); 
 
 
+/*Clear multiple download*/
 
-/*input.addEventListener('focus', function(){ input.classList.add( 'has-focus' ); });input.addEventListener('blur', function(){ input.classList.remove( 'has-focus' ); });.inputfile:focus + label,
-.inputfile.has-focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
-}*/
+$(function () {
+  $('.file_name').on('click', '.downloadFile_block #reset_value', function(){
+    $('.downloadFile_block').remove();
+     document.getElementById("file").value = null;
+    })
+      
+});
+
+  /*For animate inputs*/
+$('.general_input').on('input', function(){
+    var $this = $(this);
+    if ($this.val() == '') {
+        $this.removeClass('placeholder-animate_filled');
+    } else {
+        $this.addClass('placeholder-animate_filled');
+    }
+});
+
+
+
+
+/*Switch type form*/
+
+$(function () {
+
+  $('.type_form a').on('click', function(){
+
+    var atr = $(this).parent().attr('data'),
+        smallFormAttr = $('.small_form').attr('data'),
+        bigFormAttr = $('.big_form').attr('data'),
+        link_small = $('.small_form a'),
+        link_big = $('.big_form a');
+       
+
+   // small form
+
+  if(bigFormAttr == 'true' && smallFormAttr == 'false') {
+
+      link_small.css({'color' : '#ef1c3b'})
+      link_big.css({'color' : '#02bdf3'})
+ 
+      $('.big_form').css({
+          'border-bottom': '4px solid #02bdf3',
+      }).attr('data', 'false');
+
+      $('.small_form').css({
+        'border-bottom': '4px solid #ef1c3b',
+      }).attr('data', 'true');
+
+  } else if(bigFormAttr == 'false' && smallFormAttr == 'true') { // big form
+
+      link_small.css({'color' : '#02bdf3'})
+      link_big.css({'color' : '#ef1c3b'})
+ 
+      $('.small_form').css({
+        'border-bottom': '4px solid #02bdf3',
+      }).attr('data', 'false');
+
+      $('.big_form').css({
+        'border-bottom': '4px solid #ef1c3b',
+    }).attr('data', 'true');
+
+    } 
+  
+  })
+});
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+

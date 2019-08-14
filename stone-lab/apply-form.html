@@ -109,10 +109,10 @@
 	<div class="container">
 		<div class="form_wrapper">
 			<div class="row m-0 type_forms">
-				<div class="big_form type_form col-6">
+				<div class="big_form type_form col-6" data="true">
 					<a href="#" onclick="return false">I feel like writing</a>
 				</div>
-				<div class="small_form type_form col-6">
+				<div class="small_form type_form col-6" data="false">
 					<a href="#" onclick="return false">I’d better talk</a>
 				</div>
 			</div>
@@ -120,13 +120,20 @@
 			<div class="form">
 				<div class="form_general">
 
-					<form id="form_first" style="height: 1400px;">
+					<form id="form_first" >
 						<div class="general_title">
 							General
 						</div>
-					  	<div class="form-group d-flex justify-content-between">
-					    	<input type="name" class="form-control" id="exampleInputEmail1" placeholder="Name">
-					     	<input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                        
+					  	<div class="inputs-margin d-flex justify-content-between">
+					    	<div class="wrapper4-animate-input">
+                                <input class="general_input"/>
+                                <span class="placeholder-animate">Name</span>
+                            </div>
+					     	<div class="wrapper4-animate-input">
+                                <input class="general_input"/>
+                                <span class="placeholder-animate">Email</span>
+                            </div>
 					  	</div>
 
 					  	<div class="form-group">
@@ -140,8 +147,11 @@
 						    
 						</div>
 
-						<div class="form-group">
-    						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tell us more what bothers you"></textarea>
+						<div class="inputs-margin">
+                            <div class="wrapper4-animate-textarea">
+                                <textarea class="general_textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <span class="placeholder-animate placeholder-animate-textarea">Tell us more what bothers you</span>
+                            </div>
   						</div>
 
   						<div class="general_title">
@@ -174,11 +184,11 @@
 
 
 
-						<div class="general_title">
+						<div class="general_title general_title-margin">
 							Project Stage
 						</div>
 
-						<div class="form-check form-check-inline radio_button container_radio row m-0 justify-content-between">
+						<div class="form-check form-check-inline radio_button container_radio row justify-content-between">
                             <label>
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
                                 
@@ -222,38 +232,38 @@
                             </label>
 						</div>
 
-						<div class="form-group">
-    						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other comments"></textarea>
-  						</div>
+						<div class="inputs-margin">
+                            <div class="wrapper4-animate-textarea">
+                                <textarea class="general_textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <span class="placeholder-animate placeholder-animate-textarea">Other comments</span>
+                            </div>
+                        </div>
 
 
 
   						<div class="multiple_download">                         
-                            <label><span class="file_name"></span></label>
+                            <label class="label-flex"><span class="file_name"></span></label>
     						<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                            <label for="file">+ Upload Files</label>
+                            <label class="upload_button-margin" for="file">+ Upload Files</label>
   						</div>
 
   						<div><hr class="horizont_line"></div>
+                      
 
-						 <!--
-  							<div class="form-check">
-      							<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      							<label class="form-check-label" for="invalidCheck3">
-       								  I have read and accepted Stone Labs <a href="">Privacy Policy</a>
-      							</label>
-
+					
+  							<div class="form-check checkbox_rules">
+      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck" required>
+      							<label class="form-check-label" for="invalidCheck"></label>
+                                <span>I have read and accepted Stone Labs <a href="">Privacy Policy</a></span>
       						</div>
 
-      						<div class="form-check">
+      						<div class="form-check checkbox_rules">
                                
-      							<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      							<label class="form-check-label" for="invalidCheck3">
-       								  I accept <a href="">the Data Processing Rules of Stone Labs</a>
-      							</label>
-                            -->
+      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck2" required>
+      							<label class="form-check-label" for="invalidCheck2"></label>
+                                <span>I accept <a href="">the Data Processing Rules of Stone Labs</a></span>
       						</div>
-								
+							  
 							<div class="button_submit">
 								
 								<a type="submit" class="btn btn-dark" href="#">Send</a>
@@ -263,7 +273,7 @@
 							
 
 					</form>
-<button id="res">sdfsdfsdf</button>
+
 				</div>
 
 
@@ -272,8 +282,10 @@
 	</div>
 </section>
 
-<footer id="applyForm_footer" class="footer-wave-1 footer-wave-2 footer-wave-3">
-
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
+    <div class="container inner-container">
+       
+    </div>
     <div class="container footer-info-container">
         <div class="footer-wrapper">
             <div class="logo-socials">
@@ -342,15 +354,5 @@
 <script src="./app/js/menu_fixed.js"></script>
 <script src="./app/js/form.js"></script>
 
-
-<script>
-$(function () {
-  $('#res').on('click', function(){
-    
-
-    document.getElementById("file").value = null;
-    })
-      
-}); </script>
 </body>
 </html>
