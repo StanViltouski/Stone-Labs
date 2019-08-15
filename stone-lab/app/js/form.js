@@ -1,9 +1,17 @@
+
+/*For range input*/
+
 $(function () {
 
   $('#ageInputId').on('input', function(){
 
       var slide_value = document.getElementById('ageInputId').value,
           total_value = slide_value/130 + 'px';
+
+//For mobile
+    if (window.innerWidth < 1024) {
+        var total_value = slide_value/160 + 'px';
+     }
 
       $('#ageInputId').attr('value', slide_value);
       $('.thumb').css('left', total_value);
@@ -14,6 +22,11 @@ $(function () {
    $('#ageInputId2').on('input', function(){
       var slide_value = document.getElementById('ageInputId2').value,
           total_value = slide_value*110 + 'px';
+
+      //For mobile
+    if (window.innerWidth < 1024) {
+        var total_value = slide_value*85 + 'px';
+     }
 
       $('#ageInputId2').attr('value', slide_value);
       $('.thumbTwo').css('left', total_value);
@@ -33,6 +46,7 @@ $(window).on('load', function(){
 
 
 
+/*Styles for radio botton*/
 
 $(function () {
   $('.form-check-input').on('change', function(){
@@ -172,8 +186,20 @@ $('.general_input').on('input', function(){
 
 
 
+  /*For mobile animate inputs
+$('.mobile-general_input').on('input', function(){
+    var $this = $(this);
+    if ($this.val() == '') {
+        $this.removeClass('placeholder-animate_filled');
+    } else {
+        $this.addClass('placeholder-animate_filled');
+    }
+});
+*/
 
-/*Switch type form*/
+
+
+/*Switch form type*/
 
 $(function () {
 
@@ -186,7 +212,7 @@ $(function () {
         link_big = $('.big_form a');
        
 
-   // small form
+// Small form color
 
   if(bigFormAttr == 'true' && smallFormAttr == 'false') {
 
@@ -201,7 +227,36 @@ $(function () {
         'border-bottom': '4px solid #ef1c3b',
       }).attr('data', 'true');
 
-  } else if(bigFormAttr == 'false' && smallFormAttr == 'true') { // big form
+
+//Change form type
+
+      $('.showBig_form').hide(300);
+      $('.showBig_form-mobile').hide(300);
+
+      $('.general_wrapper').css({
+          'display': 'block',
+          'width': '420px',
+          'margin' : '0 auto'
+      });
+      $('.wrapper4-animate-input').css('margin-bottom', '20px');
+
+      //For mobile
+        if (window.innerWidth < 768) {
+
+           $('.general_wrapper').css({
+          'display': 'block',
+          'width': '302px',
+          'margin' : '0 auto'
+      });
+
+      $('.trackBar').css('display','none');
+  }
+
+
+
+// Big form color
+
+  } else if(bigFormAttr == 'false' && smallFormAttr == 'true') { 
 
       link_small.css({'color' : '#02bdf3'})
       link_big.css({'color' : '#ef1c3b'})
@@ -214,16 +269,51 @@ $(function () {
         'border-bottom': '4px solid #ef1c3b',
     }).attr('data', 'true');
 
-    } 
+//Change form type
   
+      $('.showBig_form').show(300);
+         $('.showBig_form-mobile').show(300);
+        $('.general_wrapper').css({
+          'display': 'flex',
+          'width': '100%',
+          'margin' : 'none'
+        });
+
+      $('.wrapper4-animate-input').css('margin-bottom', 'none');
+
+//For mobile
+        if (window.innerWidth < 768) {
+
+           $('.general_wrapper').css({
+          'display': 'block',
+          'width': '302px',
+          'margin' : '0 auto'
+      });
+
+      $('.trackBar').css('display','none');
+  }
+
+    } 
+
   })
+
+  $(window).on('resize', function(){
+      if (window.innerWidth < 768) {
+
+           $('.general_wrapper').css({
+          'display': 'block',
+          'width': '302px',
+          'margin' : '0 auto'
+      });
+
+      $('.trackBar').css('display','none');
+  }
+
+
+  })
+
 });
 
-
-
-
-
-  
 
 
 
