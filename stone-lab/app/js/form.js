@@ -291,6 +291,15 @@ $(function () {
       });
 
       $('.trackBar').css('display','none');
+  } else { 
+     $('.general_wrapper').css({
+          'display': 'flex',
+          'justify-content': 'space-between',
+          'width': '100%',
+          'margin' : '0 auto 15px'
+
+      })
+    $('.trackBar').css('display','flex');
   }
 
     } 
@@ -307,6 +316,18 @@ $(function () {
       });
 
       $('.trackBar').css('display','none');
+  }else { 
+
+    $('.general_wrapper').css({
+          'display': 'flex',
+          'justify-content': 'space-between',
+          'width': '100%',
+          'margin' : '0 auto 15px'
+
+      })
+
+    $('.trackBar').css('display','flex');
+
   }
 
 

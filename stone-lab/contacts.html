@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Apply-form</title>
+	<title>Contact</title>
 	<link rel="stylesheet" href="./app/css/jquery.flipster.css">
     <link rel="stylesheet" href="./app/css/app.css">
-
 </head>
 <body>
-
-	<section id="applyForm_header" class="header title-only header-wave-1 header-wave-2 header-wave-3 header-static">
+		<section id="applyForm_header" class="header title-only header-wave-1 header-wave-2 header-wave-3 header-static">
     <div class="mobile-menu-fixed">
         <div class="container navbar-container">
             <div class="top-line">
@@ -100,161 +98,37 @@
     </div>
 
     <div class="page-title-wrapper applyForm_title">
-        <h1 class="page-title">Let’s work together</h1> 
+        <h1 class="page-title page-title-contacts">Get In Touch</h1> 
+        <h4 class="page-subtitle">Have questions about how Stone Labs can help you streamline operations and improve performance? <br> Feel free to ask us. </h4>
     </div>
 </section>
 
 
 <section id="form">
 	<div class="container container_applyForm">
-		<div class="form_wrapper">
-			<div class="row m-0 type_forms">
-				<div class="big_form type_form col-6" data="true">
-					<a href="#" onclick="return false">I feel like writing</a>
-				</div>
-				<div class="small_form type_form col-6" data="false">
-					<a href="#" onclick="return false">I’d better talk</a>
-				</div>
-			</div>
+		<div class="form_wrapper form_wrapper_contacts">
 
 			<div class="form">
 				<div class="form_general">
-
 					<form id="form_first" method="post">
-						<div class="general_title showBig_form">
-							General
-						</div>
                         
-					  	<div class="inputs-margin general_wrapper">
-					    	<div class="wrapper4-animate-input">
+					  	<div class="inputs-margin inputs_contacts">
+					    	<div class="wrapper4-animate-input wrapper_contacts">
                                 <input class="general_input" type="text" name="name" pattern="^[а-яА-Яa-zA-Z ]+$" required/>
                                 <span class="placeholder-animate">Name</span>
                             </div>
-					     	<div class="wrapper4-animate-input">
+					     	<div class="wrapper4-animate-input wrapper_contacts">
                                 <input class="general_input" type="email" name="email" pattern="(\w+\.)*\w+@(\w+\.)+[A-Za-z]+" required/>
                                 <span class="placeholder-animate">Email</span>
                             </div>
 					  	</div>
 
-					  	<div class="form-group showBig_form">
-					  		<div class="select_backg">
-					  			<select class="form-control" id="exampleFormControlSelect1">
-						      	<option>Business Sphere</option>
-						      	<option>Business Sphere 2</option>
-						      	<option>Business Sphere 3</option>
-						    </select>
-					  		</div>
-						    
-						</div>
-
-						<div class="inputs-margin showBig_form">
-                            <div class="wrapper4-animate-textarea">
+						<div class="inputs-margin wrapper_textarea_contacts">
+                            <div class="wrapper4-animate-textarea wrapper4-animate-contacts">
                                 <textarea id="exampleFormControlTextarea1" class="general_textarea" type="text" name="more"  rows="3"></textarea>
-                                <span class="placeholder-animate placeholder-animate-textarea">Tell us more what bothers you</span>
+                                <span class="placeholder-animate placeholder-animate-textarea">Tell us how we can help</span>
                             </div>
   						</div>
-
-  						<div class="general_title general_title-mobile showBig_form-mobile">
-							<div>Budget <br><span class="mobile_subtitle">(max $100.000)</span></div>
-                            <!--<div class="mobile_input"><input type="text" placeholder="$"></div>-->
-                            <div class="mobile-wrapper4-animate-input">
-                                <input class="mobile-general_input" type="text" name="cash"/>
-                                <span class="mobile-placeholder-animate mobile-placeholder-cash">$</span>
-                            </div>
-						</div>
-
-						<div class="form-group trackBar showBig_form">
-                            <div class="range">
-                                <div class="slide"></div>
-                                <output name="ageOutputName" id="ageOutputId" class="output_text thumb">$ 1000</output>
-                            </div>
-						    <input type="range" name="ageInputName" id="ageInputId" value="1000" min="1000" max="100000" step="1000" >
-						</div>
-
-						<div class="general_title general_title-mobile showBig_form-mobile">
-							<div>Deadlines <br><span class="mobile_subtitle">(max 6 months)</span></div>
-                            <!--<div class="mobile_input"><input type="text" placeholder="months"></div>-->
-                            <div class="mobile-wrapper4-animate-input">
-                                <input class="mobile-general_input" type="text" name="months"/>
-                                <span class="mobile-placeholder-animate mobile-placeholder-months">months</span>
-                            </div>
-						</div>
-
-						<div class="form-group trackBar showBig_form">
-							<div class="rangeTwo">
-                                <div class="slideTwo"></div>
-                                <output name="ageOutputName2" id="ageOutputId2" class="output_text thumbTwo">1 months</output>
-                            </div>
-                            <input type="range" name="ageInputName2" id="ageInputId2" value="1" min="1" max="6" step="1" oninput="">
-   						</div>
-
-
-
-						<div class="general_title general_title-margin showBig_form">
-							Project Stage
-						</div>
-
-						<div class="form-check form-check-inline radio_button container_radio row justify-content-between showBig_form">
-                            <label>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
-                                
-                                <div class="radio_card card_idea" data-index="1">
-                                    <div class="top_card d-flex">
-                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
-                                        <span class="topCard_span">Idea</span>
-                                    </div>
-                                </div>
-                            </label>
-
-                            <label>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
-                                <div class="radio_card card_investments" data-index="2">
-                                    <div class="top_card d-flex">
-                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
-                                        <span class="topCard_span">Investments</span>
-                                    </div>
-
-                                </div>
-                            </label>
-
-                            <label>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
-                                <div class="radio_card card_development" data-index="3">
-                                    <div class="top_card d-flex">
-                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
-                                        <span class="topCard_span">Development</span>
-                                    </div>
-                                </div>
-                            </label>
-
-                            <label>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
-                                <div class="radio_card card_complete" data-index="4">
-                                    <div class="top_card d-flex">
-                                        <img src="assets/svg/red-radiobutton.svg" alt="red-radiobutton">
-                                        <span class="topCard_span">Complete</span>
-                                    </div>
-                                </div>
-                            </label>
-						</div>
-
-						<div class="inputs-margin showBig_form">
-                            <div class="wrapper4-animate-textarea wrapper4_tablet">
-                                <textarea class="general_textarea" id="exampleFormControlTextarea1" type="text" name="commets" rows="3"></textarea>
-                                <span class="placeholder-animate placeholder-animate-textarea">Other comments</span>
-                            </div>
-                        </div>
-
-
-
-  						<div class="multiple_download showBig_form">                         
-                            <label class="label-flex"><span class="file_name"></span></label>
-    						<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                            <label class="upload_button-margin" for="file">+ Upload Files</label>
-  						</div>
-
-  						<div class="showBig_form"><hr class="horizont_line"></div>
-                      
 
 					
   							<div class="form-check checkbox_rules">
@@ -264,19 +138,14 @@
       						</div>
 
       						<div class="form-check checkbox_rules">
-                               
       							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck2" required>
       							<label class="form-check-label" for="invalidCheck2"></label>
                                 <span>I accept <a href="">the Data Processing Rules of Stone Labs</a></span>
       						</div>
 							  
 							<div class="button_submit">
-								
 								<a href="#" type="submit" class="btn btn-dark">Send</a>
-
 							</div>
-
-							
 
 					</form>
 
@@ -288,9 +157,30 @@
 	</div>
 </section>
 
-<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
-    <div class="container inner-container">
-       
+
+
+
+
+
+
+
+
+
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3">
+    <div class="container inner-container inner-container-contacts">
+        <div class="footer-inquiry-contacts row m-0">
+        	<div class="col-6 tower-contacts">
+        		<img class="img-fluid" src="/assets/svg/vilnius gedimino icon.svg" alt="vilnius">
+        	</div>
+        	<div class="col-6 contact_data">
+        		<h3 class="contacts_location">Vilnus</h3>
+        		<h4 class="contacts_gmt">GMT +01:00</h4>
+        		<h3 class="contacts_timer">01:19:47 PM</h3>
+        		<h4 class="contacts_adress">Geniu 21-10 <br> Vilnius, Lithuania <br> LT-11216</h4>
+        		<h4 class="contacts_telephone">+370 608 46 481</h4>
+
+        	</div>
+        </div>
     </div>
     <div class="container footer-info-container">
         <div class="footer-wrapper">
@@ -348,17 +238,20 @@
         </div>
     </div>
 </footer>
-	
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./app/js/app.js"></script>
-<script src="./app/js/owl.carousel.min.js"></script>
-<script src="./app/js/owl.animate.js"></script>
-<script src="./app/js/owl.autoheight.js"></script>
-<script src="./app/js/jquery.flipster.min.js"></script>
-<script src="./app/js/menu_fixed.js"></script>
-<script src="./app/js/form.js"></script>
 
+
+
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="./app/js/app.js"></script>
+		<script src="./app/js/owl.carousel.min.js"></script>
+		<script src="./app/js/owl.animate.js"></script>
+		<script src="./app/js/owl.autoheight.js"></script>
+		<script src="./app/js/jquery.flipster.min.js"></script>
+		<script src="./app/js/menu_fixed.js"></script>
 </body>
 </html>

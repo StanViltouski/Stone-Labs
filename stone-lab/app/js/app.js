@@ -128,6 +128,7 @@ window.onload = function () {
     });
 
 
+
 /* Dropdown menu in showcases-catalog page*/
 
   $('#drop_menu').on('click', function(){
@@ -136,11 +137,7 @@ window.onload = function () {
 
     $('.submenu-resp').slideUp(200);
 
-  } else {
-
-    $('.submenu-resp').slideDown(200);
-
-    }
+  } else { $('.submenu-resp').slideDown(200); }
 
   })
 
@@ -181,14 +178,55 @@ window.onload = function () {
 
     var interval;
 
-    function changeSlide(data_index) {
+
+    /*Slide mouse-hover*/
+
+    $('#top-slider-wrapper').on({
+
+      'mouseenter':function(){
+          changeSlideManual();
+          interval = setInterval(changeSlideManual, 5000); 
+      },
+
+      'mouseleave':function(){
+          clearInterval(interval);
+      }
+    })
+
+     function changeSlideManual() {
+
+      var cur_index = parseInt($('.top-slide-object.active').attr('data-index'));
+      var next_index = cur_index + 1;
+
+        if (next_index > $('.top-slide-object').length) {
+          next_index = 1;
+        }
+
+        $('.top-slide-object.active').removeClass('active');
+        setTimeout(function () {
+          $('.top-slide-object[data-index="' + next_index + '"]').addClass('active');
+        }, 700);
+        
+        }
+
+       /*Slide mouse-hover END*/
+
+
+
+    function changeSlide(data_index) {  
       if (data_index) {
         $('.top-slide-object.active').removeClass('active');
         setTimeout(function () {
           $('.top-slide-object[data-index="' + data_index + '"]').addClass('active');
         }, 700);
+
+
+        /*
         clearInterval(interval);
-        interval = setInterval(changeSlide, 5000);
+        interval = setInterval(changeSlide, 5000);  For autoslide*/
+
+
+
       } else {
         var cur_index = parseInt($('.top-slide-object.active').attr('data-index'));
         var next_index = cur_index + 1;
@@ -204,7 +242,8 @@ window.onload = function () {
       }
     }
 
-    interval = setInterval(changeSlide, 5000);
+    /*interval = setInterval(changeSlide, 5000); For autoslide*/
+
     $('.title-card-item').on('click', function (e) {
       e.preventDefault();
       var data_index = parseInt($(this).attr('data-index'));
