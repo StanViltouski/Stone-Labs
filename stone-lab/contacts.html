@@ -5,6 +5,8 @@
 	<title>Contact</title>
 	<link rel="stylesheet" href="./app/css/jquery.flipster.css">
     <link rel="stylesheet" href="./app/css/app.css">
+    <link rel="stylesheet" href="./app/css/apply-form.css"> <!--Styles for Input -->
+    <link rel="stylesheet" href="./app/css/contacts.css">
 </head>
 <body>
 		<section id="applyForm_header" class="header title-only header-wave-1 header-wave-2 header-wave-3 header-static">
@@ -112,16 +114,21 @@
 				<div class="form_general">
 					<form id="form_first" method="post">
                         
-					  	<div class="inputs-margin inputs_contacts">
-					    	<div class="wrapper4-animate-input wrapper_contacts">
-                                <input class="general_input" type="text" name="name" pattern="^[а-яА-Яa-zA-Z ]+$" required/>
+
+                        <div class="inputs-margin inputs_contacts">
+                            <div class="wrapper4-animate-input wrapper_contacts">
+                                <input id="input-name" class="general_input" type="text" name="name"/>
                                 <span class="placeholder-animate">Name</span>
+                                <p class="error error-name"></p>        
                             </div>
-					     	<div class="wrapper4-animate-input wrapper_contacts">
-                                <input class="general_input" type="email" name="email" pattern="(\w+\.)*\w+@(\w+\.)+[A-Za-z]+" required/>
+                            
+                             
+                            <div class="wrapper4-animate-input wrapper_contacts">
+                                <input id="input-email" class="general_input" type="text" name="email">
                                 <span class="placeholder-animate">Email</span>
+                                <p class="error error-email"></p>
                             </div>
-					  	</div>
+                        </div>
 
 						<div class="inputs-margin wrapper_textarea_contacts">
                             <div class="wrapper4-animate-textarea wrapper4-animate-contacts">
@@ -132,20 +139,21 @@
 
 					
   							<div class="form-check checkbox_rules">
-      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck" required>
-      							<label class="form-check-label" for="invalidCheck"></label>
+                                <input class="form-check-input is-invalid checkbox-custom invalidCheck" type="checkbox" value="" id="invalidCheck">
+                                <label class="form-check-label" for="invalidCheck"></label>
                                 <span>I have read and accepted Stone Labs <a href="">Privacy Policy</a></span>
-      						</div>
+                            </div>
 
-      						<div class="form-check checkbox_rules">
-      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck2" required>
-      							<label class="form-check-label" for="invalidCheck2"></label>
+                            <div class="form-check checkbox_rules">
+                               
+                                <input class="form-check-input is-invalid checkbox-custom invalidCheck2" type="checkbox" value="" id="invalidCheck2">
+                                <label class="form-check-label" for="invalidCheck2"></label>
                                 <span>I accept <a href="">the Data Processing Rules of Stone Labs</a></span>
-      						</div>
+                            </div>
 							  
 							<div class="button_submit">
-								<a href="#" type="submit" class="btn btn-dark">Send</a>
-							</div>
+                                <button type="submit" class="btn btn-dark btn_submit" disabled>Send</button>
+                            </div>
 
 					</form>
 
@@ -156,14 +164,6 @@
 		</div>
 	</div>
 </section>
-
-
-
-
-
-
-
-
 
 
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
@@ -178,7 +178,6 @@
         		<h3 class="contacts_timer">01:19:47 PM</h3>
         		<h4 class="contacts_adress">Geniu 21-10 <br> Vilnius, Lithuania <br> LT-11216</h4>
         		<h4 class="contacts_telephone">+370 608 46 481</h4>
-
         	</div>
         </div>
     </div>
@@ -241,11 +240,6 @@
 
 
 
-
-
-
-
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="./app/js/app.js"></script>
 		<script src="./app/js/owl.carousel.min.js"></script>
@@ -253,5 +247,6 @@
 		<script src="./app/js/owl.autoheight.js"></script>
 		<script src="./app/js/jquery.flipster.min.js"></script>
 		<script src="./app/js/menu_fixed.js"></script>
+        <script src="./app/js/form.js"></script>
 </body>
 </html>

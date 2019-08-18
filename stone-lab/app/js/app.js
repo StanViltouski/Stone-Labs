@@ -303,7 +303,7 @@ window.onload = function () {
       center: true,
       animateOut: 'fadeOutRightFast',
       animateIn: 'fadeInLeftFast',
-      autoplay: 3000,
+    //autoplay: 3000,
       autoplayHoverPause: true,
       onTranslate: clickStop
     });

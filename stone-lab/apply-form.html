@@ -5,7 +5,7 @@
 	<title>Apply-form</title>
 	<link rel="stylesheet" href="./app/css/jquery.flipster.css">
     <link rel="stylesheet" href="./app/css/app.css">
-
+    <link rel="stylesheet" href="./app/css/apply-form.css">
 </head>
 <body>
 
@@ -127,16 +127,21 @@
                         
 					  	<div class="inputs-margin general_wrapper">
 					    	<div class="wrapper4-animate-input">
-                                <input class="general_input" type="text" name="name" pattern="^[а-яА-Яa-zA-Z ]+$" required/>
+                                <input id="input-name" class="general_input" type="text" name="name"/>
                                 <span class="placeholder-animate">Name</span>
+                                <p class="error error-name"></p>        
                             </div>
+                            
+                             
 					     	<div class="wrapper4-animate-input">
-                                <input class="general_input" type="email" name="email" pattern="(\w+\.)*\w+@(\w+\.)+[A-Za-z]+" required/>
+                                <input id="input-email" class="general_input" type="text" name="email">
                                 <span class="placeholder-animate">Email</span>
+                                <p class="error error-email"></p>
                             </div>
+                  
 					  	</div>
 
-					  	<div class="form-group showBig_form">
+					  	<div class="form-group showBig_form showBig_form-mobile">
 					  		<div class="select_backg">
 					  			<select class="form-control" id="exampleFormControlSelect1">
 						      	<option>Business Sphere</option>
@@ -147,54 +152,58 @@
 						    
 						</div>
 
-						<div class="inputs-margin showBig_form">
+						<div class="inputs-margin showBig_form showBig_form-mobile">
                             <div class="wrapper4-animate-textarea">
-                                <textarea id="exampleFormControlTextarea1" class="general_textarea" type="text" name="more"  rows="3"></textarea>
+                                <textarea id="exampleFormControlTextarea1" class="general_textarea" type="text" name="more" rows="3"></textarea>
                                 <span class="placeholder-animate placeholder-animate-textarea">Tell us more what bothers you</span>
                             </div>
   						</div>
 
-  						<div class="general_title general_title-mobile showBig_form-mobile">
+  						<div class="general_title-mobile showBig_form-mobile ">
 							<div>Budget <br><span class="mobile_subtitle">(max $100.000)</span></div>
                             <!--<div class="mobile_input"><input type="text" placeholder="$"></div>-->
                             <div class="mobile-wrapper4-animate-input">
-                                <input class="mobile-general_input" type="text" name="cash"/>
+                                <input class="mobile-general_input" type="text" name="cash" maxlength="6"/>
                                 <span class="mobile-placeholder-animate mobile-placeholder-cash">$</span>
                             </div>
 						</div>
 
-						<div class="form-group trackBar showBig_form">
-                            <div class="range">
-                                <div class="slide"></div>
-                                <output name="ageOutputName" id="ageOutputId" class="output_text thumb">$ 1000</output>
-                            </div>
-						    <input type="range" name="ageInputName" id="ageInputId" value="1000" min="1000" max="100000" step="1000" >
-						</div>
+                        <div class="general_title showBig_form">
+                          Budget    
+						  <div class="form-group trackBar showBig_form">
+                                <div class="range">
+                                    <div class="slide"></div>
+                                    <output name="ageOutputName" id="ageOutputId" class="output_text thumb">$ 1000</output>
+                                </div>
+						      <input type="range" name="ageInputName" id="ageInputId" value="1000" min="1000" max="100000" step="1000" >
+						  </div>
+                        </div>
 
-						<div class="general_title general_title-mobile showBig_form-mobile">
+						<div class="general_title-mobile showBig_form-mobile ">
 							<div>Deadlines <br><span class="mobile_subtitle">(max 6 months)</span></div>
                             <!--<div class="mobile_input"><input type="text" placeholder="months"></div>-->
                             <div class="mobile-wrapper4-animate-input">
-                                <input class="mobile-general_input" type="text" name="months"/>
+                                <input class="mobile-general_input" type="text" name="months" maxlength="1"/>
                                 <span class="mobile-placeholder-animate mobile-placeholder-months">months</span>
                             </div>
 						</div>
 
-						<div class="form-group trackBar showBig_form">
-							<div class="rangeTwo">
-                                <div class="slideTwo"></div>
-                                <output name="ageOutputName2" id="ageOutputId2" class="output_text thumbTwo">1 months</output>
-                            </div>
-                            <input type="range" name="ageInputName2" id="ageInputId2" value="1" min="1" max="6" step="1" oninput="">
-   						</div>
+                        <div class="general_title showBig_form">
+                            Budget 
+						    <div class="form-group trackBar showBig_form">
+							   <div class="rangeTwo">
+                                      <div class="slideTwo"></div>
+                                      <output name="ageOutputName2" id="ageOutputId2" class="output_text thumbTwo">1 months</output>
+                                </div>
+                                <input type="range" name="ageInputName2" id="ageInputId2" value="1" min="1" max="6" step="1" oninput="">
+   						    </div>
+                         </div>
 
-
-
-						<div class="general_title general_title-margin showBig_form">
+						<div class="general_title general_title-margin showBig_form showBig_form-mobile">
 							Project Stage
 						</div>
 
-						<div class="form-check form-check-inline radio_button container_radio row justify-content-between showBig_form">
+						<div class="form-check form-check-inline radio_button container_radio row justify-content-between showBig_form showBig_form-mobile">
                             <label>
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" value="small" />
                                 
@@ -238,7 +247,7 @@
                             </label>
 						</div>
 
-						<div class="inputs-margin showBig_form">
+						<div class="inputs-margin showBig_form showBig_form-mobile">
                             <div class="wrapper4-animate-textarea wrapper4_tablet">
                                 <textarea class="general_textarea" id="exampleFormControlTextarea1" type="text" name="commets" rows="3"></textarea>
                                 <span class="placeholder-animate placeholder-animate-textarea">Other comments</span>
@@ -247,46 +256,40 @@
 
 
 
-  						<div class="multiple_download showBig_form">                         
+  						<div class="multiple_download showBig_form showBig_form-mobile">                         
                             <label class="label-flex"><span class="file_name"></span></label>
     						<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                             <label class="upload_button-margin" for="file">+ Upload Files</label>
   						</div>
 
-  						<div class="showBig_form"><hr class="horizont_line"></div>
+  						<div class="showBig_form showBig_form-mobile"><hr class="horizont_line"></div>
                       
 
 					
   							<div class="form-check checkbox_rules">
-      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck" required>
+      							<input class="form-check-input is-invalid checkbox-custom invalidCheck" type="checkbox" value="" id="invalidCheck">
       							<label class="form-check-label" for="invalidCheck"></label>
                                 <span>I have read and accepted Stone Labs <a href="">Privacy Policy</a></span>
       						</div>
 
       						<div class="form-check checkbox_rules">
                                
-      							<input class="form-check-input is-invalid checkbox-custom" type="checkbox" value="" id="invalidCheck2" required>
+      							<input class="form-check-input is-invalid checkbox-custom invalidCheck2" type="checkbox" value="" id="invalidCheck2">
       							<label class="form-check-label" for="invalidCheck2"></label>
                                 <span>I accept <a href="">the Data Processing Rules of Stone Labs</a></span>
       						</div>
 							  
 							<div class="button_submit">
-								
-								<a href="#" type="submit" class="btn btn-dark">Send</a>
-
+								<button type="submit" class="btn btn-dark btn_submit" disabled>Send</button>
 							</div>
 
-							
-
 					</form>
-
 				</div>
-
-
 			</div>
 		</div>
 	</div>
 </section>
+
 
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
     <div class="container inner-container">
