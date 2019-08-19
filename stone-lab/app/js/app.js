@@ -181,18 +181,18 @@ window.onload = function () {
 
     /*Slide mouse-hover*/
 
-    $('#top-slider-wrapper').on({
+    //$('#top-slider-wrapper').on({
 
-      'mouseenter':function(){
-          changeSlideManual();
+      //'mouseenter':function(){
+          //changeSlideManual();
           //interval = setInterval(changeSlideManual, 5000); 
-      },
+      //},
 /*
       'mouseleave':function(){
           clearInterval(interval);
       }
       */
-    })
+    //})
 
      function changeSlideManual() {
 
@@ -213,7 +213,6 @@ window.onload = function () {
        /*Slide mouse-hover END*/
 
 
-
     function changeSlide(data_index) {  
       if (data_index) {
         $('.top-slide-object.active').removeClass('active');
@@ -225,7 +224,6 @@ window.onload = function () {
         /*
         clearInterval(interval);
         interval = setInterval(changeSlide, 5000);  For autoslide*/
-
 
 
       } else {
@@ -257,7 +255,7 @@ window.onload = function () {
       } else {
         // else change slide
         changeSlide(data_index);
-        play(data_index);
+        sliderAbount(data_index);
       }
     }); //End Change content func
 
@@ -306,14 +304,16 @@ window.onload = function () {
       margin: 10,
       items: 1,
       center: true,
+      dots: false,
       animateOut: 'fadeOutRightFast',
       animateIn: 'fadeInLeftFast',
-    //autoplay: 3000,
+      //autoplay: 3000,
       autoplayHoverPause: true,
-      onTranslate: clickStop
+      //onTranslate: clickStop
     });
 
-    function clickStop() {
+/*
+    function clickStop(event) {
 
       //Don't change slide while animation is in progress
       $('.owl-dots button').on('click', function () {
@@ -322,32 +322,41 @@ window.onload = function () {
         }
       });
     }
+*/
 
+      /*Action slider abount*/
+      function sliderAbount(data_index) {
 
-      function play(data_index) {  
+      var sliderWidth = (parseInt($('.owl-item').css('width'))+10)*2;
+      var itemWidth = sliderWidth / 2;
+
+      switch(data_index) { 
+
+              case 1: 
+                    $('.owl-stage').css({
+                        'transform': 'translate3d(-' + sliderWidth + 'px, 0px, 0px)',
+                        'transition' : 'all 1s ease 0s',
+                    });
+               break;
+
+               case 2: 
+                    $('.owl-stage').css({
+                        'transform': 'translate3d(-' + (sliderWidth + itemWidth) + 'px, 0px, 0px)',
+                        'transition' : 'all 1s ease 0s',
+                    });
+               break;
+
+               case 3: 
+                    $('.owl-stage').css({
+                        'transform': 'translate3d(-' + (sliderWidth*2) + 'px, 0px, 0px)',
+                        'transition' : 'all 1s ease 0s',
+                    });
+               break;
+
+               default:
+                    return;
+       }
         
-        if(data_index == 1) {
-          $('.owl-stage').css({
-            'transform': 'translate3d(-3826px, 0px, 0px)',
-            'transition' : 'all 1s ease 0s',
-          });
-          $('.owl-item').removeClass('active center');
-          $('.owl-item:eq(2)').addClass('active center');
-        } else if(data_index == 2) {
-           $('.owl-stage').css({
-            'transform': 'translate3d(-5739px, 0px, 0px)',
-            'transition' : 'all 1s ease 0s',
-          });
-          $('.owl-item').removeClass('active center');
-          $('.owl-item:eq(3)').addClass('active center');
-        } else if(data_index == 3) {
-           $('.owl-stage').css({
-            'transform': 'translate3d(-7652px, 0px, 0px)',
-            'transition' : 'all 1s ease 0s',
-          });
-          $('.owl-item').removeClass('active center');
-          $('.owl-item:eq(4)').addClass('active center');
-        }
     }
     /*End about us section slider*/
 
@@ -570,7 +579,7 @@ window.onload = function () {
         autoplayHoverPause: true,
     });*/
 
-    function clickStopAndSync() {
+    function clickStopAndSync(event) {
       //Don't change slide while animation is in progress
       $('.owl-dots button').on('click', function () {
         if ($('.owl-item').hasClass('.animated.faster')) {
