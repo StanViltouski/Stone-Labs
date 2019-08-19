@@ -185,12 +185,13 @@ window.onload = function () {
 
       'mouseenter':function(){
           changeSlideManual();
-          interval = setInterval(changeSlideManual, 5000); 
+          //interval = setInterval(changeSlideManual, 5000); 
       },
-
+/*
       'mouseleave':function(){
           clearInterval(interval);
       }
+      */
     })
 
      function changeSlideManual() {
@@ -246,6 +247,7 @@ window.onload = function () {
 
     $('.title-card-item').on('click', function (e) {
       e.preventDefault();
+
       var data_index = parseInt($(this).attr('data-index'));
       var active_slide_index = parseInt($('.top-slide-object.active').attr('data-index'));
 
@@ -255,8 +257,11 @@ window.onload = function () {
       } else {
         // else change slide
         changeSlide(data_index);
+        play(data_index);
       }
     }); //End Change content func
+
+
 
     /*End Top section */
 
@@ -308,13 +313,41 @@ window.onload = function () {
       onTranslate: clickStop
     });
 
-    function clickStop(event) {
+    function clickStop() {
+
       //Don't change slide while animation is in progress
       $('.owl-dots button').on('click', function () {
         if ($('.owl-item').hasClass('animated')) {
           return false;
         }
       });
+    }
+
+
+      function play(data_index) {  
+        
+        if(data_index == 1) {
+          $('.owl-stage').css({
+            'transform': 'translate3d(-3826px, 0px, 0px)',
+            'transition' : 'all 1s ease 0s',
+          });
+          $('.owl-item').removeClass('active center');
+          $('.owl-item:eq(2)').addClass('active center');
+        } else if(data_index == 2) {
+           $('.owl-stage').css({
+            'transform': 'translate3d(-5739px, 0px, 0px)',
+            'transition' : 'all 1s ease 0s',
+          });
+          $('.owl-item').removeClass('active center');
+          $('.owl-item:eq(3)').addClass('active center');
+        } else if(data_index == 3) {
+           $('.owl-stage').css({
+            'transform': 'translate3d(-7652px, 0px, 0px)',
+            'transition' : 'all 1s ease 0s',
+          });
+          $('.owl-item').removeClass('active center');
+          $('.owl-item:eq(4)').addClass('active center');
+        }
     }
     /*End about us section slider*/
 
@@ -439,7 +472,7 @@ window.onload = function () {
     if (window_width > 1023) {
       $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
         style: 'carousel',
-        autoplay: 2000,
+        //autoplay: 2000,
         pauseOnHover: true,
         loop: true,
         spacing: -0.73,
@@ -452,7 +485,7 @@ window.onload = function () {
     } else {
       var myFlipser = $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
         style: 'flat',
-        autoplay: 3000,
+        //autoplay: 3000,
         pauseOnHover: true,
         loop: true,
         spacing: -0.73,
@@ -468,7 +501,7 @@ window.onload = function () {
       if (window_width > 1023) {
         $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
           style: 'carousel',
-          autoplay: 2000,
+          //autoplay: 2000,
           pauseOnHover: true,
           loop: true,
           spacing: -0.73,
@@ -481,7 +514,7 @@ window.onload = function () {
       } else {
         var myFlipser = $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
           style: 'flat',
-          autoplay: 3000,
+          //autoplay: 3000,
           pauseOnHover: true,
           loop: true,
           spacing: -0.73,
@@ -537,10 +570,10 @@ window.onload = function () {
         autoplayHoverPause: true,
     });*/
 
-    function clickStopAndSync(event) {
+    function clickStopAndSync() {
       //Don't change slide while animation is in progress
       $('.owl-dots button').on('click', function () {
-        if ($('.owl-item').hasClass('animated')) {
+        if ($('.owl-item').hasClass('.animated.faster')) {
           return false;
         }
       });
@@ -556,7 +589,7 @@ window.onload = function () {
     }
 
     $('.graph-item').on('click', function (e) {
-      if ($('.owl-item').hasClass('animated')) {
+      if ($('.owl-item').hasClass('.animated.faster')) {
         return false;
       }
 
