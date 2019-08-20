@@ -5,27 +5,7 @@
 get_header();?>
         <div id="top-slider-wrapper" class="container px-1" style="opacity: 0;">
         <div class="top-slide-scene">
-            <div class="top-slide-object active" id="sport-dev" data-index="1">
-                <div class="row px-lg-2">
-                    <div class="col-sm-12 col-md-6 title-wrapper">
-                        <h1 class="title">Disruptive Software Technologies For Sport </h1>
-                        <div class="sub-title">
-                            Being an IT Consultancy and Custom Solution Development company we are fond of sports.
-                            We do sport in natural environment for ourselves, and in virtual one for the rest of sports
-                            world.
-                        </div>
-                        <a href="#" class="btn title-button">learn more</a>
-                    </div>
-                    <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
-                        <img src="<?php bloginfo('template_directory') ?>/img/sport-running-man.svg" alt="sport-man" id="sport-running-man">
-                        <img src="<?php bloginfo('template_directory') ?>/img/sport-man1.svg" alt="sport-man" id="sport-man">
-                        <img src="<?php bloginfo('template_directory') ?>/img/sport-phone.svg" alt="sport-phone" id="sport-phone">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="top-slide-scene">
-            <div class="top-slide-object" id="product-dev" data-index="2">
+            <div class="top-slide-object" id="product-dev" data-index="1">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
                         <h1 class="title">Full Cycle Product Development</h1>
@@ -40,6 +20,26 @@ get_header();?>
                         <img src="<?php bloginfo('template_directory') ?>/img/product-dev-bg.svg" alt="bg" id="product-dev-bg">
                         <img src="<?php bloginfo('template_directory') ?>/img/product-dev-brainstorm.svg" alt="brainstorm" id="product-dev-brainstorm">
                         <img src="<?php bloginfo('template_directory') ?>/img/product-dev-people.svg" alt="people" id="product-dev-people">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-slide-scene">
+            <div class="top-slide-object active" id="sport-dev" data-index="2">
+                <div class="row px-lg-2">
+                    <div class="col-sm-12 col-md-6 title-wrapper">
+                        <h1 class="title">Disruptive Software Technologies For Sport </h1>
+                        <div class="sub-title">
+                            Being an IT Consultancy and Custom Solution Development company we are fond of sports.
+                            We do sport in natural environment for ourselves, and in virtual one for the rest of sports
+                            world.
+                        </div>
+                        <a href="#" class="btn title-button">learn more</a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
+                        <img src="<?php bloginfo('template_directory') ?>/img/sport-running-man.svg" alt="sport-man" id="sport-running-man">
+                        <img src="<?php bloginfo('template_directory') ?>/img/sport-man1.svg" alt="sport-man" id="sport-man">
+                        <img src="<?php bloginfo('template_directory') ?>/img/sport-phone.svg" alt="sport-phone" id="sport-phone">
                     </div>
                 </div>
             </div>
@@ -69,16 +69,17 @@ get_header();?>
         <div class="row">
             <div class='section-head'>directions</div>
             <div class="col-12 title-cards-wrapper">
-                <div class="title-card-item sport-dev" data-id="sport-dev" data-index="1">
+                
+                <div class="title-card-item" data-id="product-dev" data-index="1">
                     <div class="col-md-8 col-6 title-card-item-text">
-                        <span>Sport Dev</span>
+                        <span>Product Dev</span>
                         <a href="#">Learn More</a>
                     </div>
                     <div class="col-md-4 col-6 title-card-item-image"></div>
                 </div>
-                <div class="title-card-item" data-id="product-dev" data-index="2">
+                <div class="title-card-item sport-dev" data-id="sport-dev" data-index="2">
                     <div class="col-md-8 col-6 title-card-item-text">
-                        <span>Product Dev</span>
+                        <span>Sport Dev</span>
                         <a href="#">Learn More</a>
                     </div>
                     <div class="col-md-4 col-6 title-card-item-image"></div>
@@ -103,10 +104,10 @@ get_header();?>
             </div>
             <div class="about-us-text">
                 <div class="about-us-head">
-                    Sport Dev
+                    Product Dev
                 </div>
                 <h3 class="about-us-header">
-                    What we do for Sport Insudtry
+                    What we do for Product Dev
                 </h3>
                 <div class="about-us-description">
                     We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
@@ -121,10 +122,10 @@ get_header();?>
             </div>
             <div class="about-us-text">
                 <div class="about-us-head">
-                    Product Dev
+                    Sport Dev
                 </div>
                 <h3 class="about-us-header">
-                    What we do for Product Dev
+                    What we do for Sport Insudtry
                 </h3>
                 <div class="about-us-description">
                     We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
