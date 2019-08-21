@@ -121,10 +121,11 @@ try {
 window.onload = function () {
 
   $(document).ready(function () {
-    $('.dropdown-item-wrapper').hover(function () {
-      $(this).find('.nav-dropdown-menu').addClass('active').slideDown(200);
+    //$('#menu-item-27>a').wrap("<div class='dropdown-item-wrapper'></div>")
+    $('#menu-item-27').hover(function () {
+      $(this).find('.sub-menu').addClass('active').slideDown(200);
     }, function () {
-      $(this).find('.nav-dropdown-menu').removeClass('active').slideUp(200);
+      $(this).find('.sub-menu').removeClass('active').slideUp(200);
     });
 
 

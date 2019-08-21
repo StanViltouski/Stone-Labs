@@ -5,11 +5,11 @@ $(function () {
 
 
   $('#ageInputId').on('input', function(){
-      var slide_value = $('#ageInputId').val(),
+      var slide_value = $('#ageInputId').val();
          
-
+      if(slide_value  < 1100) slide_value = 0;
 //Mobile or not
-          total_value = (window.innerWidth < 1024) ? slide_value/160 + 'px' : total_value = slide_value/130 + 'px'; 
+      total_value = (window.innerWidth < 992) ? slide_value/165 + 'px' : total_value = slide_value/130 + 'px'; 
 
       $('#ageInputId').attr('value', slide_value);
       $('.thumb').css('left', total_value);
@@ -26,8 +26,8 @@ $(function () {
       countDesk+=slide_value*10;
       countMob+=slide_value*10;
     
-      if(countMob > 63) countMob+=slide_value*4;
-      if(countMob > 99) countMob=105;
+      if(countMob > 63) countMob+=slide_value*3;
+      if(countMob > 99) countMob=100;
       if(countMob < 63) countMob=0;
       if(countDesk > 78) countDesk+=slide_value*4.8; 
       if(countDesk > 118) countDesk=128;
@@ -37,7 +37,7 @@ $(function () {
         //console.log(countDesk);
 
 //Mobile or not 
-      var total_value = (window.innerWidth < 1024) ? slide_value*countMob + 'px' : slide_value*countDesk+ 'px'; 
+      var total_value = (window.innerWidth < 992) ? slide_value*countMob + 'px' : slide_value*countDesk+ 'px'; 
           //console.log(slide_value);
 
       $('#ageInputId2').attr('value', slide_value);

@@ -3,9 +3,9 @@
 * Template name: Home Template
 */
 get_header();?>
-        <div id="top-slider-wrapper" class="container px-1" style="opacity: 0;">
+       <div id="top-slider-wrapper" class="container px-1" style="opacity: 0;">
         <div class="top-slide-scene">
-            <div class="top-slide-object" id="product-dev" data-index="1">
+            <div class="top-slide-object active" id="product-dev" data-index="1">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
                         <h1 class="title">Full Cycle Product Development</h1>
@@ -25,7 +25,7 @@ get_header();?>
             </div>
         </div>
         <div class="top-slide-scene">
-            <div class="top-slide-object active" id="sport-dev" data-index="2">
+            <div class="top-slide-object" id="sport-dev" data-index="2">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
                         <h1 class="title">Disruptive Software Technologies For Sport </h1>
@@ -69,7 +69,6 @@ get_header();?>
         <div class="row">
             <div class='section-head'>directions</div>
             <div class="col-12 title-cards-wrapper">
-                
                 <div class="title-card-item" data-id="product-dev" data-index="1">
                     <div class="col-md-8 col-6 title-card-item-text">
                         <span>Product Dev</span>

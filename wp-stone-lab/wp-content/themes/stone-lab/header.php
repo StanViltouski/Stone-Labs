@@ -1,3 +1,5 @@
+<?php  global $stone_lab_option; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,16 +8,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <?php wp_head(); ?>
-   
 </head>
 <body>
+
+<?php $custom_desk_logo = ($stone_lab_option['stone-lab-desk-logo']['url']); ?>
+<?php $custom_mob_logo = ($stone_lab_option['stone-lab-mob-logo']['url']); ?>
+
 <section class="header header-wave-1 header-wave-2 header-wave-3">
     <div class="mobile-menu-fixed">
         <div class="container navbar-container">
             <div class="top-line">
                 <a class="navbar-brand d-flex align-items-center" href="<?php echo home_url('/'); ?>">
-                    <img class="img-fluid" src="<?php bloginfo('template_directory') ?>/img/Logo_stone_labs-red.svg" alt="logo-mobile" />
+
+                    <?php 
+                        if($custom_mob_logo){ ?>
+
+                        <img src="<?php echo esc_url($custom_mob_logo); ?>" title="stone-lab" width="168" alt="logo">
+                    <?php 
+                        } else {
+                            echo "No image";
+                        } ?> 
+
                 </a>
                 <a href="#" class="close-button">
                     <img src="<?php bloginfo('template_directory') ?>/img/close-popup-icon.svg" alt="close-button">
@@ -57,26 +72,27 @@
     <div class="container navbar-container">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="<?php bloginfo('template_directory') ?>/assets/svg/Logo_stone_labs-white.svg" alt="logo">
+
+                <?php 
+                if($custom_desk_logo){ ?>
+
+                    <img src="<?php echo esc_url($custom_desk_logo); ?>" title="stone-lab" width="310" alt="logo">
+                    <?php 
+                } else {
+                        echo "No image";
+                } ?> 
+
             </a>
             <div class="collapse navbar-collapse">
                 <?php wp_nav_menu([
                     'theme_location'  => '',
                     'menu'            => 'header-menu', 
                     'container'       => 'div', 
-                    'container_class' => '', 
-                    'container_id'    => '',
                     'menu_class'      => 'menu', 
-                    'menu_id'         => '',
                     'echo'            => true,
                     'fallback_cb'     => 'wp_page_menu',
-                    'before'          => '',
-                    'after'           => '',
-                    'link_before'     => '',
-                    'link_after'      => '',
                     'items_wrap'      => '<ul id="%1$s" class="navbar-nav">%3$s</ul>',
                     'depth'           => 2,
-                    'walker'          => '',
 
                 ]);
                 ?>

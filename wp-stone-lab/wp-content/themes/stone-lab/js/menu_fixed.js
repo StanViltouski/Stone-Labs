@@ -2,8 +2,8 @@ $(function () {
 
   $(window).on('scroll', function() {
 
-    var scrollValue = $(window).scrollTop();    
-
+    var scrollValue = $(window).scrollTop();
+    
       if (scrollValue > 117) { 
 
         $('.navbar-brand').css({

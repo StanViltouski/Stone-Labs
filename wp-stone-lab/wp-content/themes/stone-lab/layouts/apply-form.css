@@ -134,12 +134,19 @@ input:required{
   z-index: 1;
 }
 
+#ageInputId {
+   background: transparent url("/assets/png/line.png") no-repeat center bottom;
+}
+
+#ageInputId2 {
+   background: transparent url("/assets/png/line_2.png") no-repeat center bottom;
+}
+
 input[type=range] {
   -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
   width: 100%; /* Указание параметра ширины требуется для Firefox. */
   height: 90px;
   background-color: transparent;
- background: transparent url("/assets/png/line.png") no-repeat center bottom;
 }
  
 input[type=range]::-webkit-slider-thumb {
@@ -573,7 +580,7 @@ input[type=range]:focus::-ms-fill-upper {
 
   .trackBar {
     display: flex;
-    width: 724px;
+    width: 860px;
   }
 
   .radio_card {width: 167px;}
@@ -582,6 +589,12 @@ input[type=range]:focus::-ms-fill-upper {
 
 }
 
+
+@media (max-width: 991px) { 
+
+  .trackBar {width: 700px;}
+
+}
 
 
 @media (max-width: 767px) { 

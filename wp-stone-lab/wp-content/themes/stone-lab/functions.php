@@ -118,6 +118,12 @@ function stone_lab_widgets_init() {
 }
 add_action( 'widgets_init', 'stone_lab_widgets_init' );
 
+function my_myme_types($mime_types){
+    $mime_types['svg'] = 'image/svg+xml'; // поддержка SVG
+    return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
 /**
  * Enqueue scripts and styles.
  */
@@ -188,6 +194,10 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Redux sample-config
+ */
+require get_template_directory() . '/inc/sample-config.php';
 /**
  * Load Jetpack compatibility file.
  */
