@@ -240,10 +240,12 @@
 
   .container_showcase {padding: 0;}
 
+  .wrapper4-effect {height: 449px;}
+
   .showcases_head {height: 449px;}
 
   .showcases_head .pre_title {
-    padding-top: calc(96px - 2rem););
+    padding-top: calc(96px - 2rem);
     font-size: 16px;
   }
 
@@ -285,7 +287,9 @@
 
   .showcases_head {height: 366px;}
 
-  .showcases_head .pre_title {padding-top: calc(69px - 0.5rem););}
+  .wrapper4-effect {height: 366px;}
+
+  .showcases_head .pre_title {padding-top: calc(69px - 0.5rem);}
 
   .showcases_head .main_title {font-size: 48px;}
 
@@ -323,14 +327,19 @@
     background-position:  70% 70%;
   }
 
+  .wrapper4-effect {height: 490px;}
+
   .showcases_head .pre_title {
-    padding-top: calc(136px - 1rem););
+    padding-top: calc(136px - 1rem);
     font-size: 14px;
   }
 
   .showcases_head .main_title {font-size: 32px;}
 
-  .showcasesHead_bottons {padding-top: 204px;}
+  .showcasesHead_bottons {
+    display: flex;
+    padding-top: 204px;
+  }
 
   .botton_back, .botton_share {
     padding: 5px 0px;

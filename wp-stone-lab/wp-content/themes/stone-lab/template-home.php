@@ -1,40 +1,61 @@
+
 <?php 
 /**
 * Template name: Home Template
 */
+
 get_header();?>
-       <div id="top-slider-wrapper" class="container px-1" style="opacity: 0;">
+    <div id="top-slider-wrapper" class="container px-1" style="opacity: 0;">
         <div class="top-slide-scene">
             <div class="top-slide-object active" id="product-dev" data-index="1">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
-                        <h1 class="title">Full Cycle Product Development</h1>
-                        <div class="sub-title">
-                            Being an IT Consultancy and Custom Solution Development company we are fond of sports.
-                            We do sport in natural environment for ourselves, and in virtual one for the rest of
-                            sports world.
-                        </div>
-                        <a href="#" class="btn title-button">learn more</a>
+                        <?php  
+                            wp_reset_query();
+            
+                                $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> 1)); 
+                                if ( $resent_list->have_posts() ) :
+                                    while ( $resent_list->have_posts() ) :
+                                    $resent_list->the_post();?>
+                                    
+                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                            
+                                <div class="sub-title">
+                                    <?php the_excerpt(); ?>
+                                </div>
+                       
+                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                         <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
-                    <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
-                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-bg.svg" alt="bg" id="product-dev-bg">
-                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-brainstorm.svg" alt="brainstorm" id="product-dev-brainstorm">
-                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-people.svg" alt="people" id="product-dev-people">
+                            <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
+                                <img src="<?php bloginfo('template_directory') ?>/img/product-dev-bg.svg" alt="bg" id="product-dev-bg">
+                                <img src="<?php bloginfo('template_directory') ?>/img/product-dev-brainstorm.svg" alt="brainstorm" id="product-dev-brainstorm">
+                                <img src="<?php bloginfo('template_directory') ?>/img/product-dev-people.svg" alt="people" id="product-dev-people">
+                            </div>
+                     
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <div class="top-slide-scene">
             <div class="top-slide-object" id="sport-dev" data-index="2">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
-                        <h1 class="title">Disruptive Software Technologies For Sport </h1>
-                        <div class="sub-title">
-                            Being an IT Consultancy and Custom Solution Development company we are fond of sports.
-                            We do sport in natural environment for ourselves, and in virtual one for the rest of sports
-                            world.
-                        </div>
-                        <a href="#" class="btn title-button">learn more</a>
+                        <?php  
+                            wp_reset_query();
+            
+                                $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'offset'=> 1, 'posts_per_page'=> 1)); 
+                                if ( $resent_list->have_posts() ) :
+                                    while ( $resent_list->have_posts() ) :
+                                    $resent_list->the_post();?>
+                                    
+                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                            
+                                <div class="sub-title">
+                                    <?php the_excerpt(); ?>
+                                </div>
+                       
+                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                         <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
                         <img src="<?php bloginfo('template_directory') ?>/img/sport-running-man.svg" alt="sport-man" id="sport-running-man">
@@ -48,13 +69,22 @@ get_header();?>
             <div class="top-slide-object" id="outsourcing" data-index="3">
                 <div class="row px-lg-2">
                     <div class="col-sm-12 col-md-6 title-wrapper">
-                        <h1 class="title">Outsourcing</h1>
-                        <div class="sub-title">
-                            Being an IT Consultancy and Custom Solution Development company we are fond of sports.
-                            We do sport in natural environment for ourselves, and in virtual one for the rest of sports
-                            world.
-                        </div>
-                        <a href="#" class="btn title-button">learn more</a>
+                        <?php  
+                            wp_reset_query();
+            
+                                $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'offset'=> 2, 'posts_per_page'=> 1)); 
+                                if ( $resent_list->have_posts() ) :
+                                    while ( $resent_list->have_posts() ) :
+                                    $resent_list->the_post();?>
+                                    
+                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                            
+                                <div class="sub-title">
+                                    <?php the_excerpt(); ?>
+                                </div>
+                       
+                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                         <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
                         <img src="<?php bloginfo('template_directory') ?>/img/outsourcing-computer.svg" alt="computer" id="outsourcing-computer">
@@ -64,138 +94,195 @@ get_header();?>
                 </div>
             </div>
         </div>
-    </div>
+    </div>             
+
     <div class="container" id="title-cards">
         <div class="row">
             <div class='section-head'>directions</div>
             <div class="col-12 title-cards-wrapper">
-                <div class="title-card-item" data-id="product-dev" data-index="1">
+
+                 <?php  
+                    wp_reset_query();
+                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                            if ( $resent_list->have_posts() ) :
+                                while ( $resent_list->have_posts() ) :
+                            $resent_list->the_post();
+
+                            $id_card = get_the_ID();
+                            $data_id;
+                            $data_index;
+
+                            if($id_card == 42) {
+                                $data_index = '1';
+                                $data_id = 'product-dev';
+                            } else if ($id_card == 46) {
+                                $data_index = '2';
+                                $data_id = 'sport-dev';
+                            } else if ($id_card == 47) {
+                                $data_index = '3';
+                                $data_id = 'outsourcing';
+                            } else {return;}
+                            ?>
+                        <div class="title-card-item" data-id="<?php echo($data_id); ?>" data-index="<?php echo ($data_index); ?>">
                     <div class="col-md-8 col-6 title-card-item-text">
-                        <span>Product Dev</span>
+                        <span><?php the_title(); ?></span>
                         <a href="#">Learn More</a>
                     </div>
                     <div class="col-md-4 col-6 title-card-item-image"></div>
                 </div>
-                <div class="title-card-item sport-dev" data-id="sport-dev" data-index="2">
-                    <div class="col-md-8 col-6 title-card-item-text">
-                        <span>Sport Dev</span>
-                        <a href="#">Learn More</a>
-                    </div>
-                    <div class="col-md-4 col-6 title-card-item-image"></div>
-                </div>
-                <div class="title-card-item" data-id="outsourcing" data-index="3">
-                    <div class="col-md-8 col-6 title-card-item-text">
-                        <span>Outsourcing</span>
-                        <a href="#">Learn More</a>
-                    </div>
-                    <div class="col-md-4 col-6 title-card-item-image"></div>
-                </div>
-            </div>
+
+                 <?php  endwhile; endif;  wp_reset_query(); ?>
+            
         </div>
     </div>
 </section>
-<section id="about-us" style="opacity: 0;">
 
+
+<section id="about-us" style="opacity: 0;">
     <div class="owl-carousel owl-theme  about-us-slider">
         <div class="about-us-slide container inner-container" data-index="1">
             <div class="about-us-image">
                 <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
             </div>
-            <div class="about-us-text">
-                <div class="about-us-head">
-                    Product Dev
-                </div>
-                <h3 class="about-us-header">
-                    What we do for Product Dev
-                </h3>
-                <div class="about-us-description">
-                    We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
-                    We don't sell code or development hours, we share our expertise, experience and specific IT domain
-                    knowledge.
-                </div>
-            </div>
+
+                <?php  
+                    wp_reset_query();
+                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> 1)); 
+                            if ( $resent_list->have_posts() ) :
+                                while ( $resent_list->have_posts() ) :
+                            $resent_list->the_post();?>
+                            <div class="about-us-text">
+                                <div class="about-us-head">
+                                    <?php the_title(); ?>
+                                </div>
+
+                                <h3 class="about-us-header">
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                                </h3>
+
+                                <div class="about-us-description">
+                                    <?php the_content(); ?>.
+                                </div>
+                            </div>
+             <?php  endwhile; endif;  wp_reset_query(); ?>
+            
         </div>
         <div class="about-us-slide container inner-container" data-index="2">
             <div class="about-us-image">
                 <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
             </div>
-            <div class="about-us-text">
-                <div class="about-us-head">
-                    Sport Dev
-                </div>
-                <h3 class="about-us-header">
-                    What we do for Sport Insudtry
-                </h3>
-                <div class="about-us-description">
-                    We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
-                    We don't sell code or development hours, we share our expertise, experience and specific IT domain
-                    knowledge.
-                </div>
-            </div>
+
+            <?php  
+                wp_reset_query();
+                    $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'offset'=> 1, 'posts_per_page'=> 1)); 
+                        if ( $resent_list->have_posts() ) :
+                            while ( $resent_list->have_posts() ) :
+                        $resent_list->the_post();?>
+                        <div class="about-us-text">
+                            <div class="about-us-head">
+                                <?php the_title(); ?>
+                            </div>
+                            <h3 class="about-us-header">
+                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                            </h3>
+                            <div class="about-us-description">
+                                <?php the_content(); ?>.
+                            </div>
+                        </div>
+             <?php  endwhile; endif;  wp_reset_query(); ?>
         </div>
         <div class="about-us-slide container inner-container" data-index="3">
             <div class="about-us-image">
                 <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
             </div>
-            <div class="about-us-text">
-                <div class="about-us-head">
-                    Outsourcing
-                </div>
-                <h3 class="about-us-header">
-                    What we do for Outsourcing
-                </h3>
-                <div class="about-us-description">
-                    We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
-                    We don't sell code or development hours, we share our expertise, experience and specific IT domain
-                    knowledge.
-                </div>
-            </div>
+            <?php  
+                wp_reset_query();
+                    $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'offset'=> 2, 'posts_per_page'=> 1)); 
+                        if ( $resent_list->have_posts() ) :
+                            while ( $resent_list->have_posts() ) :
+                        $resent_list->the_post();?>
+                        <div class="about-us-text">
+                            <div class="about-us-head">
+                                <?php the_title(); ?>
+                            </div>
+                            <h3 class="about-us-header">
+                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                            </h3>
+                            <div class="about-us-description">
+                                <?php the_content(); ?>.
+                            </div>
+                        </div>
+             <?php  endwhile; endif;  wp_reset_query(); ?>
         </div>
     </div>
 </section>
+
+
 <section id="philosophy">
     <div class="container inner-container">
         <div class="section-head">
             PHILOSOPHY
         </div>
-        <div class="section-header">
-            Why We Create Great Things
-        </div>
-        <div class="section-description">
-            We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
-            We don't sell code or development hours, we share our expertise, experience and specific IT domain
-            knowledge.
-            We are Digital Problem Solvers.
-        </div>
-        <div class="philosophy-icon-wrapper">
-            <div class="philosophy-item">
-                <div class="philosophy-icon approach">
-                    <img src="<?php bloginfo('template_directory') ?>/img/philosophy-icon-1.svg" alt="approach-icon">
-                </div>
-                <div class="philosophy-item-text">
-                    Full-fledged development approach
-                </div>
-            </div>
-            <div class="philosophy-item">
-                <div class="philosophy-icon business">
-                    <img src="<?php bloginfo('template_directory') ?>/img/philosophy-icon-2.svg" alt="business-icon">
-                </div>
-                <div class="philosophy-item-text">
-                    Business value first
-                </div>
-            </div>
-            <div class="philosophy-item">
-                <div class="philosophy-icon analysis">
-                    <img src="<?php bloginfo('template_directory') ?>/img/philosophy-icon-3.svg" alt="analysis-icon">
-                </div>
-                <div class="philosophy-item-text">
-                    Deep business analysis
-                </div>
-            </div>
-        </div>
+        <?php  
+                wp_reset_query();
+                    $resent_list = new WP_Query(array('post_type'=> 'fetures', 'order'=> 'ASC',  'posts_per_page'=> -1)); 
+                        if ( $resent_list->have_posts() ) :
+                            while ( $resent_list->have_posts() ) :
+                        $resent_list->the_post();?>
+
+                        <div class="section-header">
+                            <?php if( get_field('title_page') ): ?><?php the_field('title_page'); ?><?php endif; ?>
+                        </div>
+
+                        <div class="section-description">
+                            <?php the_content(); ?>
+                        </div>
+
+                        <div class="philosophy-icon-wrapper">
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon approach">
+                                    <?php if( get_field('first_icon') ): ?><img src="<?php the_field('first_icon'); ?>" /><?php endif; ?>
+                                </div>
+                                <div class="philosophy-item-text">
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)); ?>
+                                </div>
+                            </div>
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon business">
+                                    <?php if( get_field('second_icon') ): ?><img src="<?php the_field('second_icon'); ?>" /><?php endif; ?>
+                                </div>
+                                <div class="philosophy-item-text">
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)); ?>
+                                </div>
+                            </div>
+                            <div class="philosophy-item">
+                                <div class="philosophy-icon analysis">
+                                    <?php if( get_field('third_icon') ): ?><img src="<?php the_field('third_icon'); ?>" /><?php endif; ?>
+                                </div>
+                                <div class="philosophy-item-text">
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)); ?>
+                                </div>
+                            </div>
+                        </div>
+
+                <?php  endwhile; endif;  wp_reset_query(); ?>
+
     </div>
 </section>
 <section id="clients">
+<?php
+    $args = array( 'post_type'=> 'clients', 'posts_per_page' => 5,  'orderby'=> 'rand', 'tax_query' => array(
+    array(
+            'taxonomy' => 'type clients',
+            'terms' => array( 'All' )
+        )
+    )
+    );
+        $sposts = get_posts($args);
+        foreach($sposts as $post) :setup_postdata($post);
+        ?>
+         <li><?php the_post_thumbnail(); ?></li>
+    <?php endforeach; ?>
     <div class="container">
         <div class="section-head">
             CLIENTS

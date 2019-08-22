@@ -24082,14 +24082,10 @@ footer.no-inquiry.footer-wave-3 {
 
   .top-part{display: none;}
 
-
   .showcase-item-overlay {display: block;}
 
-  .showcase-button-wrapper a{
-    margin: 0 auto;
+  .showcase-button-wrapper a{margin: 45px auto;
   }
-
-  .showcase-button-wrapper a {margin-top: 45px;}
 
   .showcases-catalog-item:hover .showcase-item-overlay {opacity: 1;}
 

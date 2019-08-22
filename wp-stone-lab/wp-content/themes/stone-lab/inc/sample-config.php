@@ -393,8 +393,7 @@
          
  
 
-
-
+/*
 
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Basic Fields', 'redux-framework-demo' ),
@@ -1881,6 +1880,8 @@
         )
     ) );
 */
+
+    /*
     // -> START Additional Types
     Redux::setSection( $opt_name, array(
         'title' => __( 'Additional Types', 'redux-framework-demo' ),
@@ -2396,6 +2397,8 @@
      * This is a test function that will let you see when the compiler hook occurs.
      * It only runs if a field    set with compiler=>true is changed.
      * */
+
+
     if ( ! function_exists( 'compiler_action' ) ) {
         function compiler_action( $options, $css, $changed_values ) {
             echo '<h1>The compiler hook has run!</h1>';
