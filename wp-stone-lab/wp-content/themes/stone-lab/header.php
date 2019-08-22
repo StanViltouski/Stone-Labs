@@ -37,7 +37,21 @@
                 </a>
             </div>
             <div class="mobile-menu-wrapper">
-                <ul class="mobile-menu">
+
+                <?php wp_nav_menu([
+                    'theme_location'  => '',
+                    'menu'            => 'header-menu', 
+                    'container'       => false, 
+                    'menu_class'      => false, 
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'items_wrap'      => '<ul class="mobile-menu">%3$s</ul>',
+                    'depth'           => 2,
+
+                ]);
+                ?>
+
+             <!--   <ul class="mobile-menu">
                     <li class="mobile-nav-item">
                         <div class="mobile-dropdown-wrapper">
                             <div class="mobile-dropdown-item-toggler">
@@ -63,6 +77,8 @@
                         <a href="/contacts.html">Contacts</a>
                     </li>
                 </ul>
+            -->
+
                 <div class="mobile-nav-item-button">
                     <a class="btn" href="#">Send Inquiry</a>
                 </div>
@@ -87,11 +103,11 @@
                 <?php wp_nav_menu([
                     'theme_location'  => '',
                     'menu'            => 'header-menu', 
-                    'container'       => 'div', 
-                    'menu_class'      => 'menu', 
+                    'container'       => false, 
+                    'menu_class'      => false, 
                     'echo'            => true,
                     'fallback_cb'     => 'wp_page_menu',
-                    'items_wrap'      => '<ul id="%1$s" class="navbar-nav">%3$s</ul>',
+                    'items_wrap'      => '<ul class="navbar-nav">%3$s</ul>',
                     'depth'           => 2,
 
                 ]);

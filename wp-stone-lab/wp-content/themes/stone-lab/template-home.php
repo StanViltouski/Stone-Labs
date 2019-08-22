@@ -270,20 +270,7 @@ get_header();?>
     </div>
 </section>
 <section id="clients">
-<?php
-    $args = array( 'post_type'=> 'clients', 'posts_per_page' => 5,  'orderby'=> 'rand', 'tax_query' => array(
-    array(
-            'taxonomy' => 'type clients',
-            'terms' => array( 'All' )
-        )
-    )
-    );
-        $sposts = get_posts($args);
-        foreach($sposts as $post) :setup_postdata($post);
-        ?>
-         <li><?php the_post_thumbnail(); ?></li>
-    <?php endforeach; ?>
-    <div class="container">
+	<div class="container">
         <div class="section-head">
             CLIENTS
         </div>
@@ -291,12 +278,23 @@ get_header();?>
             Proud To Work With
         </div>
         <div class="owl-carousel owl-theme clients-slider">
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-2.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-3.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-4.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-5.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-6.png" alt="client-logo"></div>
+	
+			<?php
+			wp_reset_query();
+    			$args = array( 'post_type'=> 'clients', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
+    				array(
+    		        	'taxonomy' => 'type clients',
+    		        	'field'    => 'slug',
+    		        	'terms'   => array( 'all' )
+    		    	)
+    			)
+    		);
+    		    $posts = get_posts($args);
+    		    foreach($posts as $post) :setup_postdata($post);
+    		    ?>
+    		     <div class="clients-slide-wrapper"><?php the_post_thumbnail(); ?></div>
+    		
+    		<?php endforeach; wp_reset_query(); ?>
         </div>
     </div>
 </section>

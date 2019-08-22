@@ -42,12 +42,13 @@ if ( ! function_exists( 'stone_lab_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+
+	// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'primary', 'stone-lab' ),
 			'footer-menu' => esc_html__( 'Footer', 'stone-lab' ),
 		) );
-	
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -117,6 +118,8 @@ function stone_lab_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'stone_lab_widgets_init' );
+
+
 
 function my_myme_types($mime_types){
     $mime_types['svg'] = 'image/svg+xml'; // поддержка SVG

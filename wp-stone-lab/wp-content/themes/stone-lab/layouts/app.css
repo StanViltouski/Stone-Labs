@@ -16446,8 +16446,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168);
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168) format("embedded-opentype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?7559b3774a0625e8ca6c0160f8f6cfd8) format("woff2"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?fe9d62e0d16a333a20e63c3e7595f82e) format("woff"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?ed2b8bf117160466ba6220a8f1da54a4) format("truetype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?073c2f3ce60eaf69cc2767ef3d989078) format("svg");
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?7559b3774a0625e8ca6c0160f8f6cfd8) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?fe9d62e0d16a333a20e63c3e7595f82e) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?ed2b8bf117160466ba6220a8f1da54a4) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?073c2f3ce60eaf69cc2767ef3d989078) format("svg");
 }
 
 .fab {
@@ -16464,8 +16464,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?ef3df98419d143d9617fe163bf4edc0b);
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?ef3df98419d143d9617fe163bf4edc0b) format("embedded-opentype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?b5cf8ae26748570d8fb95a47f46b69e1) format("woff2"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?4bced7c4c0d61d4f988629bb8ae80b8b) format("woff"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?acf50f59802f20d8b45220eaae532a1c) format("truetype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?b557f56e367e59344ca95f9d1fb44352) format("svg");
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?ef3df98419d143d9617fe163bf4edc0b);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?ef3df98419d143d9617fe163bf4edc0b) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?b5cf8ae26748570d8fb95a47f46b69e1) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?4bced7c4c0d61d4f988629bb8ae80b8b) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?acf50f59802f20d8b45220eaae532a1c) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?b557f56e367e59344ca95f9d1fb44352) format("svg");
 }
 
 .fa,
@@ -16484,8 +16484,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?fc9c63c8224fb341fc933641cbdd12ef);
-  src: url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?fc9c63c8224fb341fc933641cbdd12ef) format("embedded-opentype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?e07d9e40b26048d9abe2ef966cd6e263) format("woff2"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?e5770f9863963fb576942e25214a226d) format("woff"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?59215032a4397507b80e5625dc323de3) format("truetype"), url(http://wp-stone-lab/wp-content/themes/stone-lab/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?8fdea4e89ac405d9f8db327adb331d8d) format("svg");
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?fc9c63c8224fb341fc933641cbdd12ef);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?fc9c63c8224fb341fc933641cbdd12ef) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?e07d9e40b26048d9abe2ef966cd6e263) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?e5770f9863963fb576942e25214a226d) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?59215032a4397507b80e5625dc323de3) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?8fdea4e89ac405d9f8db327adb331d8d) format("svg");
 }
 
 .far {
@@ -19924,6 +19924,7 @@ section.header {
   letter-spacing: normal;
   color: #02bdf3;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .mobile-menu-fixed .mobile-nav-item > a:hover,
@@ -20010,18 +20011,16 @@ nav .navbar-nav {
   justify-content: flex-end;
 }
 
-.menu-item-type-post_type{
-   padding-right: 40px;
-}
+nav li.nav-item {padding-right: 40px;}
 
 
-#menu-item-27 a i {
+nav .dropdown-link i {
   position: relative;
   top: 2px;
   right: -10px;
 }
 
-.menu-item a :not(.btn):not(.navbar-brand){
+nav a:not(.btn):not(.navbar-brand):not(.nav-dropdown-item) {
   height: 22px;
   color: #FFFFFF;
   font-family: "Lato", sans-serif;
@@ -20033,26 +20032,9 @@ nav .navbar-nav {
   transition: all 0.1s ease-in-out;
 }
 
-.menu-item a {
-  height: 22px;
-  color: #FFFFFF;
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 22px;
-  text-align: center;
-  display: inline-block;
-  transition: all 0.1s ease-in-out;
-}
-
-.menu-item a:hover {
+nav a:not(.btn):not(.navbar-brand):not(.nav-dropdown-item):hover {
   color: #000000;
   text-decoration: none;
-}
-
-.sub-menu li a:hover{
-  color: #ef1c3b;
-  text-decoration: underline;
 }
 
 
@@ -20093,7 +20075,7 @@ nav .nav-item-button a.btn:hover {
   top: 2px;
 }
 
-.sub-menu{
+.nav-dropdown-menu {
   position: absolute;
   display: none;
   background: #ffffff;
@@ -20103,7 +20085,7 @@ nav .nav-item-button a.btn:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.sub-menu li a{
+.nav-dropdown-menu a.nav-dropdown-item {
   color: #ef1c3b;
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -24264,20 +24246,15 @@ footer.no-inquiry.footer-wave-3 {
     height: 52px;
   }
 
-  .menu-item-type-post_type{
+  nav li.nav-item {
    padding-right: 28px;
 }
 
-  nav a:not(.btn):not(.navbar-brand):not(.menu-item-type-custom a) {
+   nav a:not(.btn):not(.navbar-brand):not(.nav-dropdown-item) {
     font-size: 17px;
   }
 
-  #menu-item-27 a{
-    display: flex;
-  }
-
-  #menu-item-27 a i {
-    margin-top: 4px;
+  nav .dropdown-link i {
     font-size: 14px;
   }
 
