@@ -278,19 +278,19 @@
 
     // -> START Basic Fields
      Redux::setSection( $opt_name, array(
-        'title'            => __( 'Header', 'redux-framework-demo' ),
+        'title'            => esc_html__( 'Header', 'stone-lab' ),
         'id'               => 'header',
         'customizer_width' => '450px',
-        'desc'             => __( 'Upload your logo', 'redux-framework-demo' ),
+        'desc'             => esc_html__( 'Upload your logo', 'stone-lab' ),
         'fields'           => array(
             array(
                 'id'       => 'stone-lab-desk-logo',
                 'type'     => 'media',
                 'url'      => true,
-                'title'    => __( 'Your desktop logo', 'redux-framework-demo' ),
+                'title'    => esc_html__( 'Your desktop logo', 'stone-lab' ),
                 'compiler' => 'true',
-                'desc'     => __( 'Upload your desktop logo', 'redux-framework-demo' ),
-                'subtitle' => __( 'Recommended size 310 x 64px', 'redux-framework-demo' ),
+                'desc'     => esc_html__( 'Upload your desktop logo', 'stone-lab' ),
+                'subtitle' => esc_html__( 'Recommended size 310 x 64px', 'stone-lab' ),
                 'default'  => '',
             ),
 
@@ -298,10 +298,10 @@
                 'id'       => 'stone-lab-mob-logo',
                 'type'     => 'media',
                 'url'      => true,
-                'title'    => __( 'Your mobile menu logo', 'redux-framework-demo' ),
+                'title'    => esc_html__( 'Your mobile menu logo', 'stone-lab' ),
                 'compiler' => 'true',
-                'desc'     => __( 'Upload your mobile menu logo', 'redux-framework-demo' ),
-                'subtitle' => __( 'Recommended size 168 x 36px', 'redux-framework-demo' ),
+                'desc'     => esc_html__( 'Upload your mobile menu logo', 'stone-lab' ),
+                'subtitle' => esc_html__( 'Recommended size 168 x 36px', 'stone-lab' ),
                 'default'  => '',
             ),
 
@@ -309,68 +309,89 @@
     ) );
 
       
-
      Redux::setSection( $opt_name, array(
-        'title'            => __( 'Footer', 'redux-framework-demo' ),
+        'title'            => esc_html__( 'Footer', 'stone-lab' ),
         'id'               => 'footer',
         'customizer_width' => '450px',
-        'desc'             => __( 'Enter your data', 'redux-framework-demo' ),
+        'desc'             => esc_html__( 'Enter your data', 'stone-lab' ),
         'fields'           => array(
             array(
                 'id'       => 'stone-lab-footer-logo',
                 'type'     => 'media',
                 'url'      => true,
-                'title'    => __( 'Your footer logo', 'redux-framework-demo' ),
+                'title'    => esc_html__( 'Your footer logo', 'stone-lab' ),
                 'compiler' => 'true',
-                'desc'     => __( 'Upload your footer logo', 'redux-framework-demo' ),
-                'subtitle' => __( 'Recommended size 211 x 45px', 'redux-framework-demo' ),
-                'default'  => '',
-            ),
-             array(
-                'id'       => 'social-network',
-                'type'     => 'text',
-                'title'    => __( 'Your social nets', 'redux-framework-demo' ),
-                'subtitle' => __( 'Enter your links', 'redux-framework-demo' ),
-                'label'    => true,
-                'options'  => array(
-                    'Link facebook'   => 'Link facebook',
-                    'Link linkedin'   => 'Link linkedin',
-                    'Link twitter' => 'Link twitter',
-                    'Link skype' => 'Link skype',
-                    'Link github' => 'Link github',
-                )
-            ),
-          
-            array(
-                'id'       => 'adress',
-                'type'     => 'textarea',
-                'url'      => true,
-                'title'    => __( 'Your adress', 'redux-framework-demo' ),
-                'compiler' => 'true',
-                'desc' => __( 'Enter your adress', 'redux-framework-demo' ),
-                'default'  => '',
-            ),
-            array(
-                'id'       => 'email',
-                'type'     => 'text',
-                'url'      => true,
-                'title'    => __( 'Your email', 'redux-framework-demo' ),
-                'compiler' => 'true',
-                'desc' => __( 'Enter your email', 'redux-framework-demo' ),
-                'default'  => '',
-            ),
-            array(
-                'id'       => 'telephone',
-                'type'     => 'text',
-                'url'      => true,
-                'title'    => __( 'Your telephone', 'redux-framework-demo' ),
-                'compiler' => 'true',
-                'desc' => __( 'Enter your telephone', 'redux-framework-demo' ),
+                'desc'     => esc_html__( 'Upload your footer logo', 'stone-lab' ),
+                'subtitle' => esc_html__( 'Recommended size 211 x 45px', 'stone-lab' ),
                 'default'  => '',
             ),
 
-        )
+       )
     ) );
+            Redux::setSection( $opt_name, array(
+                    'title'            => esc_html__( 'Social nets', 'stone-lab' ),
+                    'id'               => 'footer-social',
+                    'subsection'       => true,
+                    'customizer_width' => '450px',
+                    'desc'             => esc_html__( 'Enter your data', 'stone-lab' ),
+                    'fields'           => array(
+                        array(
+                            'id'       => 'social-network',
+                            'type'     => 'text',
+                            'title'    => esc_html__( 'Your social nets', 'stone-lab' ),
+                            'subtitle' => esc_html__( 'Enter your links', 'stone-lab' ),
+                            'label'    => true,
+                            'options'  => array(
+                                'Link facebook'   => 'Link facebook',
+                                'Link linkedin'   => 'Link linkedin',
+                                'Link twitter' => 'Link twitter',
+                                'Link skype' => 'Link skype',
+                                'Link github' => 'Link github',
+                            )
+                        ),
+
+                    )
+         ) );
+
+            Redux::setSection( $opt_name, array(
+                    'title'            => esc_html__( 'Contacts', 'stone-lab' ),
+                    'id'               => 'footer-contacts',
+                    'subsection'       => true,
+                    'customizer_width' => '450px',
+                    'desc'             => esc_html__( 'Enter your data', 'stone-lab' ),
+                    'fields'           => array(   
+          
+                        array(
+                            'id'       => 'adress',
+                            'type'     => 'textarea',
+                            'url'      => true,
+                            'title'    => esc_html__( 'Your adress', 'stone-lab' ),
+                            'compiler' => 'true',
+                            'desc'     => esc_html__( 'Enter your adress', 'stone-lab' ),
+                            'default'  => '',
+                        ),
+                        array(
+                            'id'       => 'email',
+                            'type'     => 'text',
+                            'url'      => true,
+                            'title'    => esc_html__( 'Your email', 'stone-lab' ),
+                            'compiler' => 'true',
+                            'desc' => __( 'Enter your email', 'stone-lab' ),
+                            'default'  => '',
+                        ),
+                        array(
+                            'id'       => 'telephone',
+                            'type'     => 'text',
+                            'url'      => true,
+                            'title'    => esc_html__( 'Your telephone', 'stone-lab' ),
+                            'compiler' => 'true',
+                            'desc'     => esc_html__( 'Enter your telephone', 'stone-lab' ),
+                            'default'  => '',
+                        ),
+                    )
+             ) );
+         
+ 
 
 
 

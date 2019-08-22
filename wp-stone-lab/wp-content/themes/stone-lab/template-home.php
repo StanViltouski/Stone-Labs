@@ -517,6 +517,22 @@ get_header();?>
         </ul>
     </div>
 </section>
+
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3">
+    <div class="container inner-container">
+        <div class="footer-inquiry">
+            <div class="inquiry-title">
+                Let’s Work Together
+            </div>
+            <div class="inquiry-description">
+                Have questions about how Stone Labs can help you streamline operations and improve performance?<br>
+                Feel free to ask us.
+            </div>
+            <div class="inquiry-button">
+                <a href="/apply-form.html" class="white-button">Send Inquiry</a>
+            </div>
+        </div>
+    </div>
         
 
  <?php get_footer(); ?>
