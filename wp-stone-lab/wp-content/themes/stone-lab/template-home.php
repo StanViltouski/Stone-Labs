@@ -103,7 +103,7 @@ get_header();?>
 
                  <?php  
                     wp_reset_query();
-                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> 3)); 
                             if ( $resent_list->have_posts() ) :
                                 while ( $resent_list->have_posts() ) :
                             $resent_list->the_post();
@@ -310,203 +310,88 @@ get_header();?>
             We are Digital Problem Solvers.
         </div>
         <div class="showcases-wrapper owl-carousel owl-theme owl-height">
-            <div class="showcase-item">
-                <div class="showcase-item-scene">
-                    <div class="showcase-item-object">
-                        <div class="card-face card-face-front">
-                            <div class="showcase-item-text">
-                                <div class="showcase-item-category">
-                                    Supply Chain
+
+            <?php
+            wp_reset_query();
+                $args = array( 'post_type'=> 'showcases', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
+                    array(
+                        'taxonomy' => 'pages-showcases',
+                        'field'    => 'slug',
+                        'terms'   => array( 'main' )
+                    )
+                )
+            );
+                $posts = get_posts($args);
+                foreach($posts as $post) :setup_postdata($post);?>
+
+                        <div class="showcase-item">
+                            <div class="showcase-item-scene">
+                                <div class="showcase-item-object">
+
+                                    <div class="card-face card-face-front">
+                                        <div class="showcase-item-text">
+                                            <div class="showcase-item-category">
+                                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                            </div>
+                                            <div class="showcase-item-title">
+                                                <?php the_title(); ?>
+                                            </div>
+                                            <div class="showcase-item-description">
+                                               <?php the_excerpt(); ?>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-item-image">
+                                           <?php the_post_thumbnail(); ?>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card-face card-face-back">
+                                        <div class="showcase-item-category">
+                                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                        </div>
+                                        <div class="showcase-item-title">
+                                            <?php the_title(); ?>
+                                        </div>
+                                        <div class="showcase-item-description">
+                                            <?php the_content(); ?>
+                                        </div>
+                                        <div class="showcase-info">
+                                            <div class="duration">
+                                                <div class="title">
+                                                    Duration
+                                                </div>
+                                                <div class="value">
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true)); ?>
+                                                </div>
+                                            </div>
+                                            <div class="team">
+                                                <div class="title">
+                                                    Team
+                                                </div>
+                                                <div class="value">
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true)); ?>
+                                                </div>
+                                            </div>
+                                            <div class="technology">
+                                                <div class="title">
+                                                    technology
+                                                </div>
+                                                <div class="value">
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true)); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showcase-button-wrapper">
+                                            <a href="#" class="showcase-link">See Details</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="showcase-item-title">
-                                    Music Streamer
-                                </div>
-                                <div class="showcase-item-description">
-                                    Modern medicine has known a rapid progress in the last decades and many traditional
-                                    forms.
-                                </div>
-                            </div>
-                            <div class="showcase-item-image">
-                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
                             </div>
                         </div>
-                        <div class="card-face card-face-back">
-                            <div class="showcase-item-category">
-                                Supply Chain
-                            </div>
-                            <div class="showcase-item-title">
-                                Music Streamer
-                            </div>
-                            <div class="showcase-item-description">
-                                Pain may sometimes be the reason why people change.
-                                Getting bad grades make you realize that you need to study.
-                                Debts remind you of your inability to look for a source of income.
-                            </div>
-                            <div class="showcase-info">
-                                <div class="duration">
-                                    <div class="title">
-                                        Duration
-                                    </div>
-                                    <div class="value">
-                                        48 days
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="title">
-                                        Team
-                                    </div>
-                                    <div class="value">
-                                        8 people
-                                    </div>
-                                </div>
-                                <div class="technology">
-                                    <div class="title">
-                                        technology
-                                    </div>
-                                    <div class="value">
-                                        PHP/Laravel
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="showcase-button-wrapper">
-                                <a href="#" class="showcase-link">See Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                       <?php endforeach; wp_reset_query(); ?>
             </div>
-            <div class="showcase-item">
-                <div class="showcase-item-scene">
-                    <div class="showcase-item-object">
-                        <div class="card-face card-face-front">
-                            <div class="showcase-item-text">
-                                <div class="showcase-item-category">
-                                    Supply Chain
-                                </div>
-                                <div class="showcase-item-title">
-                                    Music Streamer
-                                </div>
-                                <div class="showcase-item-description">
-                                    Pain may sometimes be the reason why people change.
-                                </div>
-                            </div>
-                            <div class="showcase-item-image">
-                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
-                            </div>
-                        </div>
-                        <div class="card-face card-face-back">
-                            <div class="showcase-item-category">
-                                Supply Chain
-                            </div>
-                            <div class="showcase-item-title">
-                                Music Streamer
-                            </div>
-                            <div class="showcase-item-description">
-                                Pain may sometimes be the reason why people change.
-                                Getting bad grades make you realize that you need to study.
-                                Debts remind you of your inability to look for a source of income.
-                            </div>
-                            <div class="showcase-info">
-                                <div class="duration">
-                                    <div class="title">
-                                        Duration
-                                    </div>
-                                    <div class="value">
-                                        48 days
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="title">
-                                        Team
-                                    </div>
-                                    <div class="value">
-                                        8 people
-                                    </div>
-                                </div>
-                                <div class="technology">
-                                    <div class="title">
-                                        technology
-                                    </div>
-                                    <div class="value">
-                                        PHP/Laravel
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="showcase-button-wrapper">
-                                <a href="#" class="showcase-link">See Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="showcase-item">
-                <div class="showcase-item-scene">
-                    <div class="showcase-item-object">
-                        <div class="card-face card-face-front">
-                            <div class="showcase-item-text">
-                                <div class="showcase-item-category">
-                                    Supply Chain
-                                </div>
-                                <div class="showcase-item-title">
-                                    Music Streamer
-                                </div>
-                                <div class="showcase-item-description">
-                                    Pain may sometimes be the reason why people change.
-                                </div>
-                            </div>
-                            <div class="showcase-item-image">
-                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
-                            </div>
-                        </div>
-                        <div class="card-face card-face-back">
-                            <div class="showcase-item-category">
-                                Supply Chain
-                            </div>
-                            <div class="showcase-item-title">
-                                Music Streamer
-                            </div>
-                            <div class="showcase-item-description">
-                                Pain may sometimes be the reason why people change.
-                                Getting bad grades make you realize that you need to study.
-                                Debts remind you of your inability to look for a source of income.
-                                Pain may sometimes be the reason why people change.
-                                Getting bad grades make you realize that you need to study.
-                                Debts remind you of your inability to look for a source of income.
-                            </div>
-                            <div class="showcase-info">
-                                <div class="duration">
-                                    <div class="title">
-                                        Duration
-                                    </div>
-                                    <div class="value">
-                                        48 days
-                                    </div>
-                                </div>
-                                <div class="team">
-                                    <div class="title">
-                                        Team
-                                    </div>
-                                    <div class="value">
-                                        8 people
-                                    </div>
-                                </div>
-                                <div class="technology">
-                                    <div class="title">
-                                        technology
-                                    </div>
-                                    <div class="value">
-                                        PHP/Laravel
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="showcase-button-wrapper">
-                                <a href="#" class="showcase-link">See Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="blue-main-link-wrapper">
             <a href="#" class="blue-main-link">
                 View More
@@ -530,75 +415,41 @@ get_header();?>
     </div>
     <div class="testimonials-3d-carousel">
         <ul>
+                <?php
+                    wp_reset_query();
+                    $args = array( 'post_type'=> 'testimonials', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
+                            array(
+                                'taxonomy' => 'pages',
+                                'field'    => 'slug',
+                                'terms'   => array( 'main' )
+                            )
+                            )       
+                    );
+                    $posts = get_posts($args);
+            foreach($posts as $post) :setup_postdata($post);
+            ?>
             <li>
-                <div class="testimonials-item-wrapper">
-                    <div class="testimonials-object">
-                        <div class="quote-icon">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
-                        </div>
-                        <div class="testimonial-text">
-                            Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
-                            professionalism, positiveness and insight. Very thorough approach to requirement gathering,
-                            efficient and timely delivery of products. No hidden costs or surprises, excellent
-                            communication
-                            and I look forward to working with the team again with my future projects!
-                        </div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
-                            <span class="author-name">Michael Connor, CEO </span>
-                        </div>
-                        <div class="testimonial-logo-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
-                        </div>
+            <div class="testimonials-item-wrapper">
+                <div class="testimonials-object">
+                    <div class="quote-icon">
+                        <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                     </div>
-                </div>
+            <div class="testimonial-text">
+                <p><?php the_content(); ?></p>
+            </div>
+            <div class="testimonial-author-wrapper">
+                <?php if( get_field('avatar') ): ?><img src="<?php the_field('avatar'); ?>" /><?php endif; ?>
+                <span class="author-name"><?php the_title(); ?> </span>
+             </div>
+            <div class="testimonial-logo-wrapper">
+                <?php if( get_field('logo') ): ?><img src="<?php the_field('logo'); ?>" /><?php endif; ?>
+            </div>
+                   </div>
+            </div>
             </li>
-            <li>
-                <div class="testimonials-item-wrapper">
-                    <div class="testimonials-object">
-                        <div class="quote-icon">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
-                        </div>
-                        <div class="testimonial-text">
-                            Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
-                            professionalism, positiveness and insight. Very thorough approach to requirement gathering,
-                            efficient and timely delivery of products. No hidden costs or surprises, excellent
-                            communication
-                            and I look forward to working with the team again with my future projects!
-                        </div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
-                            <span class="author-name">Michael Connor, CEO </span>
-                        </div>
-                        <div class="testimonial-logo-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="testimonials-item-wrapper">
-                    <div class="testimonials-object">
-                        <div class="quote-icon">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
-                        </div>
-                        <div class="testimonial-text">
-                            Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
-                            professionalism, positiveness and insight. Very thorough approach to requirement gathering,
-                            efficient and timely delivery of products. No hidden costs or surprises, excellent
-                            communication
-                            and I look forward to working with the team again with my future projects!
-                        </div>
-                        <div class="testimonial-author-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
-                            <span class="author-name">Michael Connor, CEO </span>
-                        </div>
-                        <div class="testimonial-logo-wrapper">
-                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
-                        </div>
-                    </div>
-                </div>
-            </li>
+            
+            <?php endforeach; wp_reset_query(); ?>
+           
         </ul>
     </div>
 </section>
@@ -606,13 +457,9 @@ get_header();?>
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
     <div class="container inner-container">
         <div class="footer-inquiry">
-            <div class="inquiry-title">
-                Let’s Work Together
-            </div>
-            <div class="inquiry-description">
-                Have questions about how Stone Labs can help you streamline operations and improve performance?<br>
-                Feel free to ask us.
-            </div>
+  
+            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+
             <div class="inquiry-button">
                 <a href="/apply-form.html" class="white-button">Send Inquiry</a>
             </div>

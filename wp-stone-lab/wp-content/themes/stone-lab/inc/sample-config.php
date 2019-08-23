@@ -1821,7 +1821,7 @@
     ) );
 
     // -> START Typography
-    /*
+
     Redux::setSection( $opt_name, array(
         'title'  => __( 'Typography', 'redux-framework-demo' ),
         'id'     => 'typography',
@@ -1879,9 +1879,9 @@
             ),
         )
     ) );
-*/
 
-    /*
+
+    
     // -> START Additional Types
     Redux::setSection( $opt_name, array(
         'title' => __( 'Additional Types', 'redux-framework-demo' ),
@@ -2363,6 +2363,7 @@
     /*
      * <--- END SECTIONS
      */
+
 
 
     /*

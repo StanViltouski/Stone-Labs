@@ -24677,15 +24677,15 @@ footer.no-inquiry.footer-wave-3 {
   }
 
   .header-wave-1:before {
-     background: url("/img/wave_1_header.svg");
+     background: url("/img/wave_1_header.svg") no-repeat;
   }
 
   .header-wave-2:after {
-     background: url("/img/wave_2_header.svg");
+     background: url("/img/wave_2_header.svg") no-repeat;
   }
 
   .header-wave-3 {
-    background: url("/img/wave_3_header.svg");
+    background: url("/img/wave_3_header.svg") no-repeat;
   }
 
   .mobile-menu-fixed .container {

@@ -10646,8 +10646,8 @@ a.text-dark:focus {
 
 @font-face {
   font-family: "LucidaGrande";
-  src: url("/app/fonts/LucidaGrande.eot");
-  src: url("/app/fonts/LucidaGrande.eot") format("embedded-opentype"), url("/app/fonts/LucidaGrande.woff2") format("woff2"), url("/app/fonts/LucidaGrande.woff") format("woff"), url("/app/fonts/LucidaGrande.ttf") format("truetype"), url("/app/fonts/LucidaGrande.svg#LucidaGrande") format("svg");
+  src: url("../fonts/vendor/LucidaGrande/LucidaGrande.eot");
+  src: url("../fonts/vendor/LucidaGrande/LucidaGrande.eot") format("embedded-opentype"), url("../fonts/vendor/LucidaGrande/LucidaGrande.woff2") format("woff2"), url("../fonts/vendor/LucidaGrande/LucidaGrande.woff") format("woff"), url("../fonts/vendor/LucidaGrande/LucidaGrande.ttf") format("truetype"), url("../fonts/vendor/LucidaGrande/LucidaGrande.svg#LucidaGrande") format("svg");
 }
 
 /*!
@@ -20822,6 +20822,8 @@ section#showcases .section-description > br {
   overflow: hidden;
 }
 
+.showcase-item-description p {margin-bottom: 0;}
+
 .card-face-back {
   flex-direction: initial;
   flex-wrap: wrap;
@@ -24681,15 +24683,15 @@ footer.no-inquiry.footer-wave-3 {
   }
 
   .header-wave-1:before {
-     background: url("../img/wave_1_header.svg");
+     background: url("../img/wave_1_header.svg") no-repeat;
   }
 
   .header-wave-2:after {
-     background: url("../img/wave_2_header.svg");
+     background: url("../img/wave_2_header.svg") no-repeat;
   }
 
   .header-wave-3 {
-    background: url("../img/wave_3_header.svg");
+    background: url("../img/wave_3_header.svg") no-repeat;
   }
 
   .mobile-menu-fixed .container {

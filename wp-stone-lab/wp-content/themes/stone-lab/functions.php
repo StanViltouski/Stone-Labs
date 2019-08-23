@@ -108,16 +108,17 @@ add_action( 'after_setup_theme', 'stone_lab_content_width', 0 );
  */
 function stone_lab_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'stone-lab' ),
+		'name'          => esc_html__( 'Footer nameplate', 'stone-lab' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'stone-lab' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="inquiry-description">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2 class="inquiry-title">',
 		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'stone_lab_widgets_init' );
+
 
 
 
