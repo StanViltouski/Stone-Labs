@@ -30,29 +30,36 @@
             </div>
             <div class="top-category-links-wrapper">
 
-                <?php $wcatTerms = get_terms('showcases-filter', 
-                                array(
-                                    'hide_empty' => 0,
-                                    'parent'     => 0
-                                )); 
-                    foreach($wcatTerms as $wcatTerm) : ?>
+                <?php if ( is_tax('showcases-filter', 'outsourcing') ) { 
+                    $termID = 25;
+                    $taxonomyName = "showcases-filter";
+                    $termchildren = get_term_children( $termID, $taxonomyName );
 
-                    <?php
-                        $wsubargs = array(
-                           'hierarchical' => 1,
-                           'show_option_none' => '',
-                           'hide_empty' => 0,
-                           'parent' => $wcatTerm->term_id,
-                           'taxonomy' => 'showcases-filter'
-                        );
-                        $wsubcats = get_categories($wsubargs);
-                        foreach ($wsubcats as $wsc):
-                    ?>
+                foreach ($termchildren as $child) :
+                    $term = get_term_by( 'id', $child, $taxonomyName );
+                    echo '<a href="' . get_term_link( $term->term_id, $term->taxonomy ) . '" class="top-category-item">' . $term->name . '</a>';
+                endforeach; } ?>
 
-                <a href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>" class="top-category-item"><?php echo $wsc->name;?></a>
+                <?php if ( is_tax('showcases-filter', 'product_dev') ) { 
+                    $termID = 23;
+                    $taxonomyName = "showcases-filter";
+                    $termchildren = get_term_children( $termID, $taxonomyName );
 
-                        <?php endforeach; ?>  
-                    <?php endforeach; ?>
+                foreach ($termchildren as $child) :
+                    $term = get_term_by( 'id', $child, $taxonomyName );
+                    echo '<a href="' . get_term_link( $term->term_id, $term->taxonomy ) . '" class="top-category-item">' . $term->name . '</a>';
+                endforeach; } ?>
+
+                <?php if ( is_tax('showcases-filter', 'sport_dev') ) { 
+                    $termID = 24;
+                    $taxonomyName = "showcases-filter";
+                    $termchildren = get_term_children( $termID, $taxonomyName );
+
+                foreach ($termchildren as $child) :
+                    $term = get_term_by( 'id', $child, $taxonomyName );
+                    echo '<a href="' . get_term_link( $term->term_id, $term->taxonomy ) . '" class="top-category-item">' . $term->name . '</a>';
+                endforeach; } ?>
+
             </div>
         </div>
     </div>

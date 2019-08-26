@@ -5,6 +5,9 @@
 <?php $custom_adress = ($stone_lab_option['adress']); ?>
 <?php $custom_email = ($stone_lab_option['email']); ?>
 <?php $custom_telephone = ($stone_lab_option['telephone']); ?>
+<?php $custom_icon_geo = ($stone_lab_option['icon_geo']['url']); ?>
+<?php $custom_icon_email = ($stone_lab_option['icon_email']['url']); ?>
+<?php $custom_icon_telephone= ($stone_lab_option['icon_telephone']['url']); ?>
 
 
     <div class="container footer-info-container">
@@ -56,47 +59,24 @@
 
                     echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
                 ?>
-                <!--
-                <a href="#" class="footer-nav-link">Home</a>
-                <a href="#" class="footer-nav-link">Approach</a>
-                <a href="#" class="footer-nav-link">Services</a>
-                <a href="#" class="footer-nav-link">Blog</a>
-                <a href="#" class="footer-nav-link">Showcases</a>
-                <a href="#" class="footer-nav-link">Contacts</a>
-            -->
             </div>
             <div class="footer-contacts-wrapper">
                 <div class="footer-contacts-left">
-                    <span class="footer-address">
-                       <?php 
-                        if($custom_adress){ ?>
+                    <span class="footer-address"> 
 
-                        <span><?php echo ($custom_adress); ?></span>
-                    <?php 
-                        } else {
-                            echo "No adress";
-                        } ?>
+
+                       <?php if($custom_adress){ ?><span><?php echo ($custom_adress); ?></span>
+                       <?php } else {echo "No adress";} ?>
                     </span>
                 </div>
                 <div class="footer-contacts-right">
-                    <?php 
-                        if($custom_email){ ?>
 
-                        <a href="mailto:<?php echo ($custom_email); ?>" class="footer-contact-link footer-email"><?php echo($custom_email); ?></a>
-                    <?php 
-                        } else {
-                            echo "No email";
-                        } ?>
-                      
+                    <?php if($custom_email){ ?> <a href="mailto:<?php echo ($custom_email); ?>" class="footer-contact-link footer-email"><?php echo($custom_email); ?></a>
+                    <?php } else {echo "No email";} ?>
 
-                      <?php 
-                        if($custom_telephone){ ?>
 
-                        <a href="tel:<?php echo ($custom_telephone); ?>" class="footer-contact-link footer-phone"><?php echo($custom_telephone); ?></a>
-                    <?php 
-                        } else {
-                            echo "No telephone";
-                        } ?>
+                    <?php if($custom_telephone){ ?><a href="tel:<?php echo ($custom_telephone); ?>" class="footer-contact-link footer-phone"><?php echo($custom_telephone); ?></a>
+                    <?php } else {echo "No telephone";} ?>
                
                 </div>
             </div>

@@ -158,10 +158,7 @@ window.onload = function () {
 
   })
 
-    
-
-
-
+  
 
   $(document).ready(function () {
     $('.dropdown-item-wrapper').hover(function () {

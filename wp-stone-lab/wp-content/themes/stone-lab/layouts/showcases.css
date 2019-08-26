@@ -240,7 +240,7 @@
 
   .container_showcase {padding: 0;}
 
-  .showcases_head {height: 449px;}
+  .showcases_head, .wrapper4-effect  {height: 449px;}
 
   .showcases_head .pre_title {
     padding-top: calc(96px - 2rem););
@@ -250,6 +250,7 @@
   .showcases_head .main_title {font-size: 72px;}
 
   .showcasesHead_bottons {padding-top: 130px;}
+
 
   .botton_back {
     padding: 14px 0px;
@@ -283,7 +284,7 @@
 
 @media (max-width: 1023px) {
 
-  .showcases_head {height: 366px;}
+  .showcases_head, .wrapper4-effect  {height: 366px;}
 
   .showcases_head .pre_title {padding-top: calc(69px - 0.5rem););}
 
@@ -323,6 +324,9 @@
     background-position:  70% 70%;
   }
 
+  .wrapper4-effect {height: 490px;}
+
+
   .showcases_head .pre_title {
     padding-top: calc(136px - 1rem););
     font-size: 14px;
@@ -331,6 +335,8 @@
   .showcases_head .main_title {font-size: 32px;}
 
   .showcasesHead_bottons {padding-top: 204px;}
+
+  .showcase-button-wrapper .botton_back {margin-top: 0;}
 
   .botton_back, .botton_share {
     padding: 5px 0px;

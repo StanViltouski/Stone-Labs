@@ -15,27 +15,3 @@ $(function () {
 
 
 })
-/*
-	$(window).on('load', function(){
-
-
-		  $('#lasr').on("click", function(e){
-
-        var data;
-
-        $.ajax({
-    		type: "GET",
-   			url: "http://wp-stone-lab/wp-content/themes/stone-lab/inc/ajax.php",
-   			dataType: "json",	
-    	
-    		success: function(data){
-            $('.htm').html(data);
-    }
-     
-  });
-   
-	})
-
-});
-
-  */ 

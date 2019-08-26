@@ -15,7 +15,7 @@ function stone_lab_custompost_type_cards() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'services' ),
+		'rewrite'            => array( 'slug' => 'service' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -69,9 +69,6 @@ function custom_taxonomy_for_fetures() {
 }
 
 add_action( 'init', 'custom_taxonomy_for_fetures', 0 );
-
-
-
 
 
 //Clients
@@ -162,8 +159,6 @@ function custom_taxonomy_for_testimonials() {
 add_action( 'init', 'custom_taxonomy_for_testimonials', 0 );
 
 
-
-
 //Showcases
 
 function stone_lab_custompost_type_showcases() {
@@ -221,7 +216,6 @@ add_action( 'init', 'custom_taxonomy_for_showcases_filter', 0 );
 
 
 
-
 //Category Solutions
 
 function stone_lab_custompost_type_solutions_cat() {
@@ -248,6 +242,7 @@ function stone_lab_custompost_type_solutions_cat() {
 	register_post_type( 'solutions_cat', $args );
 }
 add_action( 'init', 'stone_lab_custompost_type_solutions_cat' );
+
 
 
 //Solutions
@@ -290,49 +285,3 @@ function custom_taxonomy_for_solutions() {
 }
 
 add_action( 'init', 'custom_taxonomy_for_solutions', 0 );
-
-
-
-
-
-/*
-function custom_taxonomy_for_splendid() {
-	$args = array(
-		'label'        => __( 'Location', 'textdomain' ),
-		'public'       => true,
-		'rewrite'      => false,
-		'hierarchical' => true
-	);
-	$args_price = array(
-		'label'        => __( 'Price', 'textdomain' ),
-		'public'       => true,
-		'rewrite'      => false,
-		'hierarchical' => true
-	);
-	register_taxonomy( 'location', 'deals', $args );
-	register_taxonomy( 'price', 'deals', $args_price );
-}
-add_action( 'init', 'custom_taxonomy_for_splendid', 0 );
-function splendid_custompost_type_works() {
-	$labels = array(
-		'name'                  => 'Works',
-		'singular_name'         => 'work',
-	);
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'works' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'thumbnail',   ),
-	);
-	register_post_type( 'works', $args );
-}
-add_action( 'init', 'splendid_custompost_type_works' );
-*/
