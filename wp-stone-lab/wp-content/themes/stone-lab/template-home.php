@@ -24,7 +24,7 @@ get_header();?>
                                     <?php the_excerpt(); ?>
                                 </div>
                        
-                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                             <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -54,7 +54,7 @@ get_header();?>
                                     <?php the_excerpt(); ?>
                                 </div>
                        
-                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -83,7 +83,7 @@ get_header();?>
                                     <?php the_excerpt(); ?>
                                 </div>
                        
-                                <a href="/product-dev.html" class="btn title-button">learn more</a>
+                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -101,29 +101,24 @@ get_header();?>
             <div class='section-head'>directions</div>
             <div class="col-12 title-cards-wrapper">
 
-                 <?php  
+                 <?php
+
                     wp_reset_query();
-                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> 3)); 
+                        $resent_list = new WP_Query(array('post_type'=> 'cards', 'order'=> 'ASC', 'posts_per_page'=> 3));
+                        $i=0;
+                        $data_index;   
+
                             if ( $resent_list->have_posts() ) :
                                 while ( $resent_list->have_posts() ) :
                             $resent_list->the_post();
+                           
+                            $i++;
 
-                            $id_card = get_the_ID();
-                            $data_id;
-                            $data_index;
-
-                            if($id_card == 42) {
-                                $data_index = '1';
-                                $data_id = 'product-dev';
-                            } else if ($id_card == 46) {
-                                $data_index = '2';
-                                $data_id = 'sport-dev';
-                            } else if ($id_card == 47) {
-                                $data_index = '3';
-                                $data_id = 'outsourcing';
-                            } else {return;}
+                            if($i == 1) { $data_id = 'product-dev'; } 
+                            else if ($i == 2) { $data_id = 'sport-dev'; } 
+                            else if ($i == 3) { $data_id = 'outsourcing'; }
                             ?>
-                        <div class="title-card-item" data-id="<?php echo($data_id); ?>" data-index="<?php echo ($data_index); ?>">
+                        <div class="title-card-item" data-id="<?php echo($data_id); ?>" data-index="<?php echo ($i); ?>">
                     <div class="col-md-8 col-6 title-card-item-text">
                         <span><?php the_title(); ?></span>
                         <a href="#">Learn More</a>
@@ -223,51 +218,58 @@ get_header();?>
         <div class="section-head">
             PHILOSOPHY
         </div>
-        <?php  
+
+        <?php
                 wp_reset_query();
-                    $resent_list = new WP_Query(array('post_type'=> 'fetures', 'order'=> 'ASC',  'posts_per_page'=> -1)); 
-                        if ( $resent_list->have_posts() ) :
-                            while ( $resent_list->have_posts() ) :
-                        $resent_list->the_post();?>
+                $args = array( 'post_type'=> 'fetures', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
+                    array(
+                        'taxonomy' => 'pages-fetures',
+                        'field'    => 'slug',
+                        'terms'   => array( 'main' )
+                    )
+                )
+            );
+                $posts = get_posts($args);
+                foreach($posts as $post) :setup_postdata($post);?>
 
-                        <div class="section-header">
-                            <?php if( get_field('title_page') ): ?><?php the_field('title_page'); ?><?php endif; ?>
+                <div class="section-header">
+                    <?php the_title();?>
+                </div>
+
+                <div class="section-description">
+                    <?php the_content(); ?>
+                </div>
+
+                <div class="philosophy-icon-wrapper">
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon approach">
+                            <?php if( get_field('first_icon') ): ?><img src="<?php the_field('first_icon'); ?>" /><?php endif; ?>
                         </div>
-
-                        <div class="section-description">
-                            <?php the_content(); ?>
+                        <div class="philosophy-item-text">
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)); ?>
                         </div>
-
-                        <div class="philosophy-icon-wrapper">
-                            <div class="philosophy-item">
-                                <div class="philosophy-icon approach">
-                                    <?php if( get_field('first_icon') ): ?><img src="<?php the_field('first_icon'); ?>" /><?php endif; ?>
-                                </div>
-                                <div class="philosophy-item-text">
-                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)); ?>
-                                </div>
-                            </div>
-                            <div class="philosophy-item">
-                                <div class="philosophy-icon business">
-                                    <?php if( get_field('second_icon') ): ?><img src="<?php the_field('second_icon'); ?>" /><?php endif; ?>
-                                </div>
-                                <div class="philosophy-item-text">
-                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)); ?>
-                                </div>
-                            </div>
-                            <div class="philosophy-item">
-                                <div class="philosophy-icon analysis">
-                                    <?php if( get_field('third_icon') ): ?><img src="<?php the_field('third_icon'); ?>" /><?php endif; ?>
-                                </div>
-                                <div class="philosophy-item-text">
-                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)); ?>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon business">
+                            <?php if( get_field('second_icon') ): ?><img src="<?php the_field('second_icon'); ?>" /><?php endif; ?>
                         </div>
+                        <div class="philosophy-item-text">
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)); ?>
+                        </div>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="philosophy-icon analysis">
+                            <?php if( get_field('third_icon') ): ?><img src="<?php the_field('third_icon'); ?>" /><?php endif; ?>
+                        </div>
+                        <div class="philosophy-item-text">
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)); ?>
+                        </div>
+                    </div>
+                </div>
+            
+            <?php endforeach; wp_reset_query(); ?>
 
-                <?php  endwhile; endif;  wp_reset_query(); ?>
-
-    </div>
+        </div>
 </section>
 <section id="clients">
 	<div class="container">
@@ -341,7 +343,7 @@ get_header();?>
                                             </div>
                                         </div>
                                         <div class="showcase-item-image">
-                                           <?php the_post_thumbnail(); ?>
+                                           <?php the_post_thumbnail( array(420, 230) ); ?>
                                         </div>
                                     </div>
 
@@ -383,7 +385,7 @@ get_header();?>
                                             </div>
                                         </div>
                                         <div class="showcase-button-wrapper">
-                                            <a href="#" class="showcase-link">See Details</a>
+                                            <a href="<?php the_permalink(); ?>" class="showcase-link">See Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -393,7 +395,7 @@ get_header();?>
                        <?php endforeach; wp_reset_query(); ?>
             </div>
         <div class="blue-main-link-wrapper">
-            <a href="#" class="blue-main-link">
+            <a href="http://wp-stone-lab/showcases/" class="blue-main-link">
                 View More
             </a>
         </div>

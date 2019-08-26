@@ -524,7 +524,7 @@ window.onload = function () {
       $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
         style: 'carousel',
         //autoplay: 2000,
-        pauseOnHover: true,
+        //pauseOnHover: true,
         loop: true,
         spacing: -0.73,
         scrollwheel: false,
@@ -537,7 +537,7 @@ window.onload = function () {
       var myFlipser = $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({
         style: 'flat',
         //autoplay: 3000,
-        pauseOnHover: true,
+        //pauseOnHover: true,
         loop: true,
         spacing: -0.73,
         scrollwheel: false,

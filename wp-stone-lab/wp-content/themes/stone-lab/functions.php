@@ -128,6 +128,7 @@ function my_myme_types($mime_types){
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
+
 /**
  * Enqueue scripts and styles.
  */

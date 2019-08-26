@@ -22591,6 +22591,11 @@ footer.no-inquiry.footer-wave-3 {
   }
 }
 
+#outsourcing-head-position {
+  position: relative;
+  z-index: 1;
+}
+
 .inner-landing-head {
   padding-bottom: 150px;
 }

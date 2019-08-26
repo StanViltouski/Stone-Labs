@@ -15,7 +15,7 @@ function stone_lab_custompost_type_cards() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'cards' ),
+		'rewrite'            => array( 'slug' => 'services' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -55,6 +55,21 @@ function stone_lab_custompost_type_fetures() {
 	register_post_type( 'fetures', $args );
 }
 add_action( 'init', 'stone_lab_custompost_type_fetures' );
+
+function custom_taxonomy_for_fetures() {
+	$args = array(
+		'label'        => __( 'Pages', 'textdomain' ),
+		'public'       => true,
+		'rewrite'      => false,
+		'hierarchical' => true
+	);
+	
+	register_taxonomy( 'pages-fetures', 'fetures', $args );
+
+}
+
+add_action( 'init', 'custom_taxonomy_for_fetures', 0 );
+
 
 
 
@@ -179,17 +194,32 @@ add_action( 'init', 'stone_lab_custompost_type_showcases' );
 
 function custom_taxonomy_for_showcases() {
 	$args = array(
-		'label'        => __( 'Pages', 'showcases' ),
+		'label'        => __( 'Show on Page', 'showcases' ),
 		'public'       => true,
 		'rewrite'      => false,
 		'hierarchical' => true
 	);
 	
 	register_taxonomy( 'pages-showcases', 'showcases', $args );
-
 }
 
 add_action( 'init', 'custom_taxonomy_for_showcases', 0 );
+
+
+function custom_taxonomy_for_showcases_filter() {
+	$args = array(
+		'label'        => __( 'Showcases-filter', 'showcases' ),
+		'public'       => true,
+		'rewrite'      => false,
+		'hierarchical' => true
+	);
+	
+	register_taxonomy( 'showcases-filter', 'showcases', $args );
+}
+
+add_action( 'init', 'custom_taxonomy_for_showcases_filter', 0 );
+
+
 
 
 //Category Solutions
@@ -260,6 +290,7 @@ function custom_taxonomy_for_solutions() {
 }
 
 add_action( 'init', 'custom_taxonomy_for_solutions', 0 );
+
 
 
 

@@ -16791,7 +16791,7 @@ readers do not read off random characters that represent icons */
   width: 10px;
   height: 10px;
   margin: 5px 7px;
-  background: #D6D6D6;
+  background: #d6d6d6;
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity 200ms ease;
@@ -19944,6 +19944,7 @@ section.header {
   display: none;
   position: relative;
   padding-left: 13px;
+  z-index: 2;
 }
 
 .mobile-menu-fixed a.mobile-dropdown-item {
@@ -22591,6 +22592,11 @@ footer.no-inquiry.footer-wave-3 {
     letter-spacing: 1.5px;
     padding: 21px 24px;
   }
+}
+
+#outsourcing-head-position {
+  position: relative;
+  z-index: 1;
 }
 
 .inner-landing-head {

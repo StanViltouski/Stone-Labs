@@ -1,104 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./app/css/jquery.flipster.css">
-    <link rel="stylesheet" href="./app/css/app.css">
-</head>
-<body>
-<section class="header header-wave-1 header-wave-2 header-wave-3 header-static">
-    <div class="mobile-menu-fixed">
-        <div class="container navbar-container">
-            <div class="top-line">
-                <a class="navbar-brand d-flex align-items-center" href="/">
-                    <img class="img-fluid" src="/img/Logo_stone_labs-red.svg" alt="logo-mobile" />
-                </a>
-                <a href="#" class="close-button">
-                    <img src="/img/close-popup-icon.svg" alt="close-button">
-                </a>
-            </div>
-            <div class="mobile-menu-wrapper">
-                <ul class="mobile-menu">
-                    <li class="mobile-nav-item">
-                        <div class="mobile-dropdown-wrapper">
-                            <div class="mobile-dropdown-item-toggler">
-                                <a href="#">Services<i class="fas fa-chevron-down"></i></a>
-                                <div class="mobile-dropdown-menu">
-                                     <a href="/sport-dev.html" class="mobile-dropdown-item">Sport Dev</a>
-                                    <a href="/product-dev.html" class="mobile-dropdown-item">Product Dev</a>
-                                    <a href="/showcases-catalog.html" class="mobile-dropdown-item">Outsourcing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#">Showcases</a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#">Approach</a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#"> Blog</a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="/.html">Contacts</a>
-                    </li>
-                </ul>
-                <div class="mobile-nav-item-button">
-                    <a class="btn" href="#">Send Inquiry</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container navbar-container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="./assets/svg/Logo_stone_labs-white.svg" alt="logo">
-            </a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <div class="dropdown-item-wrapper">
-                            <div class="top-dropdown-item">
-                                <a class="nav-item dropdown-link" href="#">
-                                    Services<i class="fas fa-chevron-down"></i>
-                                </a>
 
-                                <div class="nav-dropdown-menu">
-                                    <a href="/sport-dev.html" class="nav-dropdown-item">Sport Dev</a>
-                                    <a href="/product-dev.html" class="nav-dropdown-item">Product Dev</a>
-                                    <a href="/showcases-catalog.html" class="nav-dropdown-item">Outsourcing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="/showcases-catalog.html">Showcases</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="#">Approach</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="/blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="/contacts.html">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-item-button">
-                <a class="btn" href="#">Send Inquiry</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-    </div>
-    <div id="outsourcing-head-position" class="container px-1">
+<?php 
+/**
+* Template name: Outsourcing Template
+*/
+
+get_header();?>
+			<div id="outsourcing-head-position" class="container px-1">
         <div class="inner-landing-head">
             <div class="row px-lg-2">
                 <div class="col-sm-12 col-md-6 title-wrapper">
@@ -109,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 header-images-wrapper">
-                    <img src="/img/group-15.svg" alt="visual-bg" id="out-group">
+                    <img src="<?php bloginfo('template_directory') ?>/img/group-15.svg" alt="visual-bg" id="out-group">
                 </div>
             </div>
         </div>
@@ -130,7 +37,7 @@
             <div class="philosophy-icon-wrapper">
                 <div class="philosophy-item">
                     <div class="philosophy-icon out-skills">
-                        <img src="/img/outsource-icon-1.svg" alt="icon-1">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-icon-1.svg" alt="icon-1">
                     </div>
                     <div class="philosophy-item-text">
                         skills and expertise
@@ -138,7 +45,7 @@
                 </div>
                 <div class="philosophy-item">
                     <div class="philosophy-icon out-scaling">
-                        <img src="/img/outsource-icon-2.svg" alt="icon-2">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-icon-2.svg" alt="icon-2">
                     </div>
                     <div class="philosophy-item-text">
                         SCALING VELOCITY
@@ -146,7 +53,7 @@
                 </div>
                 <div class="philosophy-item">
                     <div class="philosophy-icon out-cost">
-                        <img src="/img/outsource-icon-3.svg" alt="icon-3">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-icon-3.svg" alt="icon-3">
                     </div>
                     <div class="philosophy-item-text">
                         cost effectiveness
@@ -259,7 +166,7 @@
                         </div>
                     </div>
                     <div class="out-services-img-wrapper">
-                        <img src="/img/outsource-services-icon-1.svg" class="out-services-img" alt="out-service-icon-1">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-services-icon-1.svg" class="out-services-img" alt="out-service-icon-1">
                     </div>
                 </div>
                 <div class="out-services-item">
@@ -299,7 +206,7 @@
                         </div>
                     </div>
                     <div class="out-services-img-wrapper">
-                        <img src="/img/outsource-services-icon-2.svg" class="out-services-img" alt="out-service-icon-1">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-services-icon-2.svg" class="out-services-img" alt="out-service-icon-1">
                     </div>
                 </div>
                 <div class="out-services-item">
@@ -350,7 +257,7 @@
                         </div>
                     </div>
                     <div class="out-services-img-wrapper">
-                        <img src="/img/outsource-services-icon-3.svg" class="out-services-img" alt="out-service-icon-1">
+                        <img src="<?php bloginfo('template_directory') ?>/img/outsource-services-icon-3.svg" class="out-services-img" alt="out-service-icon-1">
                     </div>
                 </div>
             </div>
@@ -366,12 +273,12 @@
             Proud To Work With
         </div>
         <div class="owl-carousel owl-theme clients-slider">
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-1.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-2.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-3.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-4.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-5.png" alt="client-logo"></div>
-            <div class="clients-slide-wrapper"><img src="./assets/png/client-6.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-2.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-3.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-4.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-5.png" alt="client-logo"></div>
+            <div class="clients-slide-wrapper"><img src="<?php bloginfo('template_directory') ?>/assets/png/client-6.png" alt="client-logo"></div>
         </div>
     </div>
 </section>
@@ -404,7 +311,7 @@
                                 </div>
                             </div>
                             <div class="showcase-item-image">
-                                <img src="/img/showcase-demo.jpg" alt="showcase-image">
+                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
                             </div>
                         </div>
                         <div class="card-face card-face-back">
@@ -468,7 +375,7 @@
                                 </div>
                             </div>
                             <div class="showcase-item-image">
-                                <img src="/img/showcase-demo.jpg" alt="showcase-image">
+                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
                             </div>
                         </div>
                         <div class="card-face card-face-back">
@@ -532,7 +439,7 @@
                                 </div>
                             </div>
                             <div class="showcase-item-image">
-                                <img src="/img/showcase-demo.jpg" alt="showcase-image">
+                                <img src="<?php bloginfo('template_directory') ?>/img/showcase-demo.jpg" alt="showcase-image">
                             </div>
                         </div>
                         <div class="card-face card-face-back">
@@ -611,7 +518,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -621,11 +528,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -634,7 +541,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -644,11 +551,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -657,7 +564,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -667,11 +574,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -680,7 +587,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -690,11 +597,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -703,7 +610,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -713,11 +620,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -726,7 +633,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -736,11 +643,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -749,7 +656,7 @@
                 <div class="testimonials-item-wrapper">
                     <div class="testimonials-object">
                         <div class="quote-icon">
-                            <img src="/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                         </div>
                         <div class="testimonial-text">
                             Stone Labs has been a pleasure to work with at every turn. They bring a rare balance of
@@ -759,11 +666,11 @@
                             and I look forward to working with the team again with my future projects!
                         </div>
                         <div class="testimonial-author-wrapper">
-                            <img src="/assets/png/author.jpg" alt="testimonial-author">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/author.jpg" alt="testimonial-author">
                             <span class="author-name">Michael Connor, CEO </span>
                         </div>
                         <div class="testimonial-logo-wrapper">
-                            <img src="/assets/png/client-1.png" alt="testimonial-logo">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/png/client-1.png" alt="testimonial-logo">
                         </div>
                     </div>
                 </div>
@@ -771,83 +678,22 @@
         </ul>
     </div>
 </section>
+
+
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
     <div class="container inner-container">
         <div class="footer-inquiry">
-            <div class="inquiry-title">
-                Let’s Work Together
-            </div>
-            <div class="inquiry-description">
-                Have questions about how Stone Labs can help you streamline operations and improve performance?<br>
-                Feel free to ask us.
-            </div>
+  
+            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+
             <div class="inquiry-button">
                 <a href="/apply-form.html" class="white-button">Send Inquiry</a>
             </div>
         </div>
     </div>
-    <div class="container footer-info-container">
-        <div class="footer-wrapper">
-            <div class="logo-socials">
-                <div class="footer-logo">
-                    <img src="/assets/svg/stone-labs-logo-white.svg" alt="footer-logo">
-                </div>
-                <div class="footer-socials">
-                    <a href="#"><img src="/assets/svg/footer-facebook-icon.svg" alt="facebook-footer-logo"></a>
-                    <a href="#"><img src="/assets/svg/footer-linkedin-icon.svg" alt="linkedin-footer-logo"></a>
-                    <a href="#"><img src="/assets/svg/footer-twitter-icon.svg" alt="twitter-footer-logo"></a>
-                    <a href="#"><img src="/assets/svg/footer-skype-icon.svg" alt="skype-footer-logo"></a>
-                    <a href="#"><img src="/assets/svg/footer-github-icon.svg" alt="github-footer-logo"></a>
-                </div>
-            </div>
-            <div class="footer-nav">
-                <a href="#" class="footer-nav-link">Home</a>
-                <a href="#" class="footer-nav-link">Approach</a>
-                <a href="#" class="footer-nav-link">Services</a>
-                <a href="#" class="footer-nav-link">Blog</a>
-                <a href="#" class="footer-nav-link">Showcases</a>
-                <a href="#" class="footer-nav-link">Contacts</a>
-            </div>
-            <div class="footer-contacts-wrapper">
-                <div class="footer-contacts-left">
-                    <span class="footer-address">
-                        Geniu 21-10
-                    </span>
-                    <span class="footer-address">
-                        Vilnius
-                    </span>
-                    <span class="footer-address">
-                        Lithuania, LT-11216
-                    </span>
-                </div>
-                <div class="footer-contacts-right">
-                    <a href="mailto:info@stone-labs.com"
-                       class="footer-contact-link footer-email">info@stone-labs.com</a>
-                    <a href="tel:+37060846481" class="footer-contact-link footer-phone">+370 608 46 481</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyrights">
-            <div class="copyright">
-                &copy; 2009-2019 Stone Labs
-            </div>
-            <div class="privacy">
-                <a href="#" class="privacy-link">
-                    Privacy Policy
-                </a>
-                <a href="#" class="privacy-link">
-                    Sitemap
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./app/js/app.js"></script>
-<script src="./app/js/owl.carousel.min.js"></script>
-<script src="./app/js/owl.animate.js"></script>
-<script src="./app/js/owl.autoheight.js"></script>
-<script src="./app/js/jquery.flipster.min.js"></script>
-<script src="./app/js/menu_fixed.js"></script>
-</body>
-</html>
+
+
+
+
+
+ <?php get_footer(); ?>
