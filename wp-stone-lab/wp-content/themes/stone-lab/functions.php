@@ -171,7 +171,7 @@ function stone_lab_scripts() {
 
 
 	//scripts
-	wp_enqueue_script( 'lab-form', get_template_directory_uri() . '/js/form.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'lab-form', get_template_directory_uri() . '/js/form.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'menu_add_class', get_template_directory_uri() . '/js/menu_add_class.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'lab-menu_fixed', get_template_directory_uri() . '/js/menu_fixed.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'lab-showcase_bg', get_template_directory_uri() . '/js/showcase_bg.js', array(), '1.0.0', true );

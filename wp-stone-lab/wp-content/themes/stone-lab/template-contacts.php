@@ -24,7 +24,8 @@ get_header();?>
 
 			<div class="form">
 				<div class="form_general">
-						<?php echo do_shortcode('[contact-form-7 id="322" title="Contacts" html_id="form_first"]') ?>
+        
+					<?php echo do_shortcode('[contact-form-7 id="325" title="Contacts" html_id="form_first"]') ?>	 
 				</div>
 			</div>
 		</div>
