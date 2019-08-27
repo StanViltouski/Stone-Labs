@@ -80,7 +80,7 @@ $(function () {
           'color': '#232323'
          })
 
-          $('.radio_card img').attr('src', 'assets/svg/red-radiobutton.svg');
+          $('.radio_card img').attr('src', '../assets/svg/red-radiobutton.svg');
       }
 
 
@@ -91,35 +91,35 @@ $(function () {
           'color' : '#ffffff',
         })
 
-        $('.radio_card img:eq('+index+')').attr('src', 'assets/svg/white-radiobutton.svg');
+        $('.radio_card img:eq('+index+')').attr('src', '../assets/svg/white-radiobutton.svg');
       }
 
 
       switch(index) {
         case '1': 
               reset();
-              $(card_mass[0]).css('background', '#ed1a3a url("/assets/svg/idea-white.svg") no-repeat')
+              $(card_mass[0]).css('background', '#ed1a3a url("../assets/svg/idea-white.svg") no-repeat')
               publicStyles(0);
         break;
 
 
         case '2':
               reset();
-              $(card_mass[1]).css('background', '#ed1a3a url("/assets/svg/investments icon white.svg") no-repeat')
+              $(card_mass[1]).css('background', '#ed1a3a url("../assets/svg/investments icon white.svg") no-repeat')
               publicStyles(1);
         break;
 
 
         case '3':
               reset();
-              $(card_mass[2]).css('background', '#ed1a3a url("/assets/svg/development-white.svg") no-repeat')
+              $(card_mass[2]).css('background', '#ed1a3a url("../assets/svg/development-white.svg") no-repeat')
               publicStyles(2);
         break;
 
 
         case '4':
               reset();
-              $(card_mass[3]).css('background', '#ed1a3a url("/assets/svg/complete icon white.svg") no-repeat')
+              $(card_mass[3]).css('background', '#ed1a3a url("../assets/svg/complete icon white.svg") no-repeat')
               publicStyles(3);
         break;
 
@@ -155,7 +155,7 @@ $(function () {
           else 
           fileName = e.target.value.split( '\\' ).pop();    
           if( fileName )
-          label.querySelector( 'span' ).innerHTML = '<div class="downloadFile_block"><img class="icon_file" src="assets/svg/doc-blue.svg" alt="doc-blue">' + fileName + '<img id="reset_value" src="assets/svg/close icon small.svg" alt="close icon small"></div>';
+          label.querySelector( 'span' ).innerHTML = '<div class="downloadFile_block"><img class="icon_file" src="../assets/svg/doc-blue.svg" alt="doc-blue">' + fileName + '<img id="reset_value" src="../assets/svg/close icon small.svg" alt="close icon small"></div>';
     else
       label.innerHTML = labelVal;
   });
@@ -182,7 +182,7 @@ $(function () {
 
   /*For animate inputs*/
 
-$('.general_input').on('input', function(){
+$('.general_input, .general_textarea').on('input', function(){
     var $this = $(this);
    ($this.val() == '') ? $this.removeClass('placeholder-animate_filled') : $this.addClass('placeholder-animate_filled');
 
@@ -297,7 +297,7 @@ $(function () {
  $(window).on('load', function(){
 
   var form = document.forms[0],
-      name = $('#input-name')
+      name = $('#input-name'),
       email = $('#input-email'),
       regExp = [/^[а-яА-Яa-zA-Z ]+$/,/(\w+\.)*\w+@(\w+\.)+[A-Za-z]+/];
  
@@ -316,15 +316,13 @@ $(function () {
                 valid = false;
             } 
 
-
-            if(!$(email).val()) {
+             if(!$(email).val()) {
                 $('.error-email').text('The field is required');
                 valid = false;
             }else if(!$(email).val().match($(regExp)[1])) {
               $('.error-email').text('Please enter a valid email address');
                 valid = false;
             }
-
 
             if(valid) {
               form.submit();
@@ -335,19 +333,17 @@ $(function () {
 
 //Active botton
 
-  $('.invalidCheck, .invalidCheck2').on('change', function (e) {
+  $('#invalidCheck, #invalidCheck2').on('change', function (e) {
 
     if($('#invalidCheck').is(':checked') && $('#invalidCheck2').is(':checked')) {
-
       $('.btn_submit').attr('disabled', false);
 
     } else {
-      
       $('.btn_submit').attr('disabled', true);
     }
 
 })
-
+      $('.btn_submit').attr('disabled', true);
 })
 
 

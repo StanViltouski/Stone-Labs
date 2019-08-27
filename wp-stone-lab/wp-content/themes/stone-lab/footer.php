@@ -1,14 +1,14 @@
 <?php  global $stone_lab_option; ?>
 
-<?php $custom_footer_logo = ($stone_lab_option['stone-lab-footer-logo']['url']); ?>
-<?php $custom_social_nets = ($stone_lab_option['social-network']); ?>
-<?php $custom_adress = ($stone_lab_option['adress']); ?>
-<?php $custom_email = ($stone_lab_option['email']); ?>
-<?php $custom_telephone = ($stone_lab_option['telephone']); ?>
-<?php $custom_icon_geo = ($stone_lab_option['icon_geo']['url']); ?>
-<?php $custom_icon_email = ($stone_lab_option['icon_email']['url']); ?>
-<?php $custom_icon_telephone= ($stone_lab_option['icon_telephone']['url']); ?>
-
+<?php $custom_footer_logo = ($stone_lab_option['stone-lab-footer-logo']['url']);
+      $custom_social_nets = ($stone_lab_option['social-network']); 
+      $custom_adress = ($stone_lab_option['adress']); 
+      $custom_email = ($stone_lab_option['email']); 
+      $custom_telephone = ($stone_lab_option['telephone']); 
+      $custom_icon_geo = ($stone_lab_option['icon_geo']['url']); 
+      $custom_icon_email = ($stone_lab_option['icon_email']['url']); 
+      $custom_icon_telephone= ($stone_lab_option['icon_telephone']['url']); 
+?>
 
     <div class="container footer-info-container">
         <div class="footer-wrapper">
@@ -97,7 +97,8 @@
     </div>
 </footer>
 
-<?php wp_footer(); ?>
 
+<!-- wp_enqueue_script( 'menu_add_class'); -->
+<?php wp_footer();?>
 </body>
 </html>

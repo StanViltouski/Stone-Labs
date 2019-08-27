@@ -285,3 +285,58 @@ function custom_taxonomy_for_solutions() {
 }
 
 add_action( 'init', 'custom_taxonomy_for_solutions', 0 );
+
+//Startup
+
+function stone_lab_custompost_type_startup() {
+	$labels = array(
+		'name'                  => 'Startup',
+		'singular_name'         => 'Startup',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'startup' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor'),
+		'menu_icon'				=>  'dashicons-dashboard',
+	);
+	register_post_type( 'startup', $args );
+}
+add_action( 'init', 'stone_lab_custompost_type_startup' );
+
+
+//Startup
+
+function stone_lab_custompost_type_outsource() {
+	$labels = array(
+		'name'                  => 'Outsource services',
+		'singular_name'         => 'Outsource services',
+
+	);
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'outsource-services' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail'),
+		'menu_icon'				=>  'dashicons-admin-site-alt3',
+	);
+	register_post_type( 'outsource', $args );
+}
+add_action( 'init', 'stone_lab_custompost_type_outsource' );

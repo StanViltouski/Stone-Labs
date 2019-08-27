@@ -22685,6 +22685,9 @@ footer.no-inquiry.footer-wave-3 {
   display: block;
 }
 
+.section-description p {margin-bottom: 0px;}
+
+
 .pd-graph-slider-object {
   display: flex;
 }

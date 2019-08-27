@@ -1,6 +1,6 @@
 <?php 
 /**
-* Template name: Product-dev
+* Template name: Product-dev Template
 */
 
 get_header();?>
@@ -37,80 +37,35 @@ get_header();?>
                 <div class="pd-text-part-slider-wrapper">
                     <div class="owl-carousel owl-theme  pd-text-slider">
                         <!--<div class=" pd-text-slider">-->
-                        <div class="pd-text-slider-object" data-text-index="1">
-                            <div class="pd-text-slider-title">
-                                Surging Growth
-                            </div>
-                            <div class="pd-text-slider-description">
-                            <span>
-                                Congratulations on building a successful product that users will love.
-                                At this stage, test automation, well-documented releases and post-production
-                                monitoring are critical to continued growth.
-                            </span>
-                                <span>
-                                Our team provides fast incident response and reliable post production
-                                environment monitoring and support to make sure system deployments do not
-                                compromise your application’s uptime.
-                            </span>
-                            </div>
-                        </div>
-                        <div class="pd-text-slider-object" data-text-index="2">
-                            <div class="pd-text-slider-title">
-                                Lorem ipsum dolor sit amet...
-                            </div>
-                            <div class="pd-text-slider-description">
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                At cum eius fugiat quasi recusandae repellat voluptate.
-                                Dolor dolorem eius facilis hic iusto nam officia placeat
-                                porro rem soluta. Hic, obcaecati?
-                            </span>
-                                <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                A alias deserunt, distinctio doloribus earum eum facere illo
-                                ipsum iure modi numquam pariatur placeat provident quasi qui sed voluptatibus.
-                                Itaque, laborum!
-                            </span>
-                            </div>
-                        </div>
-                        <div class="pd-text-slider-object" data-text-index="3">
-                            <div class="pd-text-slider-title">
-                                Lorem ipsum dolor sit amet..3
-                            </div>
-                            <div class="pd-text-slider-description">
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                At cum eius fugiat quasi recusandae repellat voluptate.
-                                Dolor dolorem eius facilis hic iusto nam officia placeat
-                                porro rem soluta. Hic, obcaecati?
-                            </span>
-                                <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                A alias deserunt, distinctio doloribus earum eum facere illo
-                                ipsum iure modi numquam pariatur placeat provident quasi qui sed voluptatibus.
-                                Itaque, laborum!
-                            </span>
-                            </div>
-                        </div>
-                        <div class="pd-text-slider-object" data-text-index="4">
-                            <div class="pd-text-slider-title">
-                                Lorem ipsum dolor sit amet..4
-                            </div>
-                            <div class="pd-text-slider-description">
-                            <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                At cum eius fugiat quasi recusandae repellat voluptate.
-                                Dolor dolorem eius facilis hic iusto nam officia placeat
-                                porro rem soluta. Hic, obcaecati?
-                            </span>
-                                <span>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                A alias deserunt, distinctio doloribus earum eum facere illo
-                                ipsum iure modi numquam pariatur placeat provident quasi qui sed voluptatibus.
-                                Itaque, laborum!
-                            </span>
-                            </div>
-                        </div>
+
+
+                         <?php
+
+                             wp_reset_query();
+                                $resent_list = new WP_Query(array('post_type'=> 'startup', 'order'=> 'ASC', 'posts_per_page'=> 4));
+                                $i=0;
+                                $data_index;   
+
+                                    if ( $resent_list->have_posts() ) :
+                                        while ( $resent_list->have_posts() ) :
+                                    $resent_list->the_post();
+                    
+                                    $i++;
+                                    ?>
+
+                                    <div class="pd-text-slider-object" data-text-index="<?php echo($i); ?>">
+                                        <div class="pd-text-slider-title">
+                                            <?php the_title(); ?>
+                                        </div>
+                                        <div class="pd-text-slider-description">
+                                            <span>
+                                                <?php the_content(); ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                       
+                        <?php  endwhile; endif;  wp_reset_query(); ?>
+
                     </div>
                 </div>
                 <div class="pd-graph-part-slider-wrapper">
