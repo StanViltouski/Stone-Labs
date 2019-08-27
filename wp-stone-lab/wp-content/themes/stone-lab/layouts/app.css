@@ -16446,8 +16446,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168);
-  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?7559b3774a0625e8ca6c0160f8f6cfd8) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?fe9d62e0d16a333a20e63c3e7595f82e) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?ed2b8bf117160466ba6220a8f1da54a4) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?073c2f3ce60eaf69cc2767ef3d989078) format("svg");
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?03783c5172ee1ad128c576bf88fac168) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?7559b3774a0625e8ca6c0160f8f6cfd8) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?fe9d62e0d16a333a20e63c3e7595f82e) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?ed2b8bf117160466ba6220a8f1da54a4) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?073c2f3ce60eaf69cc2767ef3d989078) format("svg");
 }
 
 .fab {
@@ -20012,8 +20012,9 @@ nav .navbar-nav {
   justify-content: flex-end;
 }
 
-nav li.nav-item {padding-right: 40px;}
+.navbar-nav .nav-item{padding-right: 40px;}
 
+.nav-dropdown-menu .nav-item{padding-right: 0px;}
 
 nav .dropdown-link i {
   position: relative;
@@ -22186,6 +22187,8 @@ footer.no-inquiry.footer-wave-3 {
   text-decoration: none;
 }
 
+#drop_menu {padding-right: 0px;}
+
 .category-selector-link:after {
   content: "";
   position: absolute;
@@ -22193,7 +22196,7 @@ footer.no-inquiry.footer-wave-3 {
   top: 14px;
   width: 14px;
   height: 8px;
-  background: url("/img/chevron-down-white.svg") no-repeat center center/cover;
+  background: url("../img/chevron-down-white.svg") no-repeat center center/cover;
 }
 
 .top-category-links-wrapper {
@@ -24254,9 +24257,7 @@ footer.no-inquiry.footer-wave-3 {
     height: 52px;
   }
 
-  nav li.nav-item {
-   padding-right: 28px;
-}
+.navbar-nav .nav-item{padding-right: 28px;}
 
    nav a:not(.btn):not(.navbar-brand):not(.nav-dropdown-item) {
     font-size: 17px;
