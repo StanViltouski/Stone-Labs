@@ -145,8 +145,6 @@ window.onload = function () {
       $('.submenu-resp').slideUp(200);
   })
 
-
-
     $('.mobile-menu #menu-item-27').on('click', function () {
       if ($(this).find('.mobile-dropdown-menu').hasClass('active')) {
         $(this).find('.mobile-dropdown-menu').removeClass('active').slideUp(200);

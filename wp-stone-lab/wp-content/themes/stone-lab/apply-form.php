@@ -1,0 +1,45 @@
+<script type="text/javascript">
+	var wayImage = '<?= get_bloginfo("template_url"); ?>';
+</script>
+
+
+<?php 
+/**
+* Template name: Apply-form Template
+*/
+
+get_header();?>
+			 <div class="page-title-wrapper applyForm_title">
+        <h1 class="page-title"><?php if( get_field('title') ): ?><?php the_field('title'); ?><?php endif; ?></h1> 
+    </div>
+</section>
+
+
+<section id="form">
+	<div class="container container_applyForm">
+		<div class="form_wrapper">
+			<div class="row m-0 type_forms">
+				<div class="big_form type_form col-6" data="true">
+					<a href="#" onclick="return false"><?php if( get_field('title_big_form') ): ?><?php the_field('title_big_form'); ?><?php endif; ?></a>
+				</div>
+				<div class="small_form type_form col-6" data="false">
+					<a href="#" onclick="return false"><?php if( get_field('title_small_form') ): ?><?php the_field('title_small_form'); ?><?php endif; ?></a>
+				</div>
+			</div>
+
+			<div class="form">
+				<div class="form_general">
+
+					<?php echo do_shortcode('[contact-form-7 id="339" title="Apply-form" html_id="form_first"]') ?>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
+
+
+
+<?php wp_enqueue_script( 'lab-form'); get_footer(); ?>

@@ -42,7 +42,7 @@ get_header();?>
         	<div class="col-6 contact_data">
         		<h3 class="contacts_location"><?php if( get_field('location') ): ?><?php the_field('location'); ?><?php endif; ?></h3>
         		<h4 class="contacts_gmt">GMT +0<?php echo get_option('gmt_offset'); ?>:00</h4>
-        		<h3 class="contacts_timer"><?php echo current_time('g:i:s A', 3); ?></h3>
+        		<h3 class="contacts_timer"><?php echo current_time('g:i:s A', 1); ?></h3>
         		<h4 class="contacts_adress"><?php if( get_field('adress') ): ?><?php the_field('adress'); ?><?php endif; ?></h4>
         		<h4 class="contacts_telephone"><?php if( get_field('telephone') ): ?><?php the_field('telephone'); ?><?php endif; ?></h4>
         	</div>
@@ -50,10 +50,4 @@ get_header();?>
     </div>
 
 
-
-
-
-
-
-
-<?php get_footer(); ?>
+<?php wp_enqueue_script( 'lab-form'); get_footer(); ?>

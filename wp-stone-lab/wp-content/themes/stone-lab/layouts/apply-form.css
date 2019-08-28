@@ -1,5 +1,6 @@
 /*Apply-form*/
 
+
 #applyForm_header {
   padding-bottom: 120px;
 }
@@ -60,7 +61,7 @@
   width: 100%;
   height: 55px;
   border-radius: 10px;
-  background: #edfafe url(/assets/svg/chevron-down.svg) no-repeat;
+  background: #edfafe url(../assets/svg/chevron-down.svg) no-repeat;
   background-position: 98% 50%;
 }
 
@@ -135,11 +136,11 @@ input:required{
 }
 
 #ageInputId {
-   background: transparent url("/assets/png/line.png") no-repeat center bottom;
+   background: transparent url("../assets/png/line.png") no-repeat center bottom;
 }
 
 #ageInputId2 {
-   background: transparent url("/assets/png/line_2.png") no-repeat center bottom;
+   background: transparent url("../assets/png/line_2.png") no-repeat center bottom;
 }
 
 input[type=range] {
@@ -329,22 +330,22 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .card_idea {
-    background: url("/assets/svg/idea-blue.svg") no-repeat;
+    background: url("../assets/svg/idea-blue.svg") no-repeat;
     background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
 }
 
 .card_investments {
-  background: url("/assets/svg/investments icon blue.svg") no-repeat;
+  background: url("../assets/svg/investments icon blue.svg") no-repeat;
   background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
 }
 
 .card_development{
-  background: url("/assets/svg/development-blue.svg") no-repeat;
+  background: url("../assets/svg/development-blue.svg") no-repeat;
   background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
 }
 
 .card_complete{
-  background: url("/assets/svg/complete-blue.svg") no-repeat;
+  background: url("../assets/svg/complete-blue.svg") no-repeat;
   background-position: bottom calc(0% + 12px) right calc(0% + 12px) ;
 }
 

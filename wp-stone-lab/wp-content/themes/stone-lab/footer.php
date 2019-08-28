@@ -99,6 +99,6 @@
 
 
 <!-- wp_enqueue_script( 'menu_add_class'); -->
-<?php wp_footer();?>
+<?php wp_footer(); ?>
 </body>
 </html>

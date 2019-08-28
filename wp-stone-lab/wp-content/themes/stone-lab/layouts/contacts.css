@@ -22,7 +22,11 @@
 
 .wrapper4-animate-contacts {margin-bottom: 25px;}
 
-.form_wrapper_contacts {margin-bottom: 120px;}
+.form_wrapper_contacts {
+  position: relative;
+  margin-bottom: 120px;
+  z-index: 1;
+}
 
 .inner-container-contacts {
   width: 1080px;
