@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <script type="text/javascript">
+        var wayImage = '<?= get_bloginfo("template_url"); ?>';
+    </script>
     <?php wp_head(); ?>
 
 </head>

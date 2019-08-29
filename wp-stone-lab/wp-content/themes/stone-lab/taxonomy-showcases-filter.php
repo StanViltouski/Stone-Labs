@@ -130,8 +130,8 @@
             
         </div>
         <div class="blue-main-link-wrapper">
-            <a href="http://wp-stone-lab/showcases/" class="blue-main-link">
-                View More
+            <a href="/showcases" class="blue-main-link">
+                Clear Filter
             </a>
         </div>
     </div>
@@ -144,7 +144,7 @@
             <?php dynamic_sidebar( 'Footer nameplate' ); ?>
 
             <div class="inquiry-button">
-                <a href="/apply-form.html" class="white-button">Send Inquiry</a>
+                <a href="/apply-form" class="white-button">Send Inquiry</a>
             </div>
         </div>
     </div>

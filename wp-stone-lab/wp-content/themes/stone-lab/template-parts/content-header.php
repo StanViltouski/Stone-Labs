@@ -33,7 +33,7 @@
                 ?>
 
                 <div class="mobile-nav-item-button">
-                    <a class="btn" href="#">Send Inquiry</a>
+                    <a class="btn" href="/apply-form">Send Inquiry</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
              </div>
              
             <div class="nav-item-button">
-                <a class="btn" href="#">Send Inquiry</a>
+                <a class="btn" href="/apply-form">Send Inquiry</a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse">
                 <span class="navbar-toggler-icon"></span>

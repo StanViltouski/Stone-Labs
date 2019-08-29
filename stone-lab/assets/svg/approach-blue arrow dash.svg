@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="249px" height="907px" viewBox="0 0 249 907" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>approach-blue arrow dash</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M176.19025,7 L188.26947,13.9311672 C219.339421,31.75939 238.5,64.8447909 238.5,100.666396 L238.5,805.332855 C238.5,860.56133 193.728475,905.332855 138.5,905.332855 C138.359945,905.332855 138.21989,905.332561 138.079836,905.331973 L0.5,904.753906" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="238" height="898.332855" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Approach-1440" transform="translate(-240.000000, -1666.000000)" stroke="#0497F4">
+            <g id="approach-blue-arrow-dash" transform="translate(240.000000, 1667.000000)">
+                <use id="Rectangle" mask="url(#mask-2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,12" transform="translate(119.500000, 456.166428) scale(-1, -1) translate(-119.500000, -456.166428) " xlink:href="#path-1"></use>
+                <polyline id="Path-22" fill="#0497F4" points="224 -1.8189894e-12 248.432772 7.82747934 224 15.6549587"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

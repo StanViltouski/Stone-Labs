@@ -120,26 +120,27 @@ try {
 
 window.onload = function () {
 
-  $('.first_item_menu >a').attr('onclick', 'return false;');
-
   $(document).ready(function () {
-    $('.dropdown-item-wrapper').hover(function () {
-      $(this).find('.nav-dropdown-menu').addClass('active').slideDown(200);
-    }, function () {
-      $(this).find('.nav-dropdown-menu').removeClass('active').slideUp(200);
-    });
+    $('.dropdown-item-wrapper').on({
 
+      'mouseenter' : function () {
+        $(this).find('.nav-dropdown-menu').addClass('active').slideDown(200);
+    },
+
+      'mouseleave': function () {
+        $(this).find('.nav-dropdown-menu').removeClass('active').slideUp(200);
+      }
+
+  });
 
 
 /* Dropdown menu in showcases-catalog page*/
 
   $('#drop_menu').on('click', function(){
 
-  if($('.submenu-resp').hasClass('show')) {
-
-    $('.submenu-resp').slideUp(200);
-
-  } else { $('.submenu-resp').slideDown(200); }
+    if($('.submenu-resp').hasClass('show')) {
+      $('.submenu-resp').slideUp(200);
+      } else { $('.submenu-resp').slideDown(200); }
 
   })
 
@@ -147,7 +148,7 @@ window.onload = function () {
       $('.submenu-resp').slideUp(200);
   })
 
-    $('.mobile-menu #menu-item-27').on('click', function () {
+    $('.mobile-dropdown-item-toggler').on('click', function () {
       if ($(this).find('.mobile-dropdown-menu').hasClass('active')) {
         $(this).find('.mobile-dropdown-menu').removeClass('active').slideUp(200);
       } else {
@@ -378,7 +379,7 @@ window.onload = function () {
           items: 1,
           nav: true,
           autoWidth: true,
-          navText: ["<img src='http://wp-stone-lab/wp-content/themes/stone-lab/assets/svg/testimonials-chevron-left.svg'>", "<img src='http://wp-stone-lab/wp-content/themes/stone-lab/assets/svg/testimonials-chevron-right.svg'>"]
+          navText: ["<img src='"+wayImage+"/assets/svg/testimonials-chevron-left.svg'>", "<img src='"+wayImage+"/assets/svg/testimonials-chevron-right.svg'>"]
         },
         768: {
           items: 3,
@@ -487,8 +488,8 @@ window.onload = function () {
         scrollwheel: false,
         touch: true,
         buttons: 'custom',
-        buttonPrev: '<img src="http://wp-stone-lab/wp-content/themes/stone-lab/assets/svg/testimonials-chevron-left.svg">',
-        buttonNext: '<img src="http://wp-stone-lab/wp-content/themes/stone-lab/assets/svg/testimonials-chevron-right.svg">'
+        buttonPrev: "<img src='"+wayImage+"/assets/svg/testimonials-chevron-left.svg'>",
+        buttonNext: "<img src='"+wayImage+"/assets/svg/testimonials-chevron-right.svg'>"
       });
     } else {
       var myFlipser = $('.testimonials-3d-carousel, .screens-3d-carousel').flipster({

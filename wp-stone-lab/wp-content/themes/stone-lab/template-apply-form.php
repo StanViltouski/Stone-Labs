@@ -1,8 +1,3 @@
-<script type="text/javascript">
-	var wayImage = '<?= get_bloginfo("template_url"); ?>';
-</script>
-
-
 <?php 
 /**
 * Template name: Apply-form Template
@@ -31,6 +26,7 @@ get_header();?>
 				<div class="form_general">
 
 					<?php echo do_shortcode('[contact-form-7 id="339" title="Apply-form" html_id="form_first"]') ?>	
+					
 				</div>
 			</div>
 		</div>

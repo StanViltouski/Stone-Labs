@@ -335,7 +335,7 @@ get_header();?>
             <?php dynamic_sidebar( 'Footer nameplate' ); ?>
 
             <div class="inquiry-button">
-                <a href="/apply-form.html" class="white-button">Send Inquiry</a>
+                <a href="/apply-form" class="white-button">Send Inquiry</a>
             </div>
         </div>
     </div>

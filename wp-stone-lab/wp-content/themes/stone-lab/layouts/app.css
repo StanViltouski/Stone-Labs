@@ -20719,7 +20719,7 @@ section#showcases .section-description > br {
 .showcase-item-scene {
   margin: 0 auto;
   width: 420px;
-  min-height: 413px;
+  height: 413px;
   perspective: 600px;
 }
 
@@ -24787,7 +24787,7 @@ footer.no-inquiry.footer-wave-3 {
   }
 
   #product-dev-brainstorm {
-    margin-top: -295px;
+    margin-top: -185px;
     margin-left: 120px;
     width: 100px;
     position: static;
@@ -24859,9 +24859,10 @@ footer.no-inquiry.footer-wave-3 {
     margin-bottom: 40px;
   }
 
-  .section-header {
-    font-size: 26px;
-  }
+  .section-header {font-size: 26px;}
+
+  .showcase-item-scene {height: 340px;}
+
 
   .section-description {
     font-size: 16px;
