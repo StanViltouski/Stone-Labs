@@ -156,7 +156,7 @@ get_header();?>
                                 </h3>
 
                                 <div class="about-us-description">
-                                    <?php the_content(); ?>.
+                                    <?php the_content(); ?>
                                 </div>
                             </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>
@@ -181,7 +181,7 @@ get_header();?>
                                 <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
                             </h3>
                             <div class="about-us-description">
-                                <?php the_content(); ?>.
+                                <?php the_content(); ?>
                             </div>
                         </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>
@@ -204,7 +204,7 @@ get_header();?>
                                 <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
                             </h3>
                             <div class="about-us-description">
-                                <?php the_content(); ?>.
+                                <?php the_content(); ?>
                             </div>
                         </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>

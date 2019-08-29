@@ -120,6 +120,8 @@ try {
 
 window.onload = function () {
 
+  $('.first_item_menu >a').attr('onclick', 'return false;');
+
   $(document).ready(function () {
     $('.dropdown-item-wrapper').hover(function () {
       $(this).find('.nav-dropdown-menu').addClass('active').slideDown(200);

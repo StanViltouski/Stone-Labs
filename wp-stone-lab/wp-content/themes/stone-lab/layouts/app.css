@@ -16708,7 +16708,7 @@ readers do not read off random characters that represent icons */
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(/images/owl.video.play.png?4a37f8008959c75f619bf0a3a4e2d7a2) no-repeat;
+  background: url(../images/owl.video.play.png?4a37f8008959c75f619bf0a3a4e2d7a2) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -16755,14 +16755,14 @@ readers do not read off random characters that represent icons */
   font-size: 14px;
   margin: 5px;
   padding: 4px 7px;
-  background: #D6D6D6;
+  background: #d6d6d6;
   display: inline-block;
   cursor: pointer;
   border-radius: 3px;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
-  background: #4DC7A0;
+  background: #4dc7a0;
   color: #FFF;
   text-decoration: none;
 }
@@ -16800,7 +16800,7 @@ readers do not read off random characters that represent icons */
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #4DC7A0;
+  background: #4dc7a0;
 }
 
 /*!
@@ -20362,27 +20362,27 @@ nav .nav-item-button a.btn:hover {
 }
 
 .title-card-item[data-id=sport-dev] .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/sport-dev-icon-red.svg") no-repeat bottom right;
+  background: url("../img/sport-dev-icon-red.svg") no-repeat bottom right;
 }
 
 .title-card-item[data-id=sport-dev]:hover .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/sport-dev-icon-white.svg") no-repeat bottom right;
+  background: url("../img/sport-dev-icon-white.svg") no-repeat bottom right;
 }
 
 .title-card-item[data-id=product-dev] .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/product-dev-icon-red.svg") no-repeat bottom right;
+  background: url("../img/product-dev-icon-red.svg") no-repeat bottom right;
 }
 
 .title-card-item[data-id=product-dev]:hover .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/product-dev-icon-white.svg") no-repeat bottom right;
+  background: url("../img/product-dev-icon-white.svg") no-repeat bottom right;
 }
 
 .title-card-item[data-id=outsourcing] .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/outsourcing-icon-red.svg") no-repeat bottom right;
+  background: url("../img/outsourcing-icon-red.svg") no-repeat bottom right;
 }
 
 .title-card-item[data-id=outsourcing]:hover .title-card-item-image {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/outsourcing-icon-white.svg") no-repeat bottom right;
+  background: url("../img/outsourcing-icon-white.svg") no-repeat bottom right;
 }
 
 /*End Title Cards*/
@@ -20508,21 +20508,21 @@ section#about-us {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  width: 15px;
-  height: 15px;
-  background: transparent;
+  width: 15px !important;
+  height: 15px !important;
+  background: transparent!important;
   border: 1px solid #0497f4;
-  transition: width 0.7s ease-in-out, background 0.1s ease-in-out;
+  transition: width 0.7s ease-in-out, background 0.1s ease-in-out!important;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
   border: none;
-  background: #ed1a3a;
-  width: 51px;
+  background: #ed1a3a!important;
+  width: 51px !important;
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #ed1a3a;
+  background: #ed1a3a!important;
   border: none;
 }
 
@@ -20532,7 +20532,7 @@ section#about-us {
 
 #philosophy {
   color: #000;
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/img/bg-cloud-1_1.svg") repeat-x 0 100%/cover;
+  background: url("../img/bg-cloud-1_1.svg") repeat-x 0 100%/cover;
 }
 
 #philosophy .container.inner-container {
@@ -20705,7 +20705,7 @@ section#showcases .section-description > br {
 }
 
 .showcases-wrapper {
-  display: flex!important;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -20717,6 +20717,7 @@ section#showcases .section-description > br {
 }
 
 .showcase-item-scene {
+  margin: 0 auto;
   width: 420px;
   min-height: 413px;
   perspective: 600px;
@@ -20729,6 +20730,10 @@ section#showcases .section-description > br {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+}
+
+.showcase-item-image img{
+  width: 100%;
 }
 
 .showcase-item-object.is-flipped {
@@ -20748,6 +20753,7 @@ section#showcases .section-description > br {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .card-face img {
@@ -20774,6 +20780,7 @@ section#showcases .section-description > br {
   transform: rotateY(180deg);
   background-color: #ef1c3b;
   box-shadow: 0 10px 30px 0 rgba(237, 9, 9, 0.32), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  
 }
 
 .showcase-item-text,
@@ -20938,7 +20945,7 @@ section#showcases .section-description > br {
 /*Testimonials*/
 
 #testimonials {
-  background: url("http://wp-stone-lab/wp-content/themes/stone-lab/assets/svg/bg-cloud-2.svg") no-repeat center bottom/cover;
+  background: url("../assets/svg/bg-cloud-2.svg") no-repeat center bottom/cover;
 }
 
 #testimonials .container {
@@ -24858,10 +24865,6 @@ footer.no-inquiry.footer-wave-3 {
 
   .section-description {
     font-size: 16px;
-  }
-
-  .showcase-item-scene {
-    min-height: 340px;
   }
 
   .testimonials-object {
