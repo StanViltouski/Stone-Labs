@@ -1,7 +1,7 @@
 /*Approach*/
 
 #approach {
-  background-image: url("/img/bg-cloud-4.svg"), url("/img/bg-cloud-4-top.svg");
+  background-image: url("../img/bg-cloud-4.svg"), url("../img/bg-cloud-4-top.svg");
   background-position: 0 -55%, 395px 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -26,10 +26,10 @@
 .approach-main-content-wrapper {
   margin: 0 auto;
   width: 100%;
-  background-image: url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow short red.svg"), 
-  url("/assets/svg/arrow long red.svg"), url("/assets/svg/arrow short red.svg"), 
-  url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow long red 2.svg"), 
-  url("/assets/svg/arrow_scrum_1440.svg");
+  background-image: url("../assets/svg/arrow short red.svg"), url("../assets/svg/arrow short red.svg"), 
+  url("../assets/svg/arrow long red.svg"), url("../assets/svg/arrow short red.svg"), 
+  url("../assets/svg/arrow short red.svg"), url("../assets/svg/arrow long red 2.svg"), 
+  url("../assets/svg/arrow_scrum_1440.svg");
   background-repeat: no-repeat;
   background-position: 217px 290px, 217px 620px, 300px 930px, 437px 1280px, 
   437px 1610px, 300px 1920px, 0px 1150px;
@@ -94,10 +94,10 @@
 @media (max-width: 1439px) { 
 
     .approach-main-content-wrapper {
-        background-image: url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow short red.svg"), 
-  url("/assets/svg/arrow long red.svg"), url("/assets/svg/arrow short red.svg"), 
-  url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow long red 2.svg"), 
-  url("/assets/svg/arrow_scrum_1024.svg");
+        background-image: url("../assets/svg/arrow short red.svg"), url("../assets/svg/arrow short red.svg"), 
+  url("../assets/svg/arrow long red.svg"), url("../assets/svg/arrow short red.svg"), 
+  url("../assets/svg/arrow short red.svg"), url("../assets/svg/arrow long red 2.svg"), 
+  url("../assets/svg/arrow_scrum_1024.svg");
         background-position: 130px 290px, 130px 620px, 213px 930px, 287px 1300px, 
         287px 1630px, 145px 1935px, 0px 1165px;
     }
@@ -149,10 +149,10 @@
 @media (max-width: 1023px) {
 
     .approach-main-content-wrapper {
-        background-image: url("/assets/svg/arrow short red-768.svg"), url("/assets/svg/arrow short red-768.svg"), 
-  url("/assets/svg/arrow short red diag-768.svg"), url("/assets/svg/arrow short red-768.svg"), 
-  url("/assets/svg/arrow short red-768.svg"), url("/assets/svg/arrow short red diag 2-768.svg"), 
-  url("/assets/svg/arrow_scrum_768.svg");
+        background-image: url("../assets/svg/arrow short red-768.svg"), url("../assets/svg/arrow short red-768.svg"), 
+  url("../assets/svg/arrow short red diag-768.svg"), url("../assets/svg/arrow short red-768.svg"), 
+  url("../assets/svg/arrow short red-768.svg"), url("../assets/svg/arrow short red diag 2-768.svg"), 
+  url("../assets/svg/arrow_scrum_768.svg");
         background-position: 137px 257px, 137px 547px, 150px 840px, 212px 1127px, 
         212px 1417px, 180px 1710px, 0px 1005px;
     }
@@ -221,10 +221,10 @@
 @media (max-width: 767px) {
 
     .approach-main-content-wrapper {
-        background-image: url("/assets/svg/arrow short red - 320.svg"), url("/assets/svg/arrow short red - 320.svg"), 
-  url("/assets/svg/arrow short red diag - 320.svg"), url("/assets/svg/arrow short red - 320.svg"), 
-  url("/assets/svg/arrow short red - 320.svg"), url("/assets/svg/arrow short red diag 2 -320.svg"), 
-  url("/assets/svg/arrow_scrum_320.svg");
+        background-image: url("../assets/svg/arrow short red - 320.svg"), url("../assets/svg/arrow short red - 320.svg"), 
+  url("../assets/svg/arrow short red diag - 320.svg"), url("../assets/svg/arrow short red - 320.svg"), 
+  url("../assets/svg/arrow short red - 320.svg"), url("../assets/svg/arrow short red diag 2 -320.svg"), 
+  url("../assets/svg/arrow_scrum_320.svg");
         background-position: 143px 425px, 143px 945px, 150px 1415px, 163px 1910px, 
         163px 2380px, 143px 2845px, 0px 1575px;
     }

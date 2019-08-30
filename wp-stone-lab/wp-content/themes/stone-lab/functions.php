@@ -148,6 +148,7 @@ function stone_lab_scripts() {
 	wp_enqueue_style('apply-form', get_template_directory_uri() . '/layouts/apply-form.css');
 	wp_enqueue_style('contacts', get_template_directory_uri() . '/layouts/contacts.css');
 	wp_enqueue_style('showcases', get_template_directory_uri() . '/layouts/showcases.css');
+	wp_enqueue_style('approach', get_template_directory_uri() . '/layouts/approach.css');
 
 
 //library style

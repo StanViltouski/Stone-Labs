@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="847px" viewBox="0 0 101 847" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23,6.57644739 L37.5181083,15.5361665 C67.0311111,33.749849 85,65.9544499 85,100.635216 L85,784.157349 C85,817.85472 57.6828831,845.171837 23.9855117,845.171837 C23.6569918,845.171837 23.3284771,845.169184 23,845.163878" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="62" height="838.58743" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <linearGradient x1="1.20662332%" y1="2.14292466%" x2="90.267142%" y2="79.7543246%" id="linearGradient-3">
+            <stop stop-color="#0497F4" offset="0%"></stop>
+            <stop stop-color="#0BCBF9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Approach-768" transform="translate(-22.000000, -1420.000000)">
+            <g id="Group-3" transform="translate(22.000000, 1421.000000)">
+                <use id="Rectangle" stroke="#0497F4" mask="url(#mask-2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,12" transform="translate(54.000000, 425.870162) scale(-1, -1) translate(-54.000000, -425.870162) " xlink:href="#path-1"></use>
+                <g id="Group-2" transform="translate(0.000000, 244.000000)">
+                    <rect id="Rectangle" fill="url(#linearGradient-3)" transform="translate(23.500000, 49.000000) rotate(-90.000000) translate(-23.500000, -49.000000) " x="-25.5" y="25.5" width="98" height="47" rx="23.5"></rect>
+                    <text id="SCRUM" transform="translate(23.500000, 49.500000) rotate(-90.000000) translate(-23.500000, -49.500000) " font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" letter-spacing="1.5" fill="#FFFFFF">
+                        <tspan x="-14.5" y="57.5">SCRU</tspan>
+                        <tspan x="42.79" y="57.5">M</tspan>
+                    </text>
+                </g>
+                <g id="Group-2" transform="translate(0.000000, 579.000000)">
+                    <rect id="Rectangle" fill="url(#linearGradient-3)" transform="translate(23.500000, 49.000000) rotate(-90.000000) translate(-23.500000, -49.000000) " x="-25.5" y="25.5" width="98" height="47" rx="23.5"></rect>
+                    <text id="SCRUM" transform="translate(23.500000, 49.500000) rotate(-90.000000) translate(-23.500000, -49.500000) " font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" letter-spacing="1.5" fill="#FFFFFF">
+                        <tspan x="-14.5" y="57.5">SCRU</tspan>
+                        <tspan x="42.79" y="57.5">M</tspan>
+                    </text>
+                </g>
+                <polyline id="Path-22" stroke="#0497F4" fill="#0497F4" points="77 0 101 8 77 16"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

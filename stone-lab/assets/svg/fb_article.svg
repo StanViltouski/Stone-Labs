@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>fb_article</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.20662332%" y1="2.14292466%" x2="90.267142%" y2="79.7543246%" id="linearGradient-1">
+            <stop stop-color="#0497F4" offset="0%"></stop>
+            <stop stop-color="#0BCBF9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Article-1440-" transform="translate(-1228.000000, -4512.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M1243,4512 C1234.7157,4512 1228,4518.7157 1228,4527 C1228,4535.2843 1234.7157,4542 1243,4542 C1251.2843,4542 1258,4535.2843 1258,4527 C1258,4518.7157 1251.2843,4512 1243,4512 Z M1248.57113,4519.98521 L1246.55129,4519.98614 C1244.9674,4519.98614 1244.66114,4520.76787 1244.66114,4521.91487 L1244.66114,4524.44409 L1248.43817,4524.44409 L1248.43637,4528.4055 L1244.66143,4528.4055 L1244.66143,4538.57143 L1240.72186,4538.57143 L1240.72186,4528.4055 L1237.42857,4528.4055 L1237.42857,4524.44409 L1240.72186,4524.44409 L1240.72186,4521.5226 C1240.72186,4518.1322 1242.7163,4516.28571 1245.62803,4516.28571 L1248.57143,4516.29037 L1248.57143,4519.98521 L1248.57113,4519.98521 Z" id="fb_article"></path>
+        </g>
+    </g>
+</svg>
