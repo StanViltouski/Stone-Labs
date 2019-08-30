@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="319px" height="907px" viewBox="0 0 319 907" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M246.19025,7 L258.26947,13.9311672 C289.339421,31.75939 308.5,64.8447909 308.5,100.666396 L308.5,805.332855 C308.5,860.56133 263.728475,905.332855 208.5,905.332855 C208.359945,905.332855 208.21989,905.332561 208.079836,905.331973 L70.5,904.753906" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="238" height="898.332855" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <linearGradient x1="1.20662332%" y1="2.14292466%" x2="90.267142%" y2="79.7543246%" id="linearGradient-3">
+            <stop stop-color="#0497F4" offset="0%"></stop>
+            <stop stop-color="#0BCBF9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Approach-1440" transform="translate(-170.000000, -1666.000000)">
+            <g id="Group-2" transform="translate(170.000000, 1667.000000)">
+                <use id="Rectangle" stroke="#0497F4" mask="url(#mask-2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3,12" transform="translate(189.500000, 456.166428) scale(-1, -1) translate(-189.500000, -456.166428) " xlink:href="#path-1"></use>
+                <polyline id="Path-22" stroke="#0497F4" fill="#0497F4" points="294 0 318.432772 7.82747934 294 15.6549587"></polyline>
+                <rect id="Rectangle" fill="url(#linearGradient-3)" x="0" y="395" width="140" height="70" rx="35"></rect>
+                <text id="SCRUM" font-family="Lato-Bold, Lato" font-size="26" font-weight="bold" letter-spacing="2" fill="#FFFFFF">
+                    <tspan x="21" y="440">SCRU</tspan>
+                    <tspan x="95.677" y="440">M</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

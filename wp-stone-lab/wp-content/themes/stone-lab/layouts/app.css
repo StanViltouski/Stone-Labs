@@ -24117,6 +24117,8 @@ footer.no-inquiry.footer-wave-3 {
   .showcases-catalog-item:hover .showcase-item-front {opacity: 0;}
 
 
+  .showcase-item-image img{height: 155px;}
+
   img#out-group {
     margin-bottom: 20px;
   }

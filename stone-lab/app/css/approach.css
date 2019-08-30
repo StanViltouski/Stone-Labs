@@ -1,47 +1,57 @@
 /*Approach*/
 
+#approach {
+  background-image: url("/img/bg-cloud-4.svg"), url("/img/bg-cloud-4-top.svg");
+  background-position: 0 -75%, 395px 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 100px 0 0;
+  margin: -140px 0 60px 0;
+}
+
 .page-title {margin-bottom: 25px;}
 
 .page-subtitle {line-height: 1.6;}
 
 .approach-container {
     margin: 0 auto 80px;
-    max-width: 1200px;
+    padding: 0;
+    max-width: 1256px;
 }
 
 .approach-main-content-wrapper {
-  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
   background-image: url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow short red.svg"), 
   url("/assets/svg/arrow long red.svg"), url("/assets/svg/arrow short red.svg"), 
   url("/assets/svg/arrow short red.svg"), url("/assets/svg/arrow long red 2.svg"), 
-  url("/assets/svg/approach-blue arrow dash.svg");
+  url("/assets/svg/arrow_scrum_1440.svg");
   background-repeat: no-repeat;
-  background-position: 140px 275px, 140px 590px, 220px 885px, 360px 1220px, 
-  360px 1535px, 220px 1830px, 0px 1095px;
+  background-position: 217px 290px, 217px 620px, 300px 930px, 437px 1280px, 
+  437px 1610px, 300px 1920px, 0px 1150px;
 }
 
 .approach-main-step-item {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1080px;
   position: relative;
   display: flex;
   align-items: center;
 }
 
 .approach_img_step-pos {
-  margin-right: 20px;
-  left: 20px;
   right: 0!important;
   width: 275px;
-  max-height: 315px;
+  max-height: 330px;
 }
 
 .approach-main-step-text {
-  padding: 0 55px;
-  max-width: 895px;
+  padding: 0 0 0 50px ;
+  max-width: 748px;
   font-size: 20px;
   line-height: 1.6;
   color: #232323;
+  box-sizing: content-box;
 }
 
 .approach-step-sub_title {
@@ -59,10 +69,20 @@
   color: #0497f4;
 }
 
-.approach-main-step-item:nth-child(1n+4) {left: 221px;}
 
-.approach-main-step-item:nth-child(7) {left: 0px;}
 
-.rt {
-    max-width: 674px;
+.approach-main-step-item:nth-child(1n+4) {
+   margin: 0;
+   max-width: 860px;
+   left: 308px;
+}
+
+.approach-main-step-item:nth-child(7) {
+  margin: 0 auto;
+  max-width: 1080px;
+  left: 0px;
+}
+
+.approach-main-step-text-short {
+    max-width: 528px;
 }
