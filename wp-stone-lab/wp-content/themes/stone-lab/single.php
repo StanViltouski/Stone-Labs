@@ -10,28 +10,82 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="for_height"></div>
+</section>
 
-		<?php
+	<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+<section>
+	<div class="container container_article">
+		<div class="article_plate" style="background: linear-gradient(to bottom, rgba(4, 151, 244, 0.5), rgba(4, 151, 244, 0.5)),linear-gradient(to top, #006eb4, rgba(11, 203, 249, 0)), url(<?php the_post_thumbnail_url(); ?>">
 
-			the_post_navigation();
+			<div class="articlePlate_button_wrapper">
+                <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all articles</a>
+            </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+            <div class="articlePlate_title">
+            	<?php the_title(); ?>
+            </div>
 
-		endwhile; // End of the loop.
-		?>
+            <div class="articlePlate_date">
+            	<?php the_date(); ?>
+            </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+            <div class="articlePlate_author">
+            	<div class="articlePlate_author_avatar">
+            		<?php echo get_avatar( $user_ID); ?>
+            	</div>
 
-<?php
-get_sidebar();
-get_footer();
+            	<div class="articlePlate_author_name">
+					<?php the_author(); ?>
+            	</div>
+            </div>
+
+		</div>
+	</div>
+</section>
+
+
+<section>	
+	<div class="container container_article">
+		<?php the_content(); ?>
+	</div>
+</section>
+
+<?php endwhile; ?>	
+
+<section>	
+	<div class="container container_article container_article-footer">
+		<div class="article_footer">
+
+			<div class="articleFooter_button_wrapper">
+        	    <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all 	articles</a>
+        	</div>
+	
+        	<div class="articleFooter_socialNets">
+        	 	<a href="#"><img src="<?php bloginfo('template_directory') ?>/assets/svg/fb_article.svg" title="facebook" alt="facebook"></a>
+        	 	<a href="#"><img src="<?php bloginfo('template_directory') ?>/assets/svg/in_article.svg" title="linkedin" alt="linkedin"></a>
+        	 	<a href="#"><img src="<?php bloginfo('template_directory') ?>/assets/svg/tw_article.svg" title="twitter" alt="twitter"></a>
+        	</div>
+
+        </div>
+	</div>
+</section>
+
+
+
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3">
+    <div class="container inner-container">
+        <div class="footer-inquiry">
+  
+            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+
+            <div class="inquiry-button">
+                <a href="/apply-form" class="white-button">Send Inquiry</a>
+            </div>
+        </div>
+    </div>
+
+<?php get_footer(); ?>

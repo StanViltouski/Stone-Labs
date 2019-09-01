@@ -129,6 +129,16 @@ function my_myme_types($mime_types){
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
 
+
+
+/*Style for next_posts_link(); Blog page*/
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+//add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+function posts_link_attributes() {return 'class="blue-main-link"';}
+
+
+
 /*Contact form 7 remove span*/
 add_filter('wpcf7_form_elements', function($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
@@ -149,6 +159,7 @@ function stone_lab_scripts() {
 	wp_enqueue_style('contacts', get_template_directory_uri() . '/layouts/contacts.css');
 	wp_enqueue_style('showcases', get_template_directory_uri() . '/layouts/showcases.css');
 	wp_enqueue_style('approach', get_template_directory_uri() . '/layouts/approach.css');
+	wp_enqueue_style('article', get_template_directory_uri() . '/layouts/article.css');
 
 
 //library style

@@ -340,3 +340,4 @@ function stone_lab_custompost_type_outsource() {
 	register_post_type( 'outsource', $args );
 }
 add_action( 'init', 'stone_lab_custompost_type_outsource' );
+

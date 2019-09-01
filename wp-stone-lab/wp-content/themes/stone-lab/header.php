@@ -16,7 +16,7 @@
 <body>
 
 
-<?php if ( is_single() ){ ?>
+<?php if ( is_single() && 'showcases' == get_post_type() ){ ?>
 
 <section id="showcases-header" class="header">
         <div class="mobile-menu-fixed">
@@ -31,7 +31,7 @@
 
 <?php } else {?>
     
-    <section class="header header-wave-1 header-wave-2 header-wave-3">
+<section class="header header-wave-1 header-wave-2 header-wave-3">
 
     <div class="mobile-menu-fixed">
         <div class="container navbar-container">

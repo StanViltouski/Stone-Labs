@@ -15,46 +15,55 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-	
+	<div class="page-title-wrapper">
+        <h1 class="page-title">Our Blog</h1>
+    </div>
+</section>
 
-		<?php
-		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+<section class="blog-main-section ">
+    <div class="container">
+        <div class="blog-main-wrapper">
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <?php
+        	$i=0;
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post(); 
+					$i++;?>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<div class="blog-main-item" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                	<a href="<?php the_permalink(); ?>" class="blog-item-date">
+                    	<?php the_date(); ?>
+                	</a>
 
-			endwhile;
+                	<a href="<?php the_permalink(); ?>" class="blog-item-link">
+                    	<span class="blog-item-title">
+                        	<?php the_title(); ?>
+                    	</span>
 
-			the_posts_navigation();
+                    	<?php  if($i == 1) {?>
+							<span class="blog-item-description">
+                      			<?php the_excerpt(); ?>
+                    		</span>
+                    	<?php }?>
 
-		else :
+                	</a>
+            	</div>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php 	endwhile;
 
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </div>
+        <div class="blue-main-link-wrapper">
+        	<?php next_posts_link('View More', 0); ?>
+        </div>
+    </div>
+</section>
 
-<?php
-get_sidebar();
-get_footer();
+
+<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">		
+
+<?php get_footer(); ?>
