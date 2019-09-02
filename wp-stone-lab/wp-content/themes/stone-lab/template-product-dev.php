@@ -9,17 +9,23 @@ get_header();?>
         <div class="inner-landing-head">
             <div class="row px-lg-2">
                 <div class="col-sm-12 col-md-6 title-wrapper">
-                    <h1 class="title"><?php if( get_field('head_title') ): ?><?php the_field('head_title'); ?><?php endif; ?></h1>
+                    <h1 class="title">
+                        <?php if(get_post_meta($post->ID, $key = 'head_title', $single = true)){ ?>
+                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'head_title', $single = true));?>
+                        <?php }  ?>
+                    </h1>
                     <div class="sub-title">
-                        <?php if( get_field('head_content') ): ?><?php the_field('head_content'); ?><?php endif; ?>
+                        <?php if(get_post_meta($post->ID, $key = 'head_content', $single = true)){ ?>
+                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'head_content', $single = true));?>
+                        <?php }  ?>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 header-images-wrapper">
-                    <?php if( get_field('head_img') ): ?><img src="<?php the_field('head_img'); ?>" /><?php else:?>
-                    <img src="<?php bloginfo('template_directory') ?>/img/product-dev-land-visual-bg-circles.svg" alt="visual-bg" id="pd-bg">
-                    <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-man.svg" alt="visual-man" id="pd-man">
-                    <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-girl.svg" alt="visual-girl" id="pd-girl">
-                    <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-2-puzzles.svg" alt="visual-2-puzzles" id="pd-puzzles">
+                    <?php if( get_field('head_img') ): ?><img src="<?php esc_attr(the_field('head_img')); ?>" /><?php else:?>
+                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-land-visual-bg-circles.svg" alt="visual-bg" id="pd-bg">
+                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-man.svg" alt="visual-man" id="pd-man">
+                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-girl.svg" alt="visual-girl" id="pd-girl">
+                        <img src="<?php bloginfo('template_directory') ?>/img/product-dev-visual-2-puzzles.svg" alt="visual-2-puzzles" id="pd-puzzles">
                     <?php endif; ?>
                 </div>
             </div>
@@ -27,6 +33,8 @@ get_header();?>
 
     </div>
 </section>
+
+
 <section id="product-dev-combined-bg">
     <section id="pd-graphics-section">
         <div class="container">
@@ -36,11 +44,7 @@ get_header();?>
             <div class="graphics-slider-wrapper">
                 <div class="pd-text-part-slider-wrapper">
                     <div class="owl-carousel owl-theme  pd-text-slider">
-                        <!--<div class=" pd-text-slider">-->
-
-
                          <?php
-
                              wp_reset_query();
                                 $resent_list = new WP_Query(array('post_type'=> 'startup', 'order'=> 'ASC', 'posts_per_page'=> 4));
                                 $i=0;
@@ -49,17 +53,16 @@ get_header();?>
                                     if ( $resent_list->have_posts() ) :
                                         while ( $resent_list->have_posts() ) :
                                     $resent_list->the_post();
-                    
                                     $i++;
                                     ?>
 
                                     <div class="pd-text-slider-object" data-text-index="<?php echo($i); ?>">
                                         <div class="pd-text-slider-title">
-                                            <?php the_title(); ?>
+                                            <?php esc_html(the_title()); ?>
                                         </div>
                                         <div class="pd-text-slider-description">
                                             <span>
-                                                <?php the_content(); ?>
+                                                <?php esc_html(the_content()); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -68,6 +71,7 @@ get_header();?>
 
                     </div>
                 </div>
+
                 <div class="pd-graph-part-slider-wrapper">
                     <div class=" pd-graph-slider">
                         <!--<div class="pd-graph-slider">-->
@@ -90,6 +94,7 @@ get_header();?>
                                     </g>
                                 </svg>
                             </div>
+
                             <div class="graph-item" data-text-index="2">
                                 <svg width="193px" height="555px" viewBox="0 0 193 555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>startup graph unselected (2)</title>
@@ -108,6 +113,7 @@ get_header();?>
                                     </g>
                                 </svg>
                             </div>
+
                             <div class="graph-item" data-text-index="3">
                                 <svg width="193px" height="555px" viewBox="0 0 193 555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>startup graph unselected (3)</title>
@@ -126,6 +132,7 @@ get_header();?>
                                     </g>
                                 </svg>
                             </div>
+
                             <div class="graph-item" data-text-index="4">
                                 <svg width="196px" height="553px" viewBox="0 0 196 553" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>startup graph unselected (4)</title>
@@ -168,36 +175,42 @@ get_header();?>
                 foreach($posts as $post) :setup_postdata($post);?>
 
                 <div class="section-header">
-                    <?php the_title();?>
+                    <?php esc_html(the_title());?>
                 </div>
 
                 <div class="section-description">
-                    <?php the_content(); ?>
+                    <?php esc_html(the_content()); ?>
                 </div>
 
                 <div class="philosophy-icon-wrapper">
                     <div class="philosophy-item">
                         <div class="philosophy-icon approach">
-                            <?php if( get_field('first_icon') ): ?><img src="<?php the_field('first_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('first_icon') ): ?><img src="<?php esc_attr(the_field('first_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)); ?>
-                        </div>
+                            <?php if(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true));?>
+                            <?php }  ?>
+                        </div>esc_attr(
                     </div>
                     <div class="philosophy-item">
                         <div class="philosophy-icon business">
-                            <?php if( get_field('second_icon') ): ?><img src="<?php the_field('second_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('second_icon') ): ?><img src="<?php esc_attr(the_field('second_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)); ?>
+                            <?php if(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true));?>
+                            <?php }  ?>
                         </div>
                     </div>
                     <div class="philosophy-item">
                         <div class="philosophy-icon analysis">
-                            <?php if( get_field('third_icon') ): ?><img src="<?php the_field('third_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('third_icon') ): ?><img src="<?php esc_attr(the_field('third_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)); ?>
+                            <?php if(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true));?>
+                            <?php }  ?>
                         </div>
                     </div>
                 </div>
@@ -217,7 +230,7 @@ get_header();?>
                 We don't sell code or development hours,  we share our expertise.
             </div>
             <div class="grid-services-wrapper">
-                <?php
+            <?php
                 wp_reset_query();
                 $args = array( 'post_type'=> 'solutions', 'posts_per_page' => 8,  'orderby'=> 'rand', 'tax_query' => array(
                     array(
@@ -232,18 +245,20 @@ get_header();?>
 
                 <div class="grid-services-item">
                     <div class="grid-service-title">
-                        <?php the_title(); ?>
+                        <?php esc_html(the_title()); ?>
                     </div>
                     <div class="grid-service-image">
-                        <?php the_post_thumbnail(); ?>
+                        <?php esc_html(the_post_thumbnail()); ?>
                     </div>
                 </div>
-            
             <?php endforeach; wp_reset_query(); ?>
+
             </div>
         </div>
     </section>
 </section>
+
+
 <section id="showcases" class="middle-wave-1 middle-wave-2 middle-wave-3">
     <div class="container">
         <div class="section-header text-white">
@@ -276,30 +291,34 @@ get_header();?>
                                     <div class="card-face card-face-front">
                                         <div class="showcase-item-text">
                                             <div class="showcase-item-category">
-                                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                                <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
+                                                <?php }  ?>
                                             </div>
                                             <div class="showcase-item-title">
-                                                <?php the_title(); ?>
+                                                <?php esc_html(the_title()); ?>
                                             </div>
                                             <div class="showcase-item-description">
-                                               <?php the_excerpt(); ?>
+                                               <?php esc_html(the_excerpt()); ?>
                                             </div>
                                         </div>
                                         <div class="showcase-item-image">
-                                           <?php the_post_thumbnail( array(420, 230) ); ?>
+                                           <?php esc_html(the_post_thumbnail( array(420, 230) )); ?>
                                         </div>
                                     </div>
 
 
                                     <div class="card-face card-face-back">
                                         <div class="showcase-item-category">
-                                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                            <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
+                                            <?php }  ?>
                                         </div>
                                         <div class="showcase-item-title">
-                                            <?php the_title(); ?>
+                                            <?php esc_html(the_title()); ?>
                                         </div>
                                         <div class="showcase-item-description">
-                                            <?php the_content(); ?>
+                                            <?php esc_html(the_content()); ?>
                                         </div>
                                         <div class="showcase-info">
                                             <div class="duration">
@@ -307,7 +326,9 @@ get_header();?>
                                                     Duration
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'duration', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                             <div class="team">
@@ -315,7 +336,9 @@ get_header();?>
                                                     Team
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'team', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                             <div class="technology">
@@ -323,12 +346,14 @@ get_header();?>
                                                     technology
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'technology', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="showcase-button-wrapper">
-                                            <a href="<?php the_permalink(); ?>" class="showcase-link">See Details</a>
+                                            <a href="<?php esc_html(the_permalink()); ?>" class="showcase-link">See Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -344,6 +369,8 @@ get_header();?>
         </div>
     </div>
 </section>
+
+
 <section id="clients">
     <div class="container">
         <div class="section-head">
@@ -354,25 +381,27 @@ get_header();?>
         </div>
          <div class="owl-carousel owl-theme clients-slider">
     
-            <?php
+        <?php
             wp_reset_query();
                 $args = array( 'post_type'=> 'clients', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
                     array(
                         'taxonomy' => 'type clients',
                         'field'    => 'slug',
-                        'terms'   => array( 'product' )
+                        'terms'    => array( 'product' )
                     )
                 )
             );
                 $posts = get_posts($args);
                 foreach($posts as $post) :setup_postdata($post);
                 ?>
-                 <div class="clients-slide-wrapper"><?php the_post_thumbnail(); ?></div>
+                 <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail()); ?></div>
             
             <?php endforeach; wp_reset_query(); ?>
         </div>
     </div>
 </section>
+
+
 <section id="testimonials">
     <div class="container">
         <div class="section-head">
@@ -409,14 +438,14 @@ get_header();?>
                         <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                     </div>
             <div class="testimonial-text">
-                <p><?php the_content(); ?></p>
+                <p><?php esc_html(the_content()); ?></p>
             </div>
             <div class="testimonial-author-wrapper">
-                <?php if( get_field('avatar') ): ?><img src="<?php the_field('avatar'); ?>" /><?php endif; ?>
-                <span class="author-name"><?php the_title(); ?> </span>
+                <?php if( get_field('avatar') ): ?><img src="<?php esc_attr(the_field('avatar')); ?>" /><?php endif; ?>
+                <span class="author-name"><?php esc_html(the_title()); ?> </span>
              </div>
             <div class="testimonial-logo-wrapper">
-                <?php if( get_field('logo') ): ?><img src="<?php the_field('logo'); ?>" /><?php endif; ?>
+                <?php if( get_field('logo') ): ?><img src="<?php esc_attr(the_field('logo')); ?>" /><?php endif; ?>
             </div>
                    </div>
             </div>
@@ -428,11 +457,12 @@ get_header();?>
     </div>
 </section>
 
+
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
     <div class="container inner-container">
         <div class="footer-inquiry">
   
-            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+            <?php esc_html(dynamic_sidebar( 'Footer nameplate' )); ?>
 
             <div class="inquiry-button">
                 <a href="/apply-form" class="white-button">Send Inquiry</a>

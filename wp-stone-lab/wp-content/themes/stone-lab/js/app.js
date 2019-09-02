@@ -120,15 +120,17 @@ try {
 
 window.onload = function () {
 
+
+
   $(document).ready(function () {
     $('.dropdown-item-wrapper').on({
 
       'mouseenter' : function () {
-        $(this).find('.nav-dropdown-menu').addClass('active').slideDown(200);
+        $('.nav-dropdown-menu').addClass('active').slideDown(200);
     },
 
       'mouseleave': function () {
-        $(this).find('.nav-dropdown-menu').removeClass('active').slideUp(200);
+        $('.nav-dropdown-menu').removeClass('active').slideUp(200);
       }
 
   });
@@ -148,6 +150,9 @@ window.onload = function () {
       $('.submenu-resp').slideUp(200);
   })
 
+
+
+/* Dropdown header menu mibile*/
     $('.mobile-dropdown-item-toggler').on('click', function () {
       if ($(this).find('.mobile-dropdown-menu').hasClass('active')) {
         $(this).find('.mobile-dropdown-menu').removeClass('active').slideUp(200);

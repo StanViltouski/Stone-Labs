@@ -7,30 +7,28 @@
  * @package stone-lab
  */
 
-get_header();
-?>
+get_header(); ?>
 
 	<div class="for_height"></div>
 </section>
 
 	<?php
-		while ( have_posts() ) :
-			the_post(); ?>
+		while ( have_posts() ) : the_post(); ?>
 
 <section>
 	<div class="container container_article">
-		<div class="article_plate" style="background: linear-gradient(to bottom, rgba(4, 151, 244, 0.5), rgba(4, 151, 244, 0.5)),linear-gradient(to top, #006eb4, rgba(11, 203, 249, 0)), url(<?php the_post_thumbnail_url(); ?>">
+		<div class="article_plate" style="background: linear-gradient(to bottom, rgba(4, 151, 244, 0.5), rgba(4, 151, 244, 0.5)),linear-gradient(to top, #006eb4, rgba(11, 203, 249, 0)), url(<?php esc_html(the_post_thumbnail_url()); ?>">
 
 			<div class="articlePlate_button_wrapper">
                 <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all articles</a>
             </div>
 
             <div class="articlePlate_title">
-            	<?php the_title(); ?>
+            	<?php esc_html(the_title()); ?>
             </div>
 
             <div class="articlePlate_date">
-            	<?php the_date(); ?>
+            	<?php esc_html(the_date()); ?>
             </div>
 
             <div class="articlePlate_author">
@@ -39,7 +37,7 @@ get_header();
             	</div>
 
             	<div class="articlePlate_author_name">
-					<?php the_author(); ?>
+					<?php esc_html(the_author()); ?>
             	</div>
             </div>
 
@@ -61,7 +59,7 @@ get_header();
 		<div class="article_footer">
 
 			<div class="articleFooter_button_wrapper">
-        	    <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all 	articles</a>
+        	    <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all articles</a>
         	</div>
 	
         	<div class="articleFooter_socialNets">
@@ -80,12 +78,13 @@ get_header();
     <div class="container inner-container">
         <div class="footer-inquiry">
   
-            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+            <?php esc_html(dynamic_sidebar( 'Footer nameplate' )); ?>
 
             <div class="inquiry-button">
                 <a href="/apply-form" class="white-button">Send Inquiry</a>
             </div>
         </div>
     </div>
+
 
 <?php get_footer(); ?>

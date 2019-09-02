@@ -124,6 +124,8 @@ dl {
   margin-bottom: 1rem;
 }
 
+li {list-style: none;}
+
 ol ol,
 ul ul,
 ol ul,
@@ -20077,7 +20079,7 @@ nav .nav-item-button a.btn:hover {
   top: 2px;
 }
 
-.nav-dropdown-menu {
+.nav-dropdown-menu, .nav-dropdown-menu_filter {
   position: absolute;
   display: none;
   background: #ffffff;
@@ -20087,7 +20089,7 @@ nav .nav-item-button a.btn:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.nav-dropdown-menu a.nav-dropdown-item {
+.nav-dropdown-menu a.nav-dropdown-item, .nav-dropdown-menu_filter a.nav-dropdown-item {
   color: #ef1c3b;
   font-family: "Lato", sans-serif;
   font-size: 14px;

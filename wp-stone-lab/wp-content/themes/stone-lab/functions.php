@@ -121,13 +121,12 @@ add_action( 'widgets_init', 'stone_lab_widgets_init' );
 
 
 
-
+/*  SVG for media */
 function my_myme_types($mime_types){
-    $mime_types['svg'] = 'image/svg+xml'; // поддержка SVG
+    $mime_types['svg'] = 'image/svg+xml'; 
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
-
 
 
 
@@ -140,6 +139,7 @@ function posts_link_attributes() {return 'class="blue-main-link"';}
 
 
 /*Contact form 7 remove span*/
+
 add_filter('wpcf7_form_elements', function($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
     $content = str_replace('<br />', '', $content);

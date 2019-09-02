@@ -1,5 +1,5 @@
-
 <?php 
+
 /**
 * Template name: Home Template
 */
@@ -18,13 +18,17 @@ get_header();?>
                                     while ( $resent_list->have_posts() ) :
                                     $resent_list->the_post();?>
                                     
-                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                                    <h1 class="title">
+                                        <?php if(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)){ ?>
+                                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true));?>
+                                         <?php }  ?>
+                                    </h1>
                             
                                 <div class="sub-title">
-                                    <?php the_excerpt(); ?>
+                                    <?php esc_html(the_excerpt()); ?>
                                 </div>
                        
-                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
+                                <a href="<?php esc_html(the_permalink()); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                             <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -48,13 +52,17 @@ get_header();?>
                                     while ( $resent_list->have_posts() ) :
                                     $resent_list->the_post();?>
                                     
-                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                                    <h1 class="title">
+                                        <?php if(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)){ ?>
+                                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true));?>
+                                        <?php }  ?>
+                                    </h1>
                             
                                 <div class="sub-title">
-                                    <?php the_excerpt(); ?>
+                                    <?php esc_html(the_excerpt()); ?>
                                 </div>
                        
-                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
+                                <a href="<?php esc_html(the_permalink()); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -77,13 +85,17 @@ get_header();?>
                                     while ( $resent_list->have_posts() ) :
                                     $resent_list->the_post();?>
                                     
-                                    <h1 class="title"><?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)); ?></h1>
+                                    <h1 class="title">
+                                        <?php if(get_post_meta($post->ID, $key = 'title_first_slider', $single = true)){ ?>
+                                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_slider', $single = true));?>
+                                        <?php }  ?>
+                                    </h1>
                             
                                 <div class="sub-title">
-                                    <?php the_excerpt(); ?>
+                                    <?php esc_html(the_excerpt()); ?>
                                 </div>
                        
-                                <a href="<?php the_permalink(); ?>" class="btn title-button">learn more</a>
+                                <a href="<?php esc_html(the_permalink()); ?>" class="btn title-button">learn more</a>
                          <?php  endwhile; endif;  wp_reset_query(); ?>
                     </div>
                     <div class="col-sm-12 col-md-6 p-0 animated-col-wrapper">
@@ -120,7 +132,7 @@ get_header();?>
                             ?>
                         <div class="title-card-item" data-id="<?php echo($data_id); ?>" data-index="<?php echo ($i); ?>">
                     <div class="col-md-8 col-6 title-card-item-text">
-                        <span><?php the_title(); ?></span>
+                        <span><?php esc_html(the_title()); ?></span>
                         <a href="#">Learn More</a>
                     </div>
                     <div class="col-md-4 col-6 title-card-item-image"></div>
@@ -148,15 +160,18 @@ get_header();?>
                             $resent_list->the_post();?>
                             <div class="about-us-text">
                                 <div class="about-us-head">
-                                    <?php the_title(); ?>
+                                    <?php esc_html(the_title()); ?>
                                 </div>
 
                                 <h3 class="about-us-header">
-                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                                    <?php if(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)){ ?>
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true));?>
+                                    <?php }  ?>
+                                    
                                 </h3>
 
                                 <div class="about-us-description">
-                                    <?php the_content(); ?>
+                                    <?php esc_html(the_content()); ?>
                                 </div>
                             </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>
@@ -175,13 +190,15 @@ get_header();?>
                         $resent_list->the_post();?>
                         <div class="about-us-text">
                             <div class="about-us-head">
-                                <?php the_title(); ?>
+                                <?php esc_html(the_title()); ?>
                             </div>
                             <h3 class="about-us-header">
-                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                                <?php if(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)){ ?>
+                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true));?>
+                                <?php }  ?>
                             </h3>
                             <div class="about-us-description">
-                                <?php the_content(); ?>
+                                <?php esc_html(the_content()); ?>
                             </div>
                         </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>
@@ -198,13 +215,15 @@ get_header();?>
                         $resent_list->the_post();?>
                         <div class="about-us-text">
                             <div class="about-us-head">
-                                <?php the_title(); ?>
+                                <?php esc_html(the_title()); ?>
                             </div>
                             <h3 class="about-us-header">
-                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)); ?>
+                                <?php if(get_post_meta($post->ID, $key = 'title_second_slider', $single = true)){ ?>
+                                <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_slider', $single = true));?>
+                                <?php }  ?>
                             </h3>
                             <div class="about-us-description">
-                                <?php the_content(); ?>
+                                <?php esc_html(the_content()); ?>
                             </div>
                         </div>
              <?php  endwhile; endif;  wp_reset_query(); ?>
@@ -233,44 +252,52 @@ get_header();?>
                 foreach($posts as $post) :setup_postdata($post);?>
 
                 <div class="section-header">
-                    <?php the_title();?>
+                    <?php esc_html(the_title());?>
                 </div>
 
                 <div class="section-description">
-                    <?php the_content(); ?>
+                    <?php esc_html(the_content()); ?>
                 </div>
 
                 <div class="philosophy-icon-wrapper">
                     <div class="philosophy-item">
                         <div class="philosophy-icon approach">
-                            <?php if( get_field('first_icon') ): ?><img src="<?php the_field('first_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('first_icon') ): ?><img src="<?php esc_attr(the_field('first_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)); ?>
+                            <?php if(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true));?>
+                            <?php }  ?>
                         </div>
                     </div>
                     <div class="philosophy-item">
                         <div class="philosophy-icon business">
-                            <?php if( get_field('second_icon') ): ?><img src="<?php the_field('second_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('second_icon') ): ?><img src="<?php esc_attr(the_field('second_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)); ?>
+                            <?php if(get_post_meta($post->ID, $key = 'title_second_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_second_icon', $single = true));?>
+                            <?php }  ?>
                         </div>
                     </div>
                     <div class="philosophy-item">
                         <div class="philosophy-icon analysis">
-                            <?php if( get_field('third_icon') ): ?><img src="<?php the_field('third_icon'); ?>" /><?php endif; ?>
+                            <?php if( get_field('third_icon') ): ?><img src="<?php esc_attr(the_field('third_icon')); ?>" /><?php endif; ?>
                         </div>
                         <div class="philosophy-item-text">
-                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)); ?>
+                            <?php if(get_post_meta($post->ID, $key = 'title_third_icon', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_third_icon', $single = true));?>
+                            <?php }  ?>
                         </div>
-                    </div>
+                    </div
                 </div>
             
             <?php endforeach; wp_reset_query(); ?>
 
         </div>
 </section>
+
+
 <section id="clients">
 	<div class="container">
         <div class="section-head">
@@ -287,19 +314,21 @@ get_header();?>
     				array(
     		        	'taxonomy' => 'type clients',
     		        	'field'    => 'slug',
-    		        	'terms'   => array( 'all' )
+    		        	'terms'    => array( 'all' )
     		    	)
     			)
     		);
     		    $posts = get_posts($args);
     		    foreach($posts as $post) :setup_postdata($post);
     		    ?>
-    		     <div class="clients-slide-wrapper"><?php the_post_thumbnail(); ?></div>
+    		     <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail()); ?></div>
     		
     		<?php endforeach; wp_reset_query(); ?>
         </div>
     </div>
 </section>
+
+
 <section id="showcases" class="middle-wave-1 middle-wave-2 middle-wave-3">
     <div class="container">
         <div class="section-header text-white">
@@ -333,13 +362,16 @@ get_header();?>
                                     <div class="card-face card-face-front">
                                         <div class="showcase-item-text">
                                             <div class="showcase-item-category">
+
+                                                <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
                                                 <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                                <?php }  ?>
                                             </div>
                                             <div class="showcase-item-title">
-                                                <?php the_title(); ?>
+                                                <?php esc_html(the_title()); ?>
                                             </div>
                                             <div class="showcase-item-description">
-                                               <?php the_excerpt(); ?>
+                                               <?php esc_html(the_excerpt()); ?>
                                             </div>
                                         </div>
                                         <div class="showcase-item-image">
@@ -350,13 +382,15 @@ get_header();?>
 
                                     <div class="card-face card-face-back">
                                         <div class="showcase-item-category">
-                                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true)); ?>
+                                            <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
+                                            <?php }  ?>
                                         </div>
                                         <div class="showcase-item-title">
-                                            <?php the_title(); ?>
+                                            <?php esc_html(the_title()); ?>
                                         </div>
                                         <div class="showcase-item-description">
-                                            <?php the_content(); ?>
+                                            <?php esc_html(the_content()); ?>
                                         </div>
                                         <div class="showcase-info">
                                             <div class="duration">
@@ -364,7 +398,9 @@ get_header();?>
                                                     Duration
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'duration', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                             <div class="team">
@@ -372,7 +408,9 @@ get_header();?>
                                                     Team
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'team', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                             <div class="technology">
@@ -380,12 +418,14 @@ get_header();?>
                                                     technology
                                                 </div>
                                                 <div class="value">
-                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true)); ?>
+                                                    <?php if(get_post_meta($post->ID, $key = 'technology', $single = true)){ ?>
+                                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true));?>
+                                                    <?php }  ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="showcase-button-wrapper">
-                                            <a href="<?php the_permalink(); ?>" class="showcase-link">See Details</a>
+                                            <a href="<?php esc_html(the_permalink()); ?>" class="showcase-link">See Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -401,6 +441,8 @@ get_header();?>
         </div>
     </div>
 </section>
+
+
 <section id="testimonials">
     <div class="container">
         <div class="section-head">
@@ -437,14 +479,14 @@ get_header();?>
                         <img src="<?php bloginfo('template_directory') ?>/assets/svg/testimonials-quote-icon-red.svg" alt="quote-icon">
                     </div>
             <div class="testimonial-text">
-                <p><?php the_content(); ?></p>
+                <p><?php esc_html(the_content()); ?></p>
             </div>
             <div class="testimonial-author-wrapper">
-                <?php if( get_field('avatar') ): ?><img src="<?php the_field('avatar'); ?>" /><?php endif; ?>
+                <?php if( get_field('avatar') ): ?><img src="<?php esc_attr(the_field('avatar')); ?>" /><?php endif; ?>
                 <span class="author-name"><?php the_title(); ?> </span>
              </div>
             <div class="testimonial-logo-wrapper">
-                <?php if( get_field('logo') ): ?><img src="<?php the_field('logo'); ?>" /><?php endif; ?>
+                <?php if( get_field('logo') ): ?><img src="<?php esc_attr(the_field('logo')); ?>" /><?php endif; ?>
             </div>
                    </div>
             </div>
@@ -456,11 +498,12 @@ get_header();?>
     </div>
 </section>
 
+
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
     <div class="container inner-container">
         <div class="footer-inquiry">
   
-            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+            <?php esc_html(dynamic_sidebar( 'Footer nameplate' )); ?>
 
             <div class="inquiry-button">
                 <a href="/apply-form" class="white-button">Send Inquiry</a>

@@ -1,14 +1,16 @@
 
 <?php get_header();?>
 <div class="page-title-wrapper">
+
         <h1 class="page-title">Our Showcases</h1>
+
         <div class="container">
             <div class="category-selector-wrapper">
                  <div class="navbar-nav">
                     <div class="nav-item">
                          <div class="top-dropdown-item">
                             <a id="drop_menu" class="nav-item dropdown-link category-selector-link" data-toggle="dropdown" href="#" role="button">All Industries</a>
-                            <div class="nav-dropdown-menu dropdown-menu submenu-resp">
+                            <div class="nav-dropdown-menu_filter dropdown-menu submenu-resp">
 
                             <?php $wcatTerms = get_terms('showcases-filter', 
                             	array(
@@ -57,25 +59,29 @@
         </div>
     </div>
 </section>
+
+
 <section class="showcases-catalog-section">
     <div class="container">
         <div class="showcases-catalog-wrapper">
 
         	<?php
-		while ( have_posts() ) :
-			the_post(); ?>
 
-				<div class="showcases-catalog-item" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+		    while ( have_posts() ) : the_post(); ?>
+
+			<div class="showcases-catalog-item" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
                 <div class="showcase-item-overlay">
                     <div class="top-part">
                         <div class="showcase-item-category">
-                            <?php if( get_field('sub_title') ): ?><?php the_field('sub_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
+                            <?php }  ?>  
                         </div>
                         <div class="showcase-item-title">
-                            <?php the_title(); ?>
+                            <?php esc_html(the_title()); ?>
                         </div>
                         <div class="showcase-item-description">
-                            <?php the_content(); ?>
+                            <?php esc_html(the_content()); ?>
                         </div>
                         <div class="showcase-info">
                             <div class="duration">
@@ -83,7 +89,9 @@
                                     Duration
                                 </div>
                                 <div class="value">
-                                    <?php if( get_field('duration') ): ?><?php the_field('duration'); ?><?php endif; ?>
+                                    <?php if(get_post_meta($post->ID, $key = 'duration', $single = true)){ ?>
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true));?>
+                                    <?php }  ?>
                                 </div>
                             </div>
                             <div class="team">
@@ -91,7 +99,9 @@
                                     Team
                                 </div>
                                 <div class="value">
-                                   <?php if( get_field('team') ): ?><?php the_field('team'); ?><?php endif; ?>
+                                    <?php if(get_post_meta($post->ID, $key = 'team', $single = true)){ ?>
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'team', $single = true));?>
+                                    <?php }  ?>
                                 </div>
                             </div>
                             <div class="technology">
@@ -99,37 +109,44 @@
                                     technology
                                 </div>
                                 <div class="value">
-                                    <?php if( get_field('technology') ): ?><?php the_field('technology'); ?><?php endif; ?>
+                                    <?php if(get_post_meta($post->ID, $key = 'technology', $single = true)){ ?>
+                                    <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true));?>
+                                    <?php }  ?>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="showcase-button-wrapper">
-                        <a href="<?php the_permalink(); ?>" class="showcase-link">See Details</a>
+                        <a href="<?php esc_html(the_permalink()); ?>" class="showcase-link">See Details</a>
                     </div>
                 </div>
                 <div class="showcase-item-front">
+
                     <div class="showcase-item-category">
-                        <?php if( get_field('sub_title') ): ?><?php the_field('sub_title'); ?><?php endif; ?>
+                        <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
+                        <?php }  ?>
                     </div>
+
                     <div class="showcase-item-title">
-                        <?php the_title(); ?>
+                        <?php esc_html(the_title()); ?>
                     </div>
                 </div>
             </div>
 
-			
 		<?php endwhile; ?>
             
         </div>
     </div>
 </section>
 
+
 <footer class="footer-wave-1 footer-wave-2 footer-wave-3">
     <div class="container inner-container">
         <div class="footer-inquiry">
   
-            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+            <?php esc_html(dynamic_sidebar( 'Footer nameplate' )); ?>
 
             <div class="inquiry-button">
                 <a href="/apply-form" class="white-button">Send Inquiry</a>

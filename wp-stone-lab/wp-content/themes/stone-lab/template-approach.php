@@ -7,8 +7,16 @@ get_header();?>
 
 
 	 <div class="page-title-wrapper">
-        <h1 class="page-title"><?php if( get_field('page_title') ): ?><?php the_field('page_title'); ?><?php endif; ?></h1>
-        <h4 class="page-subtitle"><?php if( get_field('page_text') ): ?><?php the_field('page_text'); ?><?php endif; ?></h4>
+        <h1 class="page-title">
+            <?php if(get_post_meta($post->ID, $key = 'page_title', $single = true)){ ?>
+            <?php echo esc_attr(get_post_meta($post->ID, $key = 'page_title', $single = true));?>
+            <?php }  ?>    
+        </h1>
+        <h4 class="page-subtitle">
+            <?php if(get_post_meta($post->ID, $key = 'page_text', $single = true)){ ?>
+            <?php echo esc_attr(get_post_meta($post->ID, $key = 'page_text', $single = true));?>
+            <?php }  ?>      
+        </h4>
     </div>
 </section>
 
@@ -29,10 +37,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_1_title') ): ?><?php the_field('step_1_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_1_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_1_title', $single = true));?>
+                            <?php }  ?>  
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_1_content') ): ?><?php the_field('step_1_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_1_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_1_content', $single = true));?>
+                            <?php }  ?>  
                     	</div>
                     </div>
             	</div>
@@ -49,10 +61,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_2_title') ): ?><?php the_field('step_2_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_2_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_2_title', $single = true));?>
+                            <?php }  ?> 
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_2_content') ): ?><?php the_field('step_2_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_2_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_2_content', $single = true));?>
+                            <?php }  ?> 
                     	</div>
                     </div>
             	</div>
@@ -69,10 +85,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_3_title') ): ?><?php the_field('step_3_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_3_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_3_title', $single = true));?>
+                            <?php }  ?> 
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_3_content') ): ?><?php the_field('step_3_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_3_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_3_content', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     </div>
             	</div>
@@ -88,10 +108,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_4_title') ): ?><?php the_field('step_4_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_4_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_4_title', $single = true));?>
+                            <?php }  ?> 
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_4_content') ): ?><?php the_field('step_4_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_4_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_4_content', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     </div>
             	</div>
@@ -107,10 +131,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_5_title') ): ?><?php the_field('step_5_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_5_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_5_title', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     	<div class="approach-main-step-content approach-main-step-content-padding">
-                    		<?php if( get_field('step_5_content') ): ?><?php the_field('step_5_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_5_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_5_content', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     </div>
             	</div>
@@ -126,10 +154,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_6_title') ): ?><?php the_field('step_6_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_6_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_6_title', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_6_content') ): ?><?php the_field('step_6_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_6_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_6_content', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     </div>
             	</div>
@@ -145,10 +177,14 @@ get_header();?>
                     	</div>
 
                     	<div class="approach-main-step-title">
-                    		<?php if( get_field('step_7_title') ): ?><?php the_field('step_7_title'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_7_title', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_7_title', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     	<div class="approach-main-step-content">
-                    		<?php if( get_field('step_7_content') ): ?><?php the_field('step_7_content'); ?><?php endif; ?>
+                            <?php if(get_post_meta($post->ID, $key = 'step_7_content', $single = true)){ ?>
+                            <?php echo esc_attr(get_post_meta($post->ID, $key = 'step_7_content', $single = true));?>
+                            <?php }  ?>
                     	</div>
                     </div>
             	</div>
@@ -161,7 +197,7 @@ get_header();?>
     <div class="container inner-container">
         <div class="footer-inquiry">
   
-            <?php dynamic_sidebar( 'Footer nameplate' ); ?>
+            <?php esc_html(dynamic_sidebar( 'Footer nameplate' )); ?>
 
             <div class="inquiry-button">
                 <a href="/apply-form" class="white-button">Send Inquiry</a>

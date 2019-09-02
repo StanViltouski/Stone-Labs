@@ -3,9 +3,14 @@
 * Template name: Apply-form Template
 */
 
-get_header();?>
-			 <div class="page-title-wrapper applyForm_title">
-        <h1 class="page-title"><?php if( get_field('title') ): ?><?php the_field('title'); ?><?php endif; ?></h1> 
+get_header(); ?>
+
+	<div class="page-title-wrapper applyForm_title">
+        <h1 class="page-title">
+        	<?php if(get_post_meta($post->ID, $key = 'title', $single = true)){ ?>
+            <?php echo esc_attr(get_post_meta($post->ID, $key = 'title', $single = true));?>
+            <?php }  ?> 	
+        </h1> 
     </div>
 </section>
 
@@ -15,10 +20,18 @@ get_header();?>
 		<div class="form_wrapper">
 			<div class="row m-0 type_forms">
 				<div class="big_form type_form col-6" data="true">
-					<a href="#" onclick="return false"><?php if( get_field('title_big_form') ): ?><?php the_field('title_big_form'); ?><?php endif; ?></a>
+					<a href="#" onclick="return false">
+						<?php if(get_post_meta($post->ID, $key = 'title_big_form', $single = true)){ ?>
+            			<?php echo esc_attr(get_post_meta($post->ID, $key = 'title_big_form', $single = true));?>
+            			<?php }  ?> 		
+					</a>
 				</div>
 				<div class="small_form type_form col-6" data="false">
-					<a href="#" onclick="return false"><?php if( get_field('title_small_form') ): ?><?php the_field('title_small_form'); ?><?php endif; ?></a>
+					<a href="#" onclick="return false">
+						<?php if(get_post_meta($post->ID, $key = 'title_small_form', $single = true)){ ?>
+            			<?php echo esc_attr(get_post_meta($post->ID, $key = 'title_small_form', $single = true));?>
+            			<?php }  ?> 
+					</a>
 				</div>
 			</div>
 

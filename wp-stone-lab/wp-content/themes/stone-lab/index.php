@@ -32,19 +32,19 @@ get_header();
 					the_post(); 
 					$i++;?>
 
-				<div class="blog-main-item" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+				<div class="blog-main-item" style="background-image: url('<?php esc_html(the_post_thumbnail_url()); ?>')">
                 	<a href="<?php the_permalink(); ?>" class="blog-item-date">
-                    	<?php the_date(); ?>
+                    	<?php esc_html(the_date()); ?>
                 	</a>
 
                 	<a href="<?php the_permalink(); ?>" class="blog-item-link">
                     	<span class="blog-item-title">
-                        	<?php the_title(); ?>
+                        	<?php esc_html(the_title()); ?>
                     	</span>
 
                     	<?php  if($i == 1) {?>
 							<span class="blog-item-description">
-                      			<?php the_excerpt(); ?>
+                      			<?php esc_html(the_excerpt()); ?>
                     		</span>
                     	<?php }?>
 
@@ -58,7 +58,7 @@ get_header();
 
         </div>
         <div class="blue-main-link-wrapper">
-        	<?php next_posts_link('View More', 0); ?>
+        	<?php esc_html(next_posts_link('View More', 0)); ?>
         </div>
     </div>
 </section>

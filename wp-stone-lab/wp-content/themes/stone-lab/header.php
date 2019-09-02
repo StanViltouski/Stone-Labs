@@ -10,8 +10,8 @@
     <script type="text/javascript">
         var wayImage = '<?= get_bloginfo("template_url"); ?>';
     </script>
-    <?php wp_head(); ?>
 
+    <?php wp_head(); ?>
 </head>
 <body>
 
