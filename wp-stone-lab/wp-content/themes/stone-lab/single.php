@@ -17,7 +17,7 @@ get_header(); ?>
 
 <section>
 	<div class="container container_article">
-		<div class="article_plate" style="background: linear-gradient(to bottom, rgba(4, 151, 244, 0.5), rgba(4, 151, 244, 0.5)),linear-gradient(to top, #006eb4, rgba(11, 203, 249, 0)), url(<?php esc_html(the_post_thumbnail_url()); ?>">
+		<div class="article_plate" style="background: linear-gradient(to bottom, rgba(4, 151, 244, 0.5), rgba(4, 151, 244, 0.5)),linear-gradient(to top, #006eb4, rgba(11, 203, 249, 0)), url(<?php esc_html(the_post_thumbnail_url()); ?>) no-repeat center/cover">
 
 			<div class="articlePlate_button_wrapper">
                 <a href="/blog" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to all articles</a>

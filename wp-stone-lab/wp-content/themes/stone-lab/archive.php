@@ -7,47 +7,58 @@
  * @package stone-lab
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	</section>
+
+
+
+	<section>
+		<div class="container container_arch">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+					the_archive_title( '<h1 class="page-title mb-5 pt-5" style="color:#232323;">', '</h1>' );
+					the_archive_description( '<h2 class="archive-description" style="color:#232323;">', '</h2>' );
 				?>
+
 			</header><!-- .page-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<div class="row m-0">
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+			<?php while ( have_posts() ) :
+				the_post(); ?>
 
-			endwhile;
 
-			the_posts_navigation();
+			<div class="col-12 col-sm-12 col-md-6 mb-5">
+				<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
+			</div>
 
-		else :
+			<?php endwhile;?>
+
+				<div class="col-12">
+					<div class="row justify-content-center">
+						<div class="col-3">
+							<?php esc_html(next_posts_link('View More', 0)); ?>
+						</div>
+					</div>	
+				</div>
+
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+		endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</div>
+		</div>
+	</section>
 
-<?php
-get_sidebar();
-get_footer();
+	
+
+	<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
+
+<?php get_footer(); ?>

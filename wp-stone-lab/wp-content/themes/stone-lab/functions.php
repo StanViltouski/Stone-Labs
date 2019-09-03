@@ -148,6 +148,16 @@ add_filter('wpcf7_form_elements', function($content) {
 });
 
 
+/*Remove item (admin panel)*/
+	add_action('admin_menu', 'remove_admin_menu');
+
+function remove_admin_menu() {
+	remove_menu_page( 'index.php' ); //Dashboard
+	remove_menu_page('edit-comments.php'); // Comments
+}
+
+
+
 
 /**
  * Enqueue scripts and styles.

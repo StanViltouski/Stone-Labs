@@ -12,8 +12,9 @@
  * @package stone-lab
  */
 
-get_header();
-?>
+get_header(); ?>
+
+	</section>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -34,7 +35,6 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+	
+	<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
+<?php get_footer(); ?>

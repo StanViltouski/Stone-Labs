@@ -7,54 +7,25 @@
  * @package stone-lab
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="page-title-wrapper">
+        <h1 class="page-title">Page Not Found</h1>
+   </div>
+</section>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'stone-lab' ); ?></h1>
-				</header><!-- .page-header -->
+		<section>
+			<div class="container container_nopage">
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'stone-lab' ); ?></p>
+				<img class="nopage_title_img" src="<?php bloginfo('template_directory') ?>/assets/svg/404 visual.svg" alt="img-404">
 
-					<?php
-					get_search_form();
+				<div class="articleFooter_button_wrapper">
+        	    	<a  id="botton_back" href="/" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to home page</a>
+        		</div>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+			</div>
+		</section>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'stone-lab' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
+	<footer class="footer-wave-1 footer-wave-2 footer-wave-3 footer_apply">
 
-					<?php
-					/* translators: %1$s: smiley */
-					$stone_lab_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'stone-lab' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$stone_lab_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

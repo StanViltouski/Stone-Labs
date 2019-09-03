@@ -111,6 +111,24 @@
   color: #232323;
 }
 
+.container_article ul {
+	padding-left: 0px;
+	margin-bottom: 35px;
+}
+
+.container_article li {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #232323;
+}
+
+.container_article li:before {
+ 	content: "\2014";
+ 	margin-right: 7px;
+ 	color: #ef1c3b;
+}
+
+
 .container_article h4, .container_article h5, .container_article h6 {
 	font-size: 20px;
 	font-weight: bold;
@@ -246,7 +264,7 @@
 }
 
 
-/*768 -> 1423*/
+/*768 -> 1024*/
 @media (max-width: 1023px) { 
 
 	.container_article {
@@ -317,6 +335,10 @@
 	.container_article blockquote cite {font-size: 16px;}
 
 	.wp-block-columns, .wp-block-media-text {margin-bottom: 45px;}
+
+	.container_article ul {margin-bottom: 18px;}
+
+	.container_article li {font-size: 18px;}
 
 
 }
@@ -430,6 +452,10 @@
 	.tablepress thead tr th {font-size: 14px;}
 
 	.tablepress tbody tr td {font-size: 14px;}
+
+	.container_article ul {margin-bottom: 20px;}
+
+	.container_article li {font-size: 16px;}
 
 }
 

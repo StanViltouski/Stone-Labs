@@ -4,6 +4,14 @@
 $(function () {
 
 
+  /*Grammarly false*/
+
+  $( "input,textarea,div[contenteditable=true]" ).attr( "data-gramm_editor", "false" );
+
+
+
+  /*TrackBar*/
+  
   $('#ageInputId').on('input', function(){
       var slide_value = $('#ageInputId').val();
          
@@ -13,7 +21,13 @@ $(function () {
 
       $('#ageInputId').attr('value', slide_value);
       $('.thumb').css('left', total_value);
-      ageOutputId.value = '$ '+ ageInputId.value;
+      console.log(slide_value);
+
+      /*add +*/
+
+      if(slide_value > 99000) {ageOutputId.value = '$ '+ ageInputId.value + '+';} 
+      else {ageOutputId.value = '$ '+ ageInputId.value;}
+
   })
 
 
