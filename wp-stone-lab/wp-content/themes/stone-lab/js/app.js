@@ -152,7 +152,7 @@ window.onload = function () {
 
 
 
-/* Dropdown header menu mibile*/
+/* Dropdown header menu mobile*/
     $('.mobile-dropdown-item-toggler').on('click', function () {
       if ($(this).find('.mobile-dropdown-menu').hasClass('active')) {
         $(this).find('.mobile-dropdown-menu').removeClass('active').slideUp(200);

@@ -35,3 +35,43 @@ function stone_lab_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'stone_lab_pingback_header' );
+
+
+
+/*  SVG for media */
+function my_myme_types($mime_types){
+    $mime_types['svg'] = 'image/svg+xml'; 
+    return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
+
+
+/*Style for next_posts_link(); Blog page*/
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+//add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+function posts_link_attributes() {return 'class="blue-main-link"';}
+
+
+
+/*Contact form 7 remove span*/
+
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+    $content = str_replace('<br />', '', $content);
+     
+    return $content;
+});
+
+
+
+/*Remove item (admin panel)*/
+
+add_action('admin_menu', 'remove_admin_menu');
+
+function remove_admin_menu() {
+	remove_menu_page( 'index.php' ); //Dashboard
+	remove_menu_page('edit-comments.php'); // Comments
+}
+

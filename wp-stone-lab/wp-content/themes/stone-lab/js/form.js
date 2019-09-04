@@ -54,9 +54,13 @@ $(function () {
       var total_value = (window.innerWidth < 992) ? slide_value*countMob + 'px' : slide_value*countDesk+ 'px'; 
           //console.log(slide_value);
 
+
+          /*add +*/
+
       $('#ageInputId2').attr('value', slide_value);
       $('.thumbTwo').css('left', total_value);
-      ageOutputId2.value = ageInputId2.value + ' months';
+      	if(slide_value > 5) {ageOutputId2.value = ageInputId2.value + ' +months';} 
+      	else {ageOutputId2.value = ageInputId2.value + ' months';}
 
   })
 
