@@ -523,7 +523,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .placeholder-animate-textarea {top: 20%;}
 
-.footer_apply {padding-top: 282px;}
+.footer_apply {padding-top: 200px;}
 
 .error {
     display: block;
@@ -613,6 +613,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 @media (max-width: 767px) { 
+
+.footer_apply {padding-top: 100px;}
 
 .container_applyForm {padding: 0;}
 

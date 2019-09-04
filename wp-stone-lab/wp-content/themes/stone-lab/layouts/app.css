@@ -21494,7 +21494,7 @@ footer .container {
   content: "";
   background: url("../img/wave_2_footer.svg");
   background-repeat: repeat-x;
-  background-position: top 0 left 0;
+  background-position: top 0 left 11%;
   background-size: 3010px;
   width: 7000px;
   height: 100%;
@@ -21508,7 +21508,7 @@ footer .container {
 .footer-wave-3 {
   background: url("../img/wave_3_footer.svg");
   background-repeat: repeat-x;
-  background-position: bottom 0 left 0;
+  background-position: bottom -40px left 0;
   background-size: 1450px 100%;
  /* -webkit-animation: wave-right-to-left-footer-wave3 10s linear infinite;
   animation: wave-right-to-left-footer-wave3 10s linear infinite;*/
@@ -22116,7 +22116,7 @@ footer.no-inquiry.footer-wave-3 {
 
   .blog-main-section {
     margin-top: -110px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 
   .blog-main-section .container {
@@ -24980,13 +24980,13 @@ footer.no-inquiry.footer-wave-3 {
   }
 
   .footer-wave-1:before {
-    background-position: bottom 0 left 0;
+    background-position: bottom 0 left 1%;
     /*-webkit-animation: wave-right-to-left-footer-wave1 10s linear infinite;
     animation: wave-right-to-left-footer-wave1 10s linear infinite;*/
   }
 
   .footer-wave-2:after {
-    background-position: bottom 0 left 0;
+    background-position: bottom 0 left -6%;
     background-size: 3010px;
     /*-webkit-animation: wave-right-to-left-footer-wave2 12s linear infinite;
     animation: wave-right-to-left-footer-wave2 12s linear infinite;*/
