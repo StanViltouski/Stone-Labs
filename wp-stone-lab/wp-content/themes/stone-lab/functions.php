@@ -210,10 +210,6 @@ require get_template_directory() . '/inc/post-type.php';
 require get_template_directory() . '/inc/sample-config.php';
 
 /**
- * Gutenberg
- */
-require get_template_directory() . '/my_gutenberg/init_my_custom_gutenberg_block.php';
-/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
