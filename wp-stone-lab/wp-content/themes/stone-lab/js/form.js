@@ -9,7 +9,6 @@ $(function () {
   $( "input,textarea,div[contenteditable=true]" ).attr( "data-gramm_editor", "false" );
 
 
-
   /*TrackBar*/
   
   $('#ageInputId').on('input', function(){

@@ -120,11 +120,6 @@ function stone_lab_widgets_init() {
 add_action( 'widgets_init', 'stone_lab_widgets_init' );
 
 
-
-
-
-
-
 /**
  * Enqueue scripts and styles.
  */

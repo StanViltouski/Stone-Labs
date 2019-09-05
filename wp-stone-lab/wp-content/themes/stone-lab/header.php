@@ -5,7 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>
+
+        <?php
+            global $page, $paged;
+            wp_title( '|', true, 'right' );
+            bloginfo( 'name' );
+            $site_description = get_bloginfo( 'description', 'display' );
+                if ( $site_description && ( is_home() || is_front_page() ) )
+                    echo " | $site_description";
+                if ( $paged >= 2 || $page >= 2 )
+                    echo ' | ' . sprintf( __( 'Page %s', 'sm' ), max( $paged, $page ) );
+        ?>
+        
+    </title>
 
     <script type="text/javascript">
         var wayImage = '<?= get_bloginfo("template_url"); ?>';
