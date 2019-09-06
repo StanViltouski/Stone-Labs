@@ -149,7 +149,7 @@ get_header();?>
     <div class="owl-carousel owl-theme  about-us-slider">
         <div class="about-us-slide container inner-container" data-index="1">
             <div class="about-us-image">
-                <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
+                <img src="<?php bloginfo('template_directory') ?>/assets/svg/about_us_slider-product_dev.svg" alt="about-us-slider-item">
             </div>
 
                 <?php  
@@ -179,7 +179,7 @@ get_header();?>
         </div>
         <div class="about-us-slide container inner-container" data-index="2">
             <div class="about-us-image">
-                <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
+                <img src="<?php bloginfo('template_directory') ?>/assets/svg/about-us-slider-sport.svg" alt="about-us-slider-item">
             </div>
 
             <?php  
@@ -205,7 +205,7 @@ get_header();?>
         </div>
         <div class="about-us-slide container inner-container" data-index="3">
             <div class="about-us-image">
-                <img src="<?php bloginfo('template_directory') ?>/img/about-us-slider-sport.svg" alt="about-us-slider-item">
+                <img src="<?php bloginfo('template_directory') ?>/assets/svg/Abouts us OUTSOURCING SLIDER illustration.svg" alt="about-us-slider-item">
             </div>
             <?php  
                 wp_reset_query();
