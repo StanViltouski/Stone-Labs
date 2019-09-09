@@ -60,7 +60,7 @@
                     'menu_class'      => false, 
                     'echo'            => true,
                     'fallback_cb'     => 'wp_page_menu',
-                    'items_wrap'      => '<ul class="navbar-nav">%3$s</ul>',
+                    'items_wrap'      => '<ul id="desk_menu" class="navbar-nav">%3$s</ul>',
                     'depth'           => 2,
 
                 ]);
