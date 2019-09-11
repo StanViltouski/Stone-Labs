@@ -335,10 +335,7 @@ get_header();?>
             Showcases
         </div>
         <div class="section-description text-white">
-            We use best practices in Data-Driven Approach to set maximum efficiency of every business process.<br>
-            We don't sell code or development hours, we share our expertise, experience and specific IT domain
-            knowledge.<br>
-            We are Digital Problem Solvers.
+            We are proud of the projects we’ve done. Here we’d like to share our excitement and show some recent examples of our successful stories.
         </div>
         <div class="showcases-wrapper owl-carousel owl-theme owl-height">
 
@@ -375,7 +372,7 @@ get_header();?>
                                             </div>
                                         </div>
                                         <div class="showcase-item-image">
-                                           <?php the_post_thumbnail( array(420, 230) ); ?>
+                                           <?php the_post_thumbnail(); ?>
                                         </div>
                                     </div>
 
@@ -435,7 +432,7 @@ get_header();?>
                        <?php endforeach; wp_reset_query(); ?>
             </div>
         <div class="blue-main-link-wrapper">
-            <a href="http://wp-stone-lab/showcases/" class="blue-main-link">
+            <a href="/showcases" class="blue-main-link">
                 View More
             </a>
         </div>
@@ -452,8 +449,7 @@ get_header();?>
             Words From Our Clients
         </div>
         <div class="section-description">
-            We use best practices in Data-Driven Approach to set maximum efficiency of every business process.<br>
-            We don't sell code or development hours, we share our expertise.
+            
         </div>
 
     </div>

@@ -4,7 +4,7 @@
     while ( have_posts() ) : the_post(); ?>
 
 <section>
-	<div id="showcases_head" class="showcases_head">
+	<div id="showcases_head" class="showcases_head" style="background: linear-gradient(to bottom, #0498f4 5%, transparent 95%), url(<?php the_post_thumbnail_url(); ?>) no-repeat 0% 50% / cover">
         <div class="wrapper4-effect"></div>
        
 		<div class="showcasesHead_title text-center">
@@ -52,13 +52,24 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
 					<h4 class="projectInfo_title">Categories</h4>
-					<p class="projectInfo_text">Big Data, Business Intelligence, Development Process, Enterprise Solutions</p>
+					<p class="projectInfo_text">
+                    <?php 
+                       $postID = get_the_ID();
+
+                        $wcatTerms = wp_get_object_terms($postID, 'showcases-filter', array(
+                                'childless' => true,
+                        ));
+
+                        foreach($wcatTerms as $wcatTerm) 
+                                 echo ($wcatTerm->name . " ");
+                     ?>
+                </p>
 					<h4 class="projectInfo_title">Release Date</h4>
 					<p class="projectInfo_text">
                         <?php if(get_post_meta($post->ID, $key = 'release', $single = true)){ ?>
                         <?php echo esc_attr(get_post_meta($post->ID, $key = 'release', $single = true));?>
-                        <?php }  ?> 
-                    </p>
+                        <?php } ?> 
+                   </p>
 				</div>
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
 					<h4 class="projectInfo_title">Technologies</h4>

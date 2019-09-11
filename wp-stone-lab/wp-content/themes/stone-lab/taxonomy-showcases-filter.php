@@ -72,7 +72,7 @@
         while ( have_posts() ) :
             the_post(); ?>
 
-                <div class="showcases-catalog-item" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                <div class="showcases-catalog-item" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center / cover;">
                 <div class="showcase-item-overlay">
                     <div class="top-part">
                         <div class="showcase-item-category">

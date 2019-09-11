@@ -20737,8 +20737,15 @@ section#showcases .section-description > br {
   position: relative;
 }
 
+.showcase-item-image {
+  width: 100%;
+  height: 230px;
+}
+
 .showcase-item-image img{
   width: 100%;
+  min-height: 230px;
+  height: auto;
 }
 
 .showcase-item-object.is-flipped {
@@ -20758,6 +20765,7 @@ section#showcases .section-description > br {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 
 }
 
@@ -24139,9 +24147,6 @@ footer.no-inquiry.footer-wave-3 {
   .showcases-catalog-item:hover .showcase-item-overlay {opacity: 1;}
 
   .showcases-catalog-item:hover .showcase-item-front {opacity: 0;}
-
-
-  .showcase-item-image img{height: 155px;}
 
   img#out-group {
     margin-bottom: 20px;
