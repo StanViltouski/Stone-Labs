@@ -1,5 +1,5 @@
+<?php get_header(); ?>
 
-<?php get_header();?>
 <div class="page-title-wrapper">
 
         <h1 class="page-title">Our Showcases</h1>
@@ -65,10 +65,15 @@
     <div class="container">
         <div class="showcases-catalog-wrapper">
 
-        	<?php
-
-		    while ( have_posts() ) : the_post(); ?>
-
+            <?php  
+                wp_reset_query();
+            
+                    $resent_list = new WP_Query(array('post_type'=> 'showcases', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                    
+                    if ( $resent_list->have_posts() ) :
+                        while ( $resent_list->have_posts() ) :
+                        $resent_list->the_post(); ?>
+                                    
 			<div class="showcases-catalog-item" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center / cover;">
                 <div class="showcase-item-overlay">
                     <div class="top-part">
@@ -134,9 +139,9 @@
                     </div>
                 </div>
             </div>
-
-		<?php endwhile; ?>
-            
+                 
+             <?php  endwhile; endif;  wp_reset_query(); ?>
+   
         </div>
     </div>
 </section>

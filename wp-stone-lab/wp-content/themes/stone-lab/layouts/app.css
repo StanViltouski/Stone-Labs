@@ -20101,8 +20101,9 @@ nav .nav-item-button a.btn:hover {
   margin: 10px 0;
   text-align: left;
   font-weight: 700;
-  display: block;
 }
+
+.nav-dropdown-menu_filter a.nav-dropdown-item {display: block;}
 
 .page-title-wrapper {
   width: 100%;
@@ -22314,7 +22315,6 @@ footer.no-inquiry.footer-wave-3 {
 
 .showcases-catalog-item .showcase-item-overlay {
   justify-content: space-between;
-  z-index: 1;
 }
 
 .showcases-catalog-item .showcase-item-overlay .showcase-item-category {
@@ -22359,6 +22359,7 @@ footer.no-inquiry.footer-wave-3 {
   line-height: normal;
   letter-spacing: 1.33px;
   padding: 9px 25px;
+  z-index: 1;
 }
 
 .showcase-item-overlay {

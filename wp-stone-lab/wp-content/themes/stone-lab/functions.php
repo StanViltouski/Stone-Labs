@@ -144,8 +144,6 @@ function stone_lab_scripts() {
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), '', true );
 	wp_enqueue_script('jquery');
-	//wp_register_script('popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), '', true );
-	//wp_enqueue_script('popper');
 	wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri() . '/js/lib/owl.carousel.min.js', array('lab-main-scripts'), '1.0.0', true );
 	wp_enqueue_script( 'animate', get_template_directory_uri() . '/js/lib/owl.animate.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'autoheight', get_template_directory_uri() . '/js/lib/owl.autoheight.js', array(), '1.0.0', true );
