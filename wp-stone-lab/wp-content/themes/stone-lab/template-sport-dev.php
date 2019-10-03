@@ -115,10 +115,11 @@ get_header();?>
                         <?php echo esc_attr(get_post_meta($post->ID, $key = '3_step', $single = true));?>
                         <?php }  ?>
                     </div>
-                    </div>
+                    
                     <div class="approach-step-icon">
                         <img src="<?php bloginfo('template_directory') ?>/img/3-steps-step-3-icon.svg" alt="">
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -163,12 +164,14 @@ get_header();?>
 <section id="it-services" class="it-solutions">
     <div class="container">
         <div class="section-header">
-            IT Solutions
+             What do we do
         </div>
+        <!--
         <div class="section-description">
             We use best practices in Data-Driven Approach to set maximum efficiency of every business process.
             We don't sell code or development hours,  we share our expertise.
         </div>
+        -->
         <div class="grid-services-wrapper">
 
 			<?php
@@ -205,12 +208,14 @@ get_header();?>
         <div class="section-header text-white">
             Showcases
         </div>
+        <!--
         <div class="section-description text-white">
             We use best practices in Data-Driven Approach to set maximum efficiency of every business process.<br>
             We don't sell code or development hours, we share our expertise, experience and specific IT domain
             knowledge.<br>
             We are Digital Problem Solvers.
         </div>
+        -->
         <div class="showcases-wrapper owl-carousel owl-theme owl-height">
            
             
@@ -322,17 +327,19 @@ get_header();?>
         <div class="section-header">
             Words From Our Clients
         </div>
+        <!--
         <div class="section-description">
             We use best practices in Data-Driven Approach to set maximum efficiency of every business process.<br>
             We don't sell code or development hours, we share our expertise.
         </div>
+        -->
 
     </div>
     <div class="testimonials-3d-carousel">
         <ul>
                 <?php
                     wp_reset_query();
-                    $args = array( 'post_type'=> 'testimonials', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
+                    $args = array( 'post_type'=> 'testimonials', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
                             array(
                                 'taxonomy' => 'pages',
                                 'field'    => 'slug',

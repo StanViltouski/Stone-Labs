@@ -80,16 +80,37 @@ $(function () {
 
 /*Styles for radio botton*/
 
+
+
+
+
+
 $(function () {
-  $('.form-check-input').on('change', function(){
 
-    if(this.checked) {
-      var card = $(this).parent().children()[1],
-          index = $(card).attr('data-index'),
-          card_mass = $('.radio_card');
+    var card = $(this).parents('label').children()[1],
+        index = $(card).attr('data-index'),
+        card_mass = $('.radio_card');
 
+    //Default button
 
-      function reset() {
+    (function default_button() {
+          $(card_mass[0]).css('background', '#ed1a3a url("'+wayImage+'/assets/svg/idea-white.svg") no-repeat');
+          publicStyles(0);
+      })();
+
+    //Styles 4 all
+    function publicStyles(index)  {
+        $(card_mass[index]).css({
+          'background-position': 'bottom calc(0% + 12px) right calc(0% + 12px)',
+          'box-shadow': '0 20px 30px 0 rgba(208, 2, 27, 0.2)',
+          'color' : '#ffffff',
+        })
+
+        $('.radio_card img:eq('+index+')').attr('src', wayImage+'/assets/svg/white-radiobutton.svg');
+      }
+
+    //Reset styles
+    function reset() {
          $(card_mass).css({
           'background' : '',
           'background-position': '',
@@ -100,17 +121,13 @@ $(function () {
           $('.radio_card img').attr('src', wayImage+'/assets/svg/red-radiobutton.svg');
       }
 
+  $('.form-check-input .wpcf7-list-item input').on('change', function(){
 
-      function publicStyles(index)  {
-        $(card_mass[index]).css({
-          'background-position': 'bottom calc(0% + 12px) right calc(0% + 12px)',
-          'box-shadow': '0 20px 30px 0 rgba(208, 2, 27, 0.2)',
-          'color' : '#ffffff',
-        })
+  if(this.checked) {
 
-        $('.radio_card img:eq('+index+')').attr('src', wayImage+'/assets/svg/white-radiobutton.svg');
-      }
-
+      var card = $(this).parents('label').children()[1],
+        index = $(card).attr('data-index'),
+        card_mass = $('.radio_card');
 
       switch(index) {
         case '1': 

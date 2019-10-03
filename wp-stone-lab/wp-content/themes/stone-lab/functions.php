@@ -119,6 +119,20 @@ function stone_lab_widgets_init() {
 }
 add_action( 'widgets_init', 'stone_lab_widgets_init' );
 
+function stone_lab_widgets_share() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Button share', 'stone-lab' ),
+		'id'            => 'share-button',
+		'description'   => esc_html__( 'Add widgets here.', 'stone-lab' ),
+		'before_widget' => false,
+		'after_widget'  => false,
+		'before_title'  => false,
+		'after_title'   => false,
+	) );
+}
+add_action( 'widgets_init', 'stone_lab_widgets_share' );
+
+
 
 /**
  * Enqueue scripts and styles.

@@ -250,11 +250,11 @@ get_header();?>
             );
                 $posts = get_posts($args);
                 foreach($posts as $post) :setup_postdata($post);?>
-
+                
                 <div class="section-header">
                     <?php esc_html(the_title());?>
                 </div>
-
+                
                 <div class="section-description">
                     <?php esc_html(the_content()); ?>
                 </div>
@@ -457,7 +457,7 @@ get_header();?>
         <ul>
                 <?php
                     wp_reset_query();
-                    $args = array( 'post_type'=> 'testimonials', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
+                    $args = array( 'post_type'=> 'testimonials', 'posts_per_page' => -1,  'orderby'=> 'rand', 'tax_query' => array(
                             array(
                                 'taxonomy' => 'pages',
                                 'field'    => 'slug',

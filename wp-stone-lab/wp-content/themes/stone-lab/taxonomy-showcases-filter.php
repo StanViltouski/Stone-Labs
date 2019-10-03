@@ -9,7 +9,7 @@
                     <div class="nav-item">
                          <div class="top-dropdown-item">
                             <a id="drop_menu" class="nav-item dropdown-link category-selector-link" data-toggle="dropdown" href="#" role="button">All Industries</a>
-                            <div class="nav-dropdown-menu dropdown-menu submenu-resp">
+                            <div class="nav-dropdown-menu_filter dropdown-menu submenu-resp">
 
                             <?php $wcatTerms = get_terms('showcases-filter', 
                                 array(
@@ -68,9 +68,14 @@
     <div class="container">
         <div class="showcases-catalog-wrapper">
 
-            <?php
-        while ( have_posts() ) :
-            the_post(); ?>
+            <?php  
+                wp_reset_query();
+            
+                    $resent_list = new WP_Query(array('post_type'=> 'showcases', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
+                    
+                    if ( $resent_list->have_posts() ) :
+                        while ( $resent_list->have_posts() ) :
+                        $resent_list->the_post(); ?>
 
                 <div class="showcases-catalog-item" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center / cover;">
                 <div class="showcase-item-overlay">
@@ -126,7 +131,7 @@
             </div>
 
             
-        <?php endwhile; ?>
+        <?php  endwhile; endif;  wp_reset_query(); ?>
             
         </div>
         <div class="blue-main-link-wrapper">

@@ -55,29 +55,6 @@
 
 .showcasesHead_bottons {padding-top: 154px;}
 
-.botton_share {
-  display: block;
-  border-radius: 30px;
-  background-color: #ef1c3b;
-  padding: 16.5px 34px;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.botton_share:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.botton_share img{
-  margin-right: 15px;
-  width: 20px;
-}
-
 .botton_back {
   display: block;
   padding: 14px 17px;
@@ -253,11 +230,7 @@
     font-size: 18px;
   }
 
-  .botton_share {
-    padding: 14px 0px;
-    min-width: 150px;
-    font-size: 18px;
-  }
+  .button_share_wrapper img {width: 140px !important;}
 
   .projectInfo_text, .projectInfo_title{font-size: 18px;}
 
@@ -293,11 +266,7 @@
     font-size: 16px;
   }
 
-  .botton_share {
-    padding: 9px 0px;
-    min-width: 121px;
-    font-size: 16px;
-  }
+  .button_share_wrapper img {width: 135px !important;}
 
   .projectInfo_text, .projectInfo_title{font-size: 16px;}
 
@@ -333,11 +302,15 @@
 
   .showcase-button-wrapper .botton_back {margin-top: 0;}
 
-  .botton_back, .botton_share {
+  .botton_back{
     padding: 5px 0px;
     min-width: 146px;
     font-size: 14px;
   }
+
+  .button_share_wrapper img {width: 84px !important;}
+
+  .addtoany_list a img {vertical-align: middle!important;}
 
   .projectInfo_block {
     padding-left: 0;

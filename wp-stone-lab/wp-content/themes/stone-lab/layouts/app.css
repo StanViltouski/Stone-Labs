@@ -20016,7 +20016,10 @@ nav .navbar-nav {
 
 #desk_menu>li{padding-right: 40px;}
 
-#desk_menu .sub-menu li, .nav-dropdown-menu li{padding-right: 0px;}
+#desk_menu .sub-menu li, .nav-dropdown-menu li{
+  padding-right: 0px;
+  margin-top: 5px;
+}
 
 nav .dropdown-link i {
   position: relative;
@@ -20086,7 +20089,7 @@ nav .nav-item-button a.btn:hover {
   position: absolute;
   display: none;
   background: #ffffff;
-  min-width: 120px;
+  min-width: 210px;
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -20098,7 +20101,6 @@ nav .nav-item-button a.btn:hover {
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
-  margin: 10px 0;
   text-align: left;
   font-weight: 700;
 }
@@ -20683,6 +20685,7 @@ section#about-us {
 
 .owl-carousel.clients-slider .owl-item img {
   width: auto;
+  height: auto;
 }
 
 /*End Philosophy section*/
@@ -23303,6 +23306,8 @@ footer.no-inquiry.footer-wave-3 {
   flex-direction: row;
 }
 
+.approach-step-item:nth-child(1) .approach-step-text {padding-top: 20px;}
+
 .approach-step-item:nth-child(1) .approach-step-number {
   top: 30px;
   left: -23px;
@@ -23343,7 +23348,7 @@ footer.no-inquiry.footer-wave-3 {
 .approach-step-item:nth-child(3) .approach-step-text {
   max-width: 467px;
   position: relative;
-  top: 45px;
+  top: 75px;
   left: 55px;
 }
 
@@ -23498,13 +23503,17 @@ footer.no-inquiry.footer-wave-3 {
     left: 0;
   }
 
+  .approach-step-item:nth-child(2) .approach-step-text {
+    margin-left: 195px;
+  }
+
   .approach-step-item:nth-child(3) .approach-step-number {
-    top: 80px;
+    top: 90px;
     left: 95px;
   }
 
   .approach-step-item:nth-child(3) .approach-step-text {
-    top: 65px;
+    top: 105px;
     left: 55px;
   }
 
@@ -23575,7 +23584,7 @@ footer.no-inquiry.footer-wave-3 {
   }
 
   .approach-step-item .approach-step-text {
-    max-width: 346px;
+    max-width: 300px;
     font-size: 18px;
     font-weight: normal;
     font-style: normal;
@@ -23583,6 +23592,13 @@ footer.no-inquiry.footer-wave-3 {
     line-height: 1.67;
     letter-spacing: normal;
   }
+
+  .approach-step-item:nth-child(1) .approach-step-text {
+    padding-top: 55px;
+    height: 270px;
+    overflow: hidden;
+  }
+
 
   .approach-step-item:nth-child(1) .approach-step-number {
     top: -30px;
@@ -23595,17 +23611,18 @@ footer.no-inquiry.footer-wave-3 {
 
   .approach-step-item:nth-child(2) .approach-step-text {
     position: relative;
-    top: -40px;
+    top: -10px;
     margin-left: 80px;
   }
 
   .approach-step-item:nth-child(3) .approach-step-number {
-    top: 40px;
-    left: 33px;
+    top: 60px;
+    left: 35px;
   }
 
   .approach-step-item:nth-child(3) .approach-step-text {
     max-width: 346px;
+    top: 115px;
     left: 0;
   }
 }
@@ -23696,6 +23713,8 @@ footer.no-inquiry.footer-wave-3 {
     top: 180px;
     left: -2px;
   }
+
+  .approach-step-item:nth-child(1) .approach-step-text {padding-top: 0;}
 
   .approach-step-item:nth-child(2) {
     flex-direction: column-reverse;
@@ -24299,7 +24318,7 @@ footer.no-inquiry.footer-wave-3 {
     height: 52px;
   }
 
-#desk_menu>li{padding-right: 28px;}
+#desk_menu>li{padding-right: 27px;}
 
    nav a:not(.btn):not(.navbar-brand):not(.nav-dropdown-item) {
     font-size: 17px;

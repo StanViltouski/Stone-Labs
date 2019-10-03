@@ -27,22 +27,36 @@
                 </div>
                 <div class="footer-socials">
 
-                    <?php 
-                    if($custom_social_nets){ ?>
+                    <?php if($custom_social_nets['Link facebook']){ ?>
+                        <a href="<?php echo esc_url($custom_social_nets['Link facebook']); ?>">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-facebook-icon.svg" alt="facebook-footer-logo">
+                        </a>
+                    <?php } ?>
 
-                    <a href="<?php echo esc_url($custom_social_nets['Link facebook']); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-facebook-icon.svg" alt="facebook-footer-logo"></a>
+                    <?php if($custom_social_nets['Link linkedin']){ ?>
+                        <a href="<?php echo esc_url($custom_social_nets['Link linkedin']); ?>">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-linkedin-icon.svg" alt="linkedin-footer-logo">
+                        </a>
+                    <?php } ?>
+                    
+                    <?php if($custom_social_nets['Link twitter']){ ?>
+                        <a href="<?php echo esc_url($custom_social_nets['Link twitter']); ?>">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-twitter-icon.svg" alt="twitter-footer-logo">
+                        </a>
+                    <?php } ?>
 
-                    <a href="<?php echo esc_url($custom_social_nets['Link linkedin']); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-linkedin-icon.svg" alt="linkedin-footer-logo"></a>
+                    <?php if($custom_social_nets['Link skype']){ ?>
+                        <a href="<?php echo esc_url($custom_social_nets['Link skype']); ?>">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-skype-icon.svg" alt="skype-footer-logo">
+                        </a>
+                    <?php } ?>
 
-                    <a href="<?php echo esc_url($custom_social_nets['Link twitter']); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-twitter-icon.svg" alt="twitter-footer-logo"></a>
-
-                    <a href="<?php echo esc_url($custom_social_nets['Link skype']); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-skype-icon.svg" alt="skype-footer-logo"></a>
-
-                    <a href="<?php echo esc_url($custom_social_nets['Link github']); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-github-icon.svg" alt="github-footer-logo"></a>
-                     <?php 
-                        } else {
-                            echo "No data";
-                        } ?>
+                    <?php if($custom_social_nets['Link github']){ ?>
+                        <a href="<?php echo esc_url($custom_social_nets['Link github']); ?>">
+                            <img src="<?php bloginfo('template_directory') ?>/assets/svg/footer-github-icon.svg" alt="github-footer-logo">
+                        </a>
+                    <?php } ?>
+                     
             
                 </div>
             </div>

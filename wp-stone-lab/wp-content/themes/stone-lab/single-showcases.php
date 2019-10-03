@@ -22,8 +22,8 @@
                 	<a href="/showcases" class="botton_back"><img src="<?php bloginfo('template_directory') ?>/assets/svg/arrow_back.svg" alt="arrow_back">Back to projects</a>
             	</div>
 
-            	<div class="botton_share_wrapper">
-            		<a href="#" class="botton_share"><img src="<?php bloginfo('template_directory') ?>/assets/svg/share.svg" alt="share">Share</a>
+            	<div class="button_share_wrapper">
+            		<?php esc_html(dynamic_sidebar( 'Button share' )); ?>
         		</div>
 			</div>
 		</div>
@@ -152,9 +152,11 @@
         <ul>
             <li>
                 <div class="screens-item-wrapper">
+                    <!--
                 	<div class="screens-text">
                             Screens
                      </div>
+                    -->
                     <div class="screens-object">
                         <div class="screen-image-wrapper">
                             <?php if( get_field('1_slide') ): ?><img src="<?php esc_attr(the_field('1_slide')); ?>" /><?php endif;?>
@@ -171,9 +173,11 @@
 
             <li>
                 <div class="testimonials-item-wrapper">
-                	<div class="screens-text">
+                	<!--
+                    <div class="screens-text">
                             Screens
                      </div>
+                    -->
                     <div class="screens-object">
                         <div class="screen-image-wrapper">
                             <?php if( get_field('2_slide') ): ?><img src="<?php esc_attr(the_field('2_slide')); ?>" /><?php endif;?>
@@ -189,9 +193,11 @@
 
              <li>
                 <div class="testimonials-item-wrapper">
+                    <!--
                     <div class="screens-text">
                             Screens
                      </div>
+                    -->
                     <div class="screens-object">
                         <div class="screen-image-wrapper">
                             <?php if( get_field('3_slide') ): ?><img src="<?php esc_attr(the_field('3_slide')); ?>" /><?php endif;?>
@@ -207,9 +213,11 @@
 
             <li>
                 <div class="testimonials-item-wrapper">
-                	<div class="screens-text">
+                	<!--
+                    <div class="screens-text">
                             Screens
                      </div>
+                    -->
                     <div class="screens-object">
                         <div class="screen-image-wrapper">
                              <?php if( get_field('4_slide') ): ?><img src="<?php esc_attr(the_field('4_slide')); ?>" /><?php endif;?>
@@ -231,7 +239,7 @@
     <div class="owl-carousel owl-theme screen_slider-mob">
 
         <div class="screen_item container inner-container">
-            <div class="screens-text">Screens</div>
+            <!--<div class="screens-text">Screens</div>-->
             <div class="screen-image-wrapper-mobile">
                  <?php if( get_field('1_slide') ): ?><img src="<?php esc_attr(the_field('1_slide')); ?>" /><?php endif;?>
             </div>
@@ -243,7 +251,7 @@
         </div>
 		
 		<div class="screen_item container inner-container">
-            <div class="screens-text">Screens</div>
+            <!--<div class="screens-text">Screens</div>-->
             <div class="screen-image-wrapper-mobile">
                  <?php if( get_field('2_slide') ): ?><img src="<?php esc_attr(the_field('2_slide')); ?>" /><?php endif;?>
             </div>
@@ -255,7 +263,7 @@
          </div>
 
         <div class="screen_item container inner-container">
-            <div class="screens-text">Screens</div>
+            <!--<div class="screens-text">Screens</div>-->
             <div class="screen-image-wrapper-mobile">
                  <?php if( get_field('3_slide') ): ?><img src="<?php esc_attr(the_field('3_slide')); ?>" /><?php endif;?>
             </div>
@@ -267,7 +275,7 @@
         </div>
 
         <div class="screen_item container inner-container">
-            <div class="screens-text">Screens</div>
+            <!--<div class="screens-text">Screens</div>-->
             <div class="screen-image-wrapper-mobile">
                  <?php if( get_field('4_slide') ): ?><img src="<?php esc_attr(the_field('4_slide')); ?>" /><?php endif;?>
             </div>
@@ -296,11 +304,18 @@
                 <?php echo esc_attr(get_post_meta($post->ID, $key = 'more_content', $single = true));?>
                 <?php }  ?>
     	    </div>
-    	    <div class="blue-main-link-wrapper botton_download">
-    	        <a href="<?php if( get_field('file_download') ): ?><?php esc_attr(the_field('file_download')); ?><?php endif;?>" download class="blue-main-link"><img src="<?php bloginfo('template_directory') ?>/assets/svg/pfd.svg" alt="download">Download PDF</a>
-    	    </div>
+
+
+            <?php if( get_field('file_download') ) { ?>
+    	       <div class="blue-main-link-wrapper botton_download">
+    	           <a href="<?php esc_attr(the_field('file_download')); ?>" download class="blue-main-link"><img src="<?php bloginfo('template_directory') ?>/assets/svg/pfd.svg" alt="download">Download PDF</a>
+    	       </div>
+            <?php }?>
+
     	</div>
 	
+    <?php if(get_post_meta($post->ID, $key = 'testimonials_content', $single = true)){ ?>
+
 		<div class="testimonials-object feedback">
 			<div class="feedback_head"> CLIENT’S FEEDBACK </div>
 
@@ -328,6 +343,8 @@
     	    </div>
             
     	</div>
+
+        <?php }  ?>
 	</div>
 </section>
 

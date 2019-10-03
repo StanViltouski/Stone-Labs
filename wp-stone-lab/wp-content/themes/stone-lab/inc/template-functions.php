@@ -60,11 +60,16 @@ function posts_link_attributes() {return 'class="blue-main-link"';}
 add_filter('wpcf7_form_elements', function($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
     $content = str_replace('<br />', '', $content);
-     
+    
     return $content;
 });
 
+add_filter('wpcf7_form_elements', function($content) {
+    $content_two = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+    $content_two = str_replace('<br />', '', $content); 
 
+        return $content_two;
+});
 
 /*Remove item (admin panel)*/
 

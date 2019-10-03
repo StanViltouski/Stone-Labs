@@ -156,7 +156,7 @@ $(function () {
 
         $('.navbar').addClass('fixed-top').css({
           'background' : 'rgba(6,165,245,1)',
-          'padding-right' : '2%'
+          'padding' : '0 2%'
         });
 
       } else {
@@ -168,7 +168,7 @@ $(function () {
 
         $('.navbar').removeClass('fixed-top').css({
             'background': '',
-            'padding-right' : ''
+            'padding' : ''
         });
     }
 
