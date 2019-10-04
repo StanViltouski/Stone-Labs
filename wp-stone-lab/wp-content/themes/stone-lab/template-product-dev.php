@@ -398,7 +398,7 @@ get_header();?>
                 $posts = get_posts($args);
                 foreach($posts as $post) :setup_postdata($post);
                 ?>
-                 <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail()); ?></div>
+                 <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail(array(161, 105))); ?></div>
             
             <?php endforeach; wp_reset_query(); ?>
         </div>
@@ -414,10 +414,12 @@ get_header();?>
         <div class="section-header">
             Words From Our Clients
         </div>
+        <!--
         <div class="section-description">
             We use best practices in Data-Driven Approach to set maximum efficiency of every business process.<br>
             We don't sell code or development hours, we share our expertise.
         </div>
+        -->
 
     </div>
     <div class="testimonials-3d-carousel">

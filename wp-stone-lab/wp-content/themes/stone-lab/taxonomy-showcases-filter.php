@@ -68,14 +68,25 @@
     <div class="container">
         <div class="showcases-catalog-wrapper">
 
-            <?php  
-                wp_reset_query();
-            
-                    $resent_list = new WP_Query(array('post_type'=> 'showcases', 'order'=> 'ASC', 'posts_per_page'=> -1)); 
-                    
-                    if ( $resent_list->have_posts() ) :
-                        while ( $resent_list->have_posts() ) :
-                        $resent_list->the_post(); ?>
+            <?php
+           
+
+                        wp_reset_query();
+
+                        $term_name = (get_queried_object()->slug);
+
+                        $args = array( 'post_type'=> 'showcases', 'orderby'=> 'rand', 'posts_per_page' => -1, 'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'showcases-filter',
+                                    'field'    => 'slug',
+                                    'terms'   => array( $term_name )
+                                )
+                        )
+                    );
+
+                $posts = get_posts($args);
+
+                foreach($posts as $post) : ?>
 
                 <div class="showcases-catalog-item" style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center / cover;">
                 <div class="showcase-item-overlay">
@@ -131,7 +142,7 @@
             </div>
 
             
-        <?php  endwhile; endif;  wp_reset_query(); ?>
+        <?php endforeach; wp_reset_query(); ?>
             
         </div>
         <div class="blue-main-link-wrapper">

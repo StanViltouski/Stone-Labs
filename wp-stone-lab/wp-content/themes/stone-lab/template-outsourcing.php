@@ -283,7 +283,7 @@ get_header(); ?>
                 $posts = get_posts($args);
                 foreach($posts as $post) :setup_postdata($post);
                 ?>
-                 <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail()); ?></div>
+                 <div class="clients-slide-wrapper"><?php esc_html(the_post_thumbnail(array(161, 105))); ?></div>
             
             <?php endforeach; wp_reset_query(); ?>
         </div>

@@ -453,6 +453,7 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 10px;
   background-color: #edfafe;
   position: relative;
+  z-index: 1;
 }
 
 .general_input {
@@ -510,6 +511,7 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 10px;
   background-color: #edfafe;
   position: relative;
+  z-index: 1;
 }
 
 .general_textarea {

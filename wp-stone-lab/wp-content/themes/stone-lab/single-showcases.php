@@ -37,18 +37,17 @@
 		<div class="project_info col-12">
 			<div class="row m-0">
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
-					<h4 class="projectInfo_title">Industry</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?>
-                        <?php }  ?>
-                    </p>
-					<h4 class="projectInfo_title">Duration</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'duration', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true));?>
-                        <?php }  ?>  
-                    </p>
+				
+                    <?php if(get_post_meta($post->ID, $key = 'sub_title', $single = true)){ ?>
+                        <h4 class="projectInfo_title">Industry</h4>
+                        <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'sub_title', $single = true));?></p>
+                    <?php }  ?>
+                    					
+                    <?php if(get_post_meta($post->ID, $key = 'duration', $single = true)){ ?>
+                        <h4 class="projectInfo_title">Duration</h4>
+                        <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'duration', $single = true));?> </p>
+                    <?php }  ?>  
+                   
 				</div>
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
 					<h4 class="projectInfo_title">Categories</h4>
@@ -64,34 +63,34 @@
                                  echo ($wcatTerm->name . " ");
                      ?>
                 </p>
-					<h4 class="projectInfo_title">Release Date</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'release', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'release', $single = true));?>
-                        <?php } ?> 
-                   </p>
+					
+
+                <?php if(get_post_meta($post->ID, $key = 'release', $single = true)){ ?>
+                    <h4 class="projectInfo_title">Release Date</h4>
+                    <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'release', $single = true));?></p>
+                <?php } ?> 
+                  
 				</div>
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
-					<h4 class="projectInfo_title">Technologies</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'technology', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true));?>
-                        <?php }  ?>       
-                    </p>
-					<h4 class="projectInfo_title">Platforms</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'platforms', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'platforms', $single = true));?>
-                        <?php }  ?>   
-                    </p>
+										
+                    <?php if(get_post_meta($post->ID, $key = 'technology', $single = true)){ ?>
+                        <h4 class="projectInfo_title">Technologies</h4>
+                        <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'technology', $single = true));?></p>
+                    <?php }  ?>       
+                    					
+                    <?php if(get_post_meta($post->ID, $key = 'platforms', $single = true)){ ?>
+                        <h4 class="projectInfo_title">Platforms</h4>
+                        <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'platforms', $single = true));?></p>
+                    <?php }  ?>   
+                    
 				</div>
 				<div class="col-lg-3 col-md-6 col-12 projectInfo_block">
-					<h4 class="projectInfo_title">Team</h4>
-					<p class="projectInfo_text">
-                        <?php if(get_post_meta($post->ID, $key = 'full_team', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'full_team', $single = true));?>
-                        <?php }  ?>
-                    </p>
+					
+                    <?php if(get_post_meta($post->ID, $key = 'full_team', $single = true)){ ?>
+                        <h4 class="projectInfo_title">Team</h4>
+                        <p class="projectInfo_text"><?php echo esc_attr(get_post_meta($post->ID, $key = 'full_team', $single = true));?></p>
+                    <?php }  ?>
+                    
 				</div>
 
 			</div>
@@ -105,41 +104,35 @@
 		<div class="main_text">
 			<div class="row m-0">
 				<div class="col-lg-6 col-12">
-					<h3 class="mainText_title">Goal</h3>
-					<p class="mainText_content">
-                        <?php if(get_post_meta($post->ID, $key = 'goal', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'goal', $single = true));?>
-                        <?php }  ?>    
-                    </p>
-
-					<h3 class="mainText_title">Solution</h3>
-					<p class="mainText_content">
-                        <?php if(get_post_meta($post->ID, $key = 'solution', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'solution', $single = true));?>
-                        <?php }  ?> 
-                    </p>
+					
+                    <?php if(get_post_meta($post->ID, $key = 'goal', $single = true)){ ?>
+                        <h3 class="mainText_title">Goal</h3>
+                        <p class="mainText_content"><?php echo esc_attr(get_post_meta($post->ID, $key = 'goal', $single = true));?> </p>
+                    <?php }  ?>    
+                   
+                    <?php if(get_post_meta($post->ID, $key = 'solution', $single = true)){ ?>
+                        <h3 class="mainText_title">Solution</h3>
+                        <p class="mainText_content"><?php echo esc_attr(get_post_meta($post->ID, $key = 'solution', $single = true));?></p>
+                    <?php }  ?> 
+                    
 				</div>
 				<div class="col-lg-6 col-12">
-					<h3 class="mainText_title">Main Challenge</h3>
-					<p class="mainText_content">
-                        <?php if(get_post_meta($post->ID, $key = 'challenge', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'challenge', $single = true));?>
-                        <?php }  ?>    
-                     </p>
-
-					<h3 class="mainText_title">Features</h3>
-					<p class="mainText_content">
-                        <?php if(get_post_meta($post->ID, $key = 'features', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'features', $single = true));?>
-                        <?php }  ?>     
-                    </p>
-
-					<h3 class="mainText_title">Competitive Advantage</h3>
-					<p class="mainText_content">
-                        <?php if(get_post_meta($post->ID, $key = 'competitive_adv', $single = true)){ ?>
-                        <?php echo esc_attr(get_post_meta($post->ID, $key = 'competitive_adv', $single = true));?>
-                        <?php }  ?>    
-                    </p>
+					
+                    <?php if(get_post_meta($post->ID, $key = 'challenge', $single = true)){ ?>
+                        <h3 class="mainText_title">Main Challenge</h3>
+                        <p class="mainText_content"><?php echo esc_attr(get_post_meta($post->ID, $key = 'challenge', $single = true));?></p>
+                    <?php }  ?>    
+                     
+                    <?php if(get_post_meta($post->ID, $key = 'features', $single = true)){ ?>
+                        <h3 class="mainText_title">Features</h3>
+                        <p class="mainText_content"><?php echo esc_attr(get_post_meta($post->ID, $key = 'features', $single = true));?></p>
+                    <?php }  ?>     
+                    
+                    <?php if(get_post_meta($post->ID, $key = 'competitive_adv', $single = true)){ ?>
+                        <h3 class="mainText_title">Competitive Advantage</h3>
+                        <p class="mainText_content"><?php echo esc_attr(get_post_meta($post->ID, $key = 'competitive_adv', $single = true));?></p>
+                    <?php }  ?>    
+                    
 				</div>
 			</div>
 		</div>
