@@ -7,9 +7,13 @@
 
 - HTML5/CSS3
 - Bootstrap 4.3
-- JavaScript/Jquery
+- JavaScript
 - PHP 7.2/MySQL 5.7
 - WordPress 5.2.4
+
+## Библиотеки:
+
+- Jquery
 - OWL (animate/autoheight/carousel)
 - Jquery Flipster
 
@@ -51,4 +55,4 @@
 
 ## Copyright
 
-<p align="center">Copyright 2009-2019 Stone-Labs</p>
+<p align="center">Copyright@2019 Stanislau Viltouski</p>
