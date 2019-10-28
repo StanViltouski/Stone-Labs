@@ -94,8 +94,8 @@ $(function () {
     //Default button
 
     (function default_button() {
-          $(card_mass[0]).css('background', '#ed1a3a url("'+wayImage+'/assets/svg/idea-white.svg") no-repeat');
-          publicStyles(0);
+          $(card_mass[3]).css('background', '#ed1a3a url("'+wayImage+'/assets/svg/idea-white.svg") no-repeat');
+          publicStyles(3);
       })();
 
     //Styles 4 all

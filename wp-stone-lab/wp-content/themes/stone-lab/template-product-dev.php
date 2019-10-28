@@ -161,7 +161,7 @@ get_header();?>
 
     <section id="software-solutions">
         <div class="container inner-container">
-                    <?php
+            <?php
                 wp_reset_query();
                 $args = array( 'post_type'=> 'fetures', 'posts_per_page' => 3,  'orderby'=> 'rand', 'tax_query' => array(
                     array(
@@ -191,7 +191,7 @@ get_header();?>
                             <?php if(get_post_meta($post->ID, $key = 'title_first_icon', $single = true)){ ?>
                             <?php echo esc_attr(get_post_meta($post->ID, $key = 'title_first_icon', $single = true));?>
                             <?php }  ?>
-                        </div>esc_attr(
+                        </div>
                     </div>
                     <div class="philosophy-item">
                         <div class="philosophy-icon business">
