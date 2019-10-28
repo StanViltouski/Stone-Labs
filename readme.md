@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/StanViltouski/Stone-Labs/tree/master/wp-stone-lab/screenshot.png"></p>
+<p align="center"><img src="/StanViltouski/Stone-Labs/blob/master/wp-stone-lab/screenshot.png?raw=true"></p>
 
 <h2 align="center"> Сайт компании Stone-Labs </h2>
 
@@ -47,8 +47,8 @@
 
 - [vyts_vyts@mail.ru](mailto:vyts_vyts@mail.ru)
 - [Stan Viltouski](https://vk.com/stanviltouski)
-
+- [Stone-Labs](https://stone-labs.com)
 
 ## Copyright
 
-<p align="center">Copyright 2009-2019 [Stone-Labs](https://stone-labs.com)</p>
+<p align="center">Copyright 2009-2019 Stone-Labs</p>
