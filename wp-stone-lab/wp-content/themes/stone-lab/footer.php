@@ -5,9 +5,6 @@
       $custom_adress = ($stone_lab_option['adress']); 
       $custom_email = ($stone_lab_option['email']); 
       $custom_telephone = ($stone_lab_option['telephone']); 
-      $custom_icon_geo = ($stone_lab_option['icon_geo']['url']); 
-      $custom_icon_email = ($stone_lab_option['icon_email']['url']); 
-      $custom_icon_telephone= ($stone_lab_option['icon_telephone']['url']); 
 ?>
 
     <div class="container footer-info-container">

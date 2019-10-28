@@ -133,6 +133,17 @@ function stone_lab_widgets_share() {
 add_action( 'widgets_init', 'stone_lab_widgets_share' );
 
 
+/*Async Load*/
+
+function add_async_forscript($url)
+{
+    if (strpos($url, '#asyncload')===false)
+        return $url;
+    else
+        return str_replace('#asyncload', '', $url)."' async='async"; 
+}
+add_filter('clean_url', 'add_async_forscript', 11, 1);
+
 
 /**
  * Enqueue scripts and styles.
@@ -173,6 +184,10 @@ function stone_lab_scripts() {
 	wp_enqueue_script( 'lab-main-scripts', get_template_directory_uri() . '/js/app.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'stone-lab-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'stone-lab-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	//scripts google
+	wp_enqueue_script('googletagmanager', '//googletagmanager.com/gtag/js?id=UA-33837333-4#asyncload', false, null, false);
+	wp_enqueue_script( 'google-manager', get_template_directory_uri() . '/js/googletagmanager.js', array(), '1.0.0');
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

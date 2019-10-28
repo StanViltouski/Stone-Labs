@@ -120,7 +120,20 @@ try {
 
 window.onload = function () {
 
+
+
   $(document).ready(function () {
+    $('.dropdown-item-wrapper').on({
+
+      'mouseenter' : function () {
+        $('.nav-dropdown-menu').slideDown(200);
+    },
+
+      'mouseleave': function () {
+        $('.nav-dropdown-menu').hide();
+      }
+
+  });
 
     /*Top section*/
     //Init
