@@ -1,4 +1,4 @@
-<p align="center"><img src="/screenshot.png?raw=true"></p>
+<p align="center"><img src="https://github.com/StanViltouski/Stone-Labs/blob/master/screenshot.png?raw=true"></p>
 
 <h2 align="center"> Сайт компании Stone-Labs </h2>
 
